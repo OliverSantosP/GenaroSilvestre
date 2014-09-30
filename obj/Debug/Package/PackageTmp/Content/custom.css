@@ -1,0 +1,51 @@
+﻿@font-face {
+    font-family: GaramondBold;
+    src: url('/fonts/Adobe_Garamond_LT_Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: GaramondBoldItalic;
+    src: url('/fonts/Adobe_Garamond_LT_Bold_Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: GaramondItalic;
+    src: url('/fonts/Adobe_Garamond_LT_Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: Garamond;
+    src: url('/fonts/Adobe_Garamond_LT_Regular.woff') format('woff');
+}
+
+.header-text {
+    font-family: 'GaramondItalic';
+    color: #000;
+    padding-left: 290px;
+    font-size: 2.5em;
+    margin-top: -330px;
+}
+
+.header-link {
+    font-family: 'GaramondBoldItalic';
+    color: #d93920;
+    padding-left: 290px;
+    font-size: 1.8em;
+    padding-top: 20px;
+}
+
+.menu-spacer {
+    padding-bottom: 5px;
+    background: #fff;
+}
+
+
+.menu-left {
+}
+
+
+.menu-right {
+    position: absolute;
+    top: 0px;
+    background-color: #FFF;
+}
