@@ -174,6 +174,8 @@
     <Content Include="Content\custom.css" />
     <Content Include="Content\images\Header.jpg" />
     <Content Include="Content\images\Header2.jpg" />
+    <Content Include="Content\images\NoticiasFrameShadow.jpg" />
+    <Content Include="Content\images\TestPic.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

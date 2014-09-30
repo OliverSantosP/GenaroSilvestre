@@ -34,18 +34,26 @@
     padding-top: 20px;
 }
 
-.menu-spacer {
-    padding-bottom: 5px;
-    background: #fff;
-}
-
-
 .menu-left {
 }
-
 
 .menu-right {
     position: absolute;
     top: 0px;
     background-color: #FFF;
+}
+
+.menu-spacer {
+    padding-bottom: 5px;
+    background: #fff;
+}
+
+.noticias-header {
+    font-family: 'Garamond';
+    color: #d93920;
+    text-transform: uppercase;
+    padding-left: 290px;
+    font-size: 5em;
+    padding-top: 50px;
+    letter-spacing: 8px;
 }
