@@ -20,13 +20,14 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="~/Content/images/Header.jpg" /></a>
+                    <img src="~/Content/images/Header.png" class="navbar-brand-logo" />
+                </a>
             </div>
             <div class="menu-spacer"></div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Áreas de práctica</a></li>
+                    <li class="active"><a href="/AreasDePractica.cshtml">Áreas de práctica</a></li>
                     <li><a href="#">Perfil ejecutivo</a></li>
                     <li><a href="#">Perfil de la firma</a></li>
                     <li><a href="#">Notariado y legalización</a></li>
@@ -35,7 +36,7 @@
             </div><!-- /.navbar-collapse -->
         </nav>
         <div class="menu-right">
-            <img src="~/Content/images/Header2.jpg" />
+            <div class="menu-right-background"></div>
             <div class="header-text">
                 GENARO SILVESTRE, ESTUDIO JURIDICO – LAW OFFICE es un bufete de abogados, con sede principal en la ciudad de La Romana, en la región Este de la República Dominicana, con oficinas en Santo Domingo, Distrito Nacional, especializada en la asistencia y asesoría legal a personas públicas o privadas para la protección y defensa de sus intereses económicos, legales y derechos constitucionales, así como en la representación judicial y extrajudicial en casos de litigios Civiles, Administrativos y Arbitrales.
             </div>
@@ -44,12 +45,12 @@
             </div>
         </div>
     </div>
+    </div>
     <div class="menu-right">
         <div class="container body-content">
             @RenderBody()
         </div>
-        <footer>
-        </footer>
+        <footer></footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
