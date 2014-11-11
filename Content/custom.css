@@ -1,4 +1,9 @@
-﻿.header-text {
+﻿#map_canvas {
+    width: 1120px;
+    height: 464px;
+}
+
+.header-text {
     font-family: 'Times New Roman';
     font-style: italic;
     color: #000;
@@ -25,15 +30,16 @@
     top: 0px;
 }
 
-.menu-right-background{
+.menu-right-background {
     background-image: url("/Content/images/Header2.jpg");
     height: 356px;
 }
-.arrow{
+
+.arrow {
     background-image: url("/Content/images/Arrow.png");
-    background-repeat:no-repeat;
-    width:27px;
-    height:20px;
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 20px;
     display: inline-block;
 }
 
@@ -48,8 +54,9 @@
     color: #d93920;
     text-transform: uppercase;
     padding-left: 229px;
-    font-size: 5em;
+    font-size: 4.8em;
     padding-top: 380px;
+    padding-bottom: 10px;
     letter-spacing: 8px;
 }
 
@@ -64,10 +71,11 @@
     letter-spacing: 7px;
 }
 
-.times-italic{
+.times-italic {
     font-family: "Times New Roman";
-    font-style:italic;
+    font-style: italic;
 }
+
 .noticia-wrapper {
     padding-left: 229px;
     display: inline-block;
@@ -83,18 +91,18 @@
 }
 
 .areas-wrapper {
-     padding-left: 130px;
+    padding-left: 130px;
 }
 
 .areas-text-wrapper {
     padding-left: 130px;
-    width:1152px;
-    font-family:'Times New Roman';
+    width: 1152px;
+    font-family: 'Times New Roman';
     font-size: 1.3em;
 }
 
 .areas-container {
-    width:1152px;
+    width: 1152px;
     padding-top: 50px;
 }
 
@@ -124,13 +132,13 @@
 .noticia-image-shadow {
     background-image: url('/Content/images/NoticiasFrameShadow.jpg');
     background-repeat: no-repeat;
-    padding-top:53px;
+    padding-top: 53px;
 }
 
 .areas-image-shadow {
     background-image: url('/Content/images/AreasFrameShadow.png');
     background-repeat: no-repeat;
-    padding-top:53px;
+    padding-top: 53px;
     width: 1152px;
 }
 
@@ -140,9 +148,11 @@
     width: 1152px;
     padding-left: 20px;
     padding-top: 20px;
+    margin-bottom: 30px;
     padding-bottom: 20px;
     font-family: 'Times New Roman';
     font-size: 1.3em;
+    margin-left: -20px;
 }
 
 .noticia-title {

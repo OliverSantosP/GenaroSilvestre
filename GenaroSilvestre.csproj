@@ -176,6 +176,7 @@
     <Content Include="Content\images\AreasFrameShadow.png" />
     <Content Include="Content\images\AreasGrayBackground.png" />
     <Content Include="Content\images\Arrow.png" />
+    <Content Include="Content\images\ContactHeader.png" />
     <Content Include="Content\images\Header.jpg" />
     <Content Include="Content\images\Header.png" />
     <Content Include="Content\images\Header2.jpg" />

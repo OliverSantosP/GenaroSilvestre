@@ -15,6 +15,7 @@ namespace GenaroSilvestre.Controllers
 
         public ActionResult AreasDePractica()
         {
+            ViewBag.Message = "Areas de Practica.";
             return View();
         }
 
@@ -27,7 +28,7 @@ namespace GenaroSilvestre.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contactos.";
 
             return View();
         }

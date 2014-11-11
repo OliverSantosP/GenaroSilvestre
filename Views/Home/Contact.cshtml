@@ -1,6 +1,50 @@
 ﻿@{
     ViewBag.Title = "Genaro Silvestre - Contacto";
 }
+
 <div class="noticias-header">
-    Noticias
+    Contactos
 </div>
+<div class="noticia-wrapper">
+    <div class="noticia-container">
+        <div class="areas-image-frame">
+            <div class="noticia-image">
+                <img src="~/Content/images/ContactHeader.png" />
+            </div>
+        </div>
+        <div class="areas-image-shadow"></div>
+        <div class="noticia-text-wrapper">
+            <div class="areas-gray-background">
+                Edificio Patio Panatlantic - Suite # 17,<br />
+                Calle General Gregorio Luperon # 4,<br />
+                casi esquina Francisco Rihiez Ducoudray,<br />
+                Centro de la ciudad de La Romana, Rep. Dom.
+            </div>
+        </div>
+
+        <div class="areas-image-frame">
+            <div class="noticia-image">
+                <div id="map_canvas"></div>
+            </div>
+        </div>
+        <div class="areas-image-shadow"></div>
+
+    </div>
+</div>
+<div class="noticia-wrapper">
+    
+    </div>
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+    function initialize() {
+        var mapCanvas = document.getElementById('map_canvas');
+        var mapOptions = {
+            center: new google.maps.LatLng(18.428031, -68.980013),
+            zoom: 14,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
