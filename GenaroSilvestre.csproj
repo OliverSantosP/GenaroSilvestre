@@ -172,6 +172,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\custom.css" />
+    <Content Include="Content\images\AreasDePracticaHeader.png" />
+    <Content Include="Content\images\AreasFrameShadow.png" />
+    <Content Include="Content\images\AreasGrayBackground.png" />
+    <Content Include="Content\images\Arrow.png" />
     <Content Include="Content\images\Header.jpg" />
     <Content Include="Content\images\Header.png" />
     <Content Include="Content\images\Header2.jpg" />

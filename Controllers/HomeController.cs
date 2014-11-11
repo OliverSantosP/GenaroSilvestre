@@ -13,6 +13,11 @@ namespace GenaroSilvestre.Controllers
             return View();
         }
 
+        public ActionResult AreasDePractica()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
