@@ -1,4 +1,9 @@
-﻿.header-text {
+﻿#map_canvas {
+    width: 1120px;
+    height: 464px;
+}
+
+.header-text {
     font-family: 'Times New Roman';
     font-style: italic;
     color: #000;
@@ -143,9 +148,11 @@
     width: 1152px;
     padding-left: 20px;
     padding-top: 20px;
+    margin-bottom: 30px;
     padding-bottom: 20px;
     font-family: 'Times New Roman';
     font-size: 1.3em;
+    margin-left: -20px;
 }
 
 .noticia-title {
