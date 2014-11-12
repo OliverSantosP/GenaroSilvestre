@@ -32,5 +32,12 @@ namespace GenaroSilvestre.Controllers
 
             return View();
         }
+
+        public ActionResult Perfil()
+        {
+            ViewBag.Message = "Perfil Ejecutivo.";
+
+            return View();
+        }
     }
 }

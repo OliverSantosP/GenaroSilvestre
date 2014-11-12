@@ -181,6 +181,7 @@
     <Content Include="Content\images\Header.png" />
     <Content Include="Content\images\Header2.jpg" />
     <Content Include="Content\images\NoticiasFrameShadow.jpg" />
+    <Content Include="Content\images\Profile.png" />
     <Content Include="Content\images\TestPic.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -231,6 +232,7 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\AreasDePractica.cshtml" />
+    <Content Include="Views\Home\Perfil.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
