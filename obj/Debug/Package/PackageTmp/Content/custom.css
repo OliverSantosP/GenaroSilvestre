@@ -60,6 +60,14 @@
     letter-spacing: 8px;
 }
 
+.title-medium {
+    font-family: 'Times New Roman';
+    color: #d93920;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
 .areas-header {
     font-family: 'Times New Roman';
     color: #d93920;
@@ -76,6 +84,21 @@
     font-style: italic;
 }
 
+.times-regular {
+    font-family: "Times New Roman";
+}
+
+.profile{
+    margin-top:-20px;
+}
+.vertical-line{
+  width: 1px; /* Line width */
+  background-color: black; /* Line color */
+  height: 100%; /* Override in-line if you want specific height. */
+  float: left; /* Causes the line to float to left of content. 
+    You can instead use position:absolute or display:inline-block
+    if this fits better with your design */
+}
 .noticia-wrapper {
     padding-left: 229px;
     display: inline-block;
@@ -146,10 +169,8 @@
     background-image: url('/Content/images/AreasGrayBackground.png');
     background-repeat: repeat-y;
     width: 1152px;
-    padding-left: 20px;
-    padding-top: 20px;
+    padding: 50px;
     margin-bottom: 30px;
-    padding-bottom: 20px;
     font-family: 'Times New Roman';
     font-size: 1.3em;
     margin-left: -20px;
@@ -167,12 +188,14 @@
 .input-spaced {
     padding-top: 20px;
     padding-left: 20px;
+    padding-right: 20px;
     font-family: "Times New Roman";
     color: #C0C0C0;
 }
 
 input, select, textarea {
     color: #C0C0C0;
+    width: 96%;
 }
 
 .noticia-title {

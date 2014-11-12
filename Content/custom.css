@@ -91,6 +91,14 @@
 .profile{
     margin-top:-20px;
 }
+
+.social-mini
+{
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
 .vertical-line{
   width: 1px; /* Line width */
   background-color: black; /* Line color */

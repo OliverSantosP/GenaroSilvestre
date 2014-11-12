@@ -177,12 +177,14 @@
     <Content Include="Content\images\AreasGrayBackground.png" />
     <Content Include="Content\images\Arrow.png" />
     <Content Include="Content\images\ContactHeader.png" />
+    <Content Include="Content\images\FBLogo.png" />
     <Content Include="Content\images\Header.jpg" />
     <Content Include="Content\images\Header.png" />
     <Content Include="Content\images\Header2.jpg" />
     <Content Include="Content\images\NoticiasFrameShadow.jpg" />
     <Content Include="Content\images\Profile.png" />
     <Content Include="Content\images\TestPic.png" />
+    <Content Include="Content\images\TWLogo.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
