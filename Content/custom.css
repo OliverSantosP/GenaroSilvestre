@@ -88,25 +88,25 @@
     font-family: "Times New Roman";
 }
 
-.profile{
-    margin-top:-20px;
+.profile {
+    margin-top: -20px;
 }
 
-.social-mini
-{
-    margin-left:auto;
-    margin-right:auto;
+.social-mini {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
-.vertical-line{
-  width: 1px; /* Line width */
-  background-color: black; /* Line color */
-  height: 100%; /* Override in-line if you want specific height. */
-  float: left; /* Causes the line to float to left of content. 
+.vertical-line {
+    width: 1px; /* Line width */
+    background-color: black; /* Line color */
+    height: 100%; /* Override in-line if you want specific height. */
+    float: left; /* Causes the line to float to left of content. 
     You can instead use position:absolute or display:inline-block
     if this fits better with your design */
 }
+
 .noticia-wrapper {
     padding-left: 229px;
     display: inline-block;
@@ -194,16 +194,27 @@
 }
 
 .input-spaced {
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-family: "Times New Roman";
-    color: #C0C0C0;
+padding-bottom: 12px;
+padding-top: 18px;
+font-family: "Times New Roman";
+color: #C0C0C0;
+font-size: 1.18em;
 }
 
-input, select, textarea {
+input, select {
     color: #C0C0C0;
     width: 96%;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+textarea {
+    color: #C0C0C0;
+    width: 96%;
+    padding: 10px;
+    padding-left: 20px;
+    height: 390px;
+    width: 100%;
 }
 
 .noticia-title {
