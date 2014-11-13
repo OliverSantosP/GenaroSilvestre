@@ -2175,10 +2175,11 @@ textarea.input-lg {
 }
 
 .btn {
+    font-family: "Times New Roman";
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: normal;
     line-height: 1.428571429;
     text-align: center;

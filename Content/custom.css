@@ -88,6 +88,19 @@
     font-family: "Times New Roman";
 }
 
+.form-subtitle {
+    font-family: "Times New Roman";
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.form-label {
+    font-family: "Times New Roman";
+    font-size: 1.3em;
+    padding-left:15px;
+    font-weight: bold;
+}
+
 .profile {
     margin-top: -20px;
 }
@@ -201,9 +214,9 @@ color: #C0C0C0;
 font-size: 1.18em;
 }
 
-input, select {
+.input-wide {
     color: #C0C0C0;
-    width: 96%;
+    width: 100%;
     padding: 10px;
     padding-left: 20px;
 }
@@ -216,6 +229,7 @@ textarea {
     height: 390px;
     width: 100%;
 }
+
 
 .noticia-title {
     font-family: 'Times New Roman';
