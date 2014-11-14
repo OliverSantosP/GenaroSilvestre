@@ -1,5 +1,5 @@
 ﻿#map_canvas {
-    width: 1120px;
+    max-width: 1120px;
     height: 464px;
 }
 
@@ -126,6 +126,10 @@
 
 .profile {
     margin-top: -20px;
+
+}
+
+.form-button{
 }
 
 .social-mini {
@@ -142,6 +146,12 @@
     You can instead use position:absolute or display:inline-block
     if this fits better with your design */
 }
+
+.overall-wrapper {
+    padding-left: 22px;
+    padding-right: 10px;
+}
+
 
 .noticia-wrapper {
     padding-left: 22px;
@@ -166,18 +176,17 @@
 
 .areas-text-wrapper {
     padding-left: 13px;
-    width: 1152px;
+    max-width: 1152px;
     font-family: 'Times New Roman';
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-size: 1.3em;
 }
 
 .areas-container {
-    width: 1152px;
-    padding-top: 50px;
+    max-width: 1152px;
 }
 
-.noticia-image {
+.image-responsive {
 }
 
 img {
@@ -194,12 +203,22 @@ img {
 }
 
 .areas-image-frame {
-    width: 1152px;
-    height: 498px;
+    max-width: 1152px;
+    max-height: 498px;
     padding: 15px;
     border: solid;
     border-width: 1px;
     border-color: #c5c5c5;
+}
+
+.areas-map-image-frame {
+    max-width: 1152px;
+    max-height: 498px;
+    padding: 15px;
+    border: solid;
+    border-width: 1px;
+    border-color: #c5c5c5;
+    margin-bottom:15px;
 }
 
 .noticia-image-shadow {
@@ -209,22 +228,33 @@ img {
 }
 
 .areas-image-shadow {
-    background-image: url('/Content/images/AreasFrameShadow.png');
-    background-repeat: no-repeat;
-    padding-top: 53px;
-    width: 1152px;
+    max-width: 100%;
+    height: auto;
+    vertical-align:top;
 }
 
 .areas-gray-background {
     background-image: url('/Content/images/AreasGrayBackground.png');
     background-repeat: repeat-y;
-    width: 1152px;
+    
+    max-width: 1152px;
     padding: 50px;
     margin-bottom: 30px;
     font-family: 'Times New Roman';
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-size: 1.3em;
-    margin-left: -20px;
+    margin-left: -15px;
+}
+
+.areas-form-gray-background {
+    background-image: url('/Content/images/AreasGrayBackground.png');
+    background-repeat: repeat-y;
+    max-width: 1152px;
+    padding: 50px;
+    margin-bottom: 30px;
+    font-family: 'Times New Roman';
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    font-size: 1.3em;
 }
 
 .gray-header {

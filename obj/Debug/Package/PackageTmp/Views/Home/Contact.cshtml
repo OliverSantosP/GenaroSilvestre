@@ -5,83 +5,82 @@
 <div class="noticias-header">
     Contactos
 </div>
-<div class="noticia-wrapper">
-    <div class="noticia-container">
-        <div class="areas-image-frame">
-            <div class="noticia-image">
-                <img src="~/Content/images/Contactos-Image.jpg" />
-            </div>
+<div class="overall-wrapper">
+    <div class="areas-image-frame">
+        <div class="noticia-image">
+            <img src="~/Content/images/Contactos-Image.jpg" />
         </div>
-        <div class="areas-image-shadow"></div>
-        <div class="noticia-text-wrapper">
-            <div class="areas-gray-background">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="title-medium">Dirección</div>
-                        <div class="times-regular">
-                            Edificio Patio Panatlantic - Suite # 17,<br />
-                            Calle General Gregorio Luperon # 4,<br />
-                            casi esquina Francisco Rihiez Ducoudray,<br />
-                            Centro de la ciudad de La Romana, Rep. Dom.
-                        </div>
-
-                    </div>
-                        <div class="col-md-6">
-                            <div class="title-medium">Teléfono</div>
-                            <div class="times-regular">
-                                809-813-3131
-                            </div>
-                            <br />
-                            <div class="title-medium">E.Mail</div>
-                            <div class="times-regular">
-                                genarosilvestre@gmail.com
-                            </div>
-                        </div>
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="areas-image-frame">
-            <div class="noticia-image">
-                <div id="map_canvas"></div>
-            </div>
-        </div>
-        <div class="areas-image-shadow"></div>
-
-
+    </div>
+    <div class="areas-image-shadow"></div>
+    <div class="noticia-text-wrapper">
         <div class="areas-gray-background">
             <div class="row">
-                <div class="gray-header">
-                    Formulario de contacto
-                </div>
                 <div class="col-md-6">
+                    <div class="title-medium">Dirección</div>
+                    <div class="times-regular">
+                        Edificio Patio Panatlantic - Suite # 17,<br />
+                        Calle General Gregorio Luperon # 4,<br />
+                        casi esquina Francisco Rihiez Ducoudray,<br />
+                        Centro de la ciudad de La Romana, Rep. Dom.
+                    </div>
 
-                    <div class="input-spaced">
-                        <input type="text" name="Nombre" placeholder="Nombre" class="input-wide"/><br />
-                    </div>
-                    <div class="input-spaced">
-                        <input type="text" name="Dirección" placeholder="Dirección" class="input-wide" /><br />
-                    </div>
-                    <div class="input-spaced">
-                        <input type="text" name="Teléfono" placeholder="Teléfono" class="input-wide" /><br />
-                    </div>
-                    <div class="input-spaced">
-                        <input type="text" name="Email" placeholder="Email" class="input-wide" /><br />
-                    </div>
-                    <div class="input-spaced">
-                        <input type="text" name="Ciudad" placeholder="Ciudad" class="input-wide" />
-                    </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="input-spaced">
-                        <textarea class="span6" rows="12" placeholder="Comentario" required ></textarea>
+                    <div class="title-medium">Teléfono</div>
+                    <div class="times-regular">
+                        809-813-3131
+                    </div>
+                    <br />
+                    <div class="title-medium">E.Mail</div>
+                    <div class="times-regular">
+                        genarosilvestre@gmail.com
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
-</div>
+
+    <div class="areas-map-image-frame">
+        <div class="noticia-image">
+            <div id="map_canvas"></div>
+        </div>
+    </div>
+    <div class="areas-image-shadow"></div>
+
+
+    <div class="areas-form-gray-background">
+        <div class="row">
+            <div class="gray-header">
+                Formulario de contacto
+            </div>
+            <div class="col-md-6">
+                <div class="input-spaced">
+                    <input type="text" name="Nombre" placeholder="Nombre" class="input-wide" /><br />
+                </div>
+                <div class="input-spaced">
+                    <input type="text" name="Dirección" placeholder="Dirección" class="input-wide" /><br />
+                </div>
+                <div class="input-spaced">
+                    <input type="text" name="Teléfono" placeholder="Teléfono" class="input-wide" /><br />
+                </div>
+                <div class="input-spaced">
+                    <input type="text" name="Email" placeholder="Email" class="input-wide" /><br />
+                </div>
+                <div class="input-spaced">
+                    <input type="text" name="Ciudad" placeholder="Ciudad" class="input-wide" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-spaced">
+                    <textarea class="span6" rows="12" placeholder="Comentario" required></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="form-button">
+            <input type="submit" class="btn btn-default" value="Enviar" />
+        </div>
+    </div>
 
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script>
