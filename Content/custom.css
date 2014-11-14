@@ -5,29 +5,43 @@
 
 .header-text {
     font-family: 'Times New Roman';
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-style: italic;
     color: #000;
-    padding-left: 245px;
+    padding-left: 25px;
+    padding-top:25px;
     font-size: 1.7em;
-    margin-top: -315px;
+    text-align: left;
+    max-height: 290px;
+    overflow-y: hidden;
 }
 
 .header-link {
     font-family: 'Times New Roman';
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-style: italic;
     font-weight: bold;
     color: #d93920;
-    padding-left: 245px;
+    padding-left: 25px;
     font-size: 1.6em;
     padding-top: 20px;
+    text-align: left;
+}
+
+.main {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .menu-left {
+    background-color: #000000;
+    float: left;
+    width: 197px;
 }
 
 .menu-right {
-    position: absolute;
-    top: 0px;
+    margin-left: 197px;
+    height: 356px;
 }
 
 .menu-right-background {
@@ -51,53 +65,63 @@
 
 .noticias-header {
     font-family: 'Times New Roman';
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     color: #d93920;
     text-transform: uppercase;
-    padding-left: 229px;
+    padding-left: 25px;
     font-size: 4.8em;
-    padding-top: 380px;
+    top: 200px;
     padding-bottom: 10px;
     letter-spacing: 8px;
+    text-align: left;
 }
 
 .title-medium {
     font-family: 'Times New Roman';
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     color: #d93920;
     text-transform: uppercase;
     font-size: 1.5em;
     font-weight: bold;
+
 }
 
 .areas-header {
     font-family: 'Times New Roman';
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     color: #d93920;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 2em;
-    padding-left: 130px;
+    padding-left: 13px;
+    padding-top: 20px;
     padding-bottom: 10px;
     letter-spacing: 7px;
 }
 
 .times-italic {
     font-family: "Times New Roman";
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-style: italic;
 }
 
 .times-regular {
     font-family: "Times New Roman";
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
 
 .form-subtitle {
     font-family: "Times New Roman";
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-size: 1.5em;
     font-weight: bold;
 }
 
 .form-label {
     font-family: "Times New Roman";
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-size: 1.3em;
-    padding-left:15px;
+    padding-left: 15px;
     font-weight: bold;
 }
 
@@ -121,8 +145,8 @@
 }
 
 .noticia-wrapper {
-    padding-left: 229px;
-    display: inline-block;
+    padding-left: 22px;
+    overflow-x: scroll;
 }
 
 .noticia-text-wrapper {
@@ -135,13 +159,14 @@
 }
 
 .areas-wrapper {
-    padding-left: 130px;
+    padding-left: 13px;
 }
 
 .areas-text-wrapper {
-    padding-left: 130px;
+    padding-left: 13px;
     width: 1152px;
     font-family: 'Times New Roman';
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-size: 1.3em;
 }
 
@@ -151,17 +176,19 @@
 }
 
 .noticia-image {
-    height: 300px;
-    width: 533px;
-}
+    
+} img
+  {
+max-width:500px;
+  }
 
 .noticia-image-frame {
-    width: 583px;
-    height: 330px;
     padding: 15px;
     border: solid;
     border-width: 1px;
     border-color: #c5c5c5;
+    max-width: 532px;
+    
 }
 
 .areas-image-frame {
@@ -174,7 +201,7 @@
 }
 
 .noticia-image-shadow {
-    background-image: url('/Content/images/NoticiasFrameShadow.jpg');
+    background-image: url('/Content/images/NoticiasFrameShadow.png');
     background-repeat: no-repeat;
     padding-top: 53px;
 }
@@ -193,12 +220,14 @@
     padding: 50px;
     margin-bottom: 30px;
     font-family: 'Times New Roman';
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-size: 1.3em;
     margin-left: -20px;
 }
 
 .gray-header {
     font-family: 'Times New Roman';
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-size: 2.3em;
     color: #C0C0C0;
     text-transform: uppercase;
@@ -207,11 +236,12 @@
 }
 
 .input-spaced {
-padding-bottom: 12px;
-padding-top: 18px;
-font-family: "Times New Roman";
-color: #C0C0C0;
-font-size: 1.18em;
+    padding-bottom: 12px;
+    padding-top: 18px;
+    font-family: "Times New Roman";
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    color: #C0C0C0;
+    font-size: 1.18em;
 }
 
 .input-wide {
@@ -233,6 +263,7 @@ textarea {
 
 .noticia-title {
     font-family: 'Times New Roman';
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-style: italic;
     font-weight: bold;
     color: #000;
@@ -244,15 +275,19 @@ textarea {
 
 .noticia-text {
     font-family: 'Times New Roman';
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-style: italic;
     color: #000;
+    max-width: 510px;
 }
 
 .noticia-link {
     font-family: 'Times New Roman';
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-style: italic;
     font-weight: bold;
     color: #d93920;
     font-size: 1.0em;
     padding-top: 10px;
+    padding-bottom: 20px;
 }

@@ -335,7 +335,6 @@ body {
     font-size: 14px;
     line-height: 1.428571429;
     color: #333333;
-    background-color: #ffffff;
 }
 
 input,
@@ -4473,7 +4472,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
         text-align: center;
         padding-top: 20px;
         background-color:#000;
-        height: 1500px;
+        width: 197px;
     }
 
         .navbar-nav > li {

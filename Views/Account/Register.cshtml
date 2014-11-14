@@ -15,19 +15,25 @@
         <hr />
         @Html.ValidationSummary()
         <div class="form-group">
-            <div class="form-label">Nombre de usuario</div>
+            @Html.LabelFor(m => m.UserName, new { @class = "form-label" })
             <div class="col-md-10">
                 @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
             </div>
         </div>
         <div class="form-group">
-            <div class="form-label">Contraseña</div>
+            @Html.LabelFor(m => m.Email, new { @class = "form-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, new { @class = "form-label" })
             <div class="col-md-10">
                 @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
             </div>
         </div>
         <div class="form-group">
-            <div class="form-label">Confirme contraseña</div>
+            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "form-label" })
             <div class="col-md-10">
                 @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
                 <br />
