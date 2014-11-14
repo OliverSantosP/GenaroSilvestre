@@ -335,7 +335,6 @@ body {
     font-size: 14px;
     line-height: 1.428571429;
     color: #333333;
-    background-color: #ffffff;
 }
 
 input,
@@ -2175,10 +2174,11 @@ textarea.input-lg {
 }
 
 .btn {
+    font-family: "Times New Roman";
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: normal;
     line-height: 1.428571429;
     text-align: center;
@@ -4472,7 +4472,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
         text-align: center;
         padding-top: 20px;
         background-color:#000;
-        height: 1500px;
+        width: 197px;
     }
 
         .navbar-nav > li {

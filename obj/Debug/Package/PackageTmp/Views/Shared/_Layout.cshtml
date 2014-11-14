@@ -9,56 +9,55 @@
     <link href="~/Content/custom.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="menu-left">
-        <nav class="navbar navbar-default" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <img src="~/Content/images/Header.png" class="navbar-brand-logo" />
-                </a>
+    <div class="main">
+                <div class="menu-left">
+                    <nav class="navbar navbar-default" role="navigation">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">
+                                <img src="~/Content/images/Header.png" class="navbar-brand-logo" />
+                            </a>
+                        </div>
+                        <div class="menu-spacer"></div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
+                                <li><a href="/Home/Perfil">Perfil ejecutivo</a></li>
+                                <li><a href="#">Perfil de la firma</a></li>
+                                <li><a href="#">Notariado y legalización</a></li>
+                                <li>
+                                    <a href="/Home/Contact">Contactos</a><br />
+                                    <div class="social-mini">
+                                        <a href="http://www.facebook.com"><img src="~/Content/images/FBLogo.png" /></a>
+                                        <a href="http://www.twitter.com"><img src="~/Content/images/TWLogo.png" /></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </nav>
+                </div>
+                <div class="menu-right">
+                    <div class="menu-right-background hidden-sm hidden-xs">
+                        <div class="header-text">
+                            GENARO SILVESTRE, ESTUDIO JURIDICO – LAW OFFICE es un bufete de abogados, con sede principal en la ciudad de La Romana, en la región Este de la República Dominicana, con oficinas en Santo Domingo, Distrito Nacional, especializada en la asistencia y asesoría legal a personas públicas o privadas para la protección y defensa de sus intereses económicos, legales y derechos constitucionales, así como en la representación judicial y extrajudicial en casos de litigios Civiles, Administrativos y Arbitrales.
+                        </div>
+                        <div class="header-link">
+                            Leer Más
+                        </div>
+                    </div>
+                    <div class="container body-content">
+                        @RenderBody()
+                    </div>
+                    <footer></footer>
+                </div>
             </div>
-            <div class="menu-spacer"></div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
-                    <li><a href="/Home/Perfil">Perfil ejecutivo</a></li>
-                    <li><a href="#">Perfil de la firma</a></li>
-                    <li><a href="#">Notariado y legalización</a></li>
-                    <li><a href="/Home/Contact">Contactos</a><br />
-                        <div class="social-mini">
-                            <a href="http://www.facebook.com"><img src="~/Content/images/FBLogo.png" /></a>
-                            <a href="http://www.twitter.com"><img src="~/Content/images/TWLogo.png" /></a>
-                        </div></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-
-            
-        </nav>
-        <div class="menu-right">
-            <div class="menu-right-background"></div>
-            <div class="header-text">
-                GENARO SILVESTRE, ESTUDIO JURIDICO – LAW OFFICE es un bufete de abogados, con sede principal en la ciudad de La Romana, en la región Este de la República Dominicana, con oficinas en Santo Domingo, Distrito Nacional, especializada en la asistencia y asesoría legal a personas públicas o privadas para la protección y defensa de sus intereses económicos, legales y derechos constitucionales, así como en la representación judicial y extrajudicial en casos de litigios Civiles, Administrativos y Arbitrales.
-            </div>
-            <div class="header-link">
-                Leer Más
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="menu-right">
-        <div class="container body-content">
-            @RenderBody()
-        </div>
-        <footer></footer>
-    </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
