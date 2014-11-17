@@ -81,11 +81,11 @@
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     color: #d93920;
     text-transform: uppercase;
-    font-size: 1.5em;
-    font-weight: bold;
 }
 
 .areas-header {
+    font-size: 1.5em;
+    font-weight: bold;
     font-family: 'Times New Roman';
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     color: #d93920;
@@ -107,6 +107,7 @@
 .times-regular {
     font-family: "Times New Roman";
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    font-size: 1.1em;
 }
 
 .form-subtitle {
@@ -124,12 +125,8 @@
     font-weight: bold;
 }
 
-.profile {
-    margin-top: -20px;
 
-}
-
-.form-button{
+.form-button {
 }
 
 .social-mini {
@@ -138,14 +135,25 @@
     text-align: center;
 }
 
-.vertical-line {
-    width: 1px; /* Line width */
-    background-color: black; /* Line color */
-    height: 100%; /* Override in-line if you want specific height. */
-    float: left; /* Causes the line to float to left of content. 
-    You can instead use position:absolute or display:inline-block
-    if this fits better with your design */
+.vertical-line-gray {
+    width: 2px;
+    background-color: rgb(229, 229, 229);
+    height: 250px;
+    margin-left: auto;
+    margin-bottom: -205px;
+    margin-top: -50px;
 }
+
+.vertical-line-white {
+    width: 2px;
+    background-color: #FFF;
+    height: 250px;
+    margin-right: auto;
+    margin-bottom: -205px;
+    margin-top: -50px;
+    margin-left:-30px;
+}
+
 
 .overall-wrapper {
     padding-left: 22px;
@@ -218,25 +226,24 @@ img {
     border: solid;
     border-width: 1px;
     border-color: #c5c5c5;
-    margin-bottom:15px;
+    margin-bottom: 15px;
 }
 
 .noticia-image-shadow {
     max-width: 100%;
     height: auto;
-    vertical-align:top;
+    vertical-align: top;
 }
 
 .areas-image-shadow {
     max-width: 100%;
     height: auto;
-    vertical-align:top;
+    vertical-align: top;
 }
 
 .areas-gray-background {
     background-image: url('/Content/images/AreasGrayBackground.png');
     background-repeat: repeat-y;
-    
     max-width: 1152px;
     padding: 50px;
     margin-bottom: 30px;
@@ -244,6 +251,7 @@ img {
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-size: 1.3em;
     margin-left: -15px;
+    overflow: hidden;
 }
 
 .areas-form-gray-background {

@@ -107,6 +107,7 @@
 .times-regular {
     font-family: "Times New Roman";
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    font-size: 1.1em;
 }
 
 .form-subtitle {
@@ -250,6 +251,7 @@ img {
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-size: 1.3em;
     margin-left: -15px;
+    overflow: hidden;
 }
 
 .areas-form-gray-background {
