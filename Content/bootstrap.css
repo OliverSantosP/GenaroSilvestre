@@ -354,7 +354,7 @@ textarea {
     }
 
 a {
-    color: #428bca;
+    color: #d93920;
     text-decoration: none;
 }
 
@@ -4478,7 +4478,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
         .navbar-nav > li {
             float: left;
         }
-
             .navbar-nav > li > a {
                 padding-top: 15px;
                 padding-bottom: 15px;
@@ -4622,7 +4621,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     .navbar-default .navbar-nav > .active > a,
     .navbar-default .navbar-nav > .active > a:hover,
     .navbar-default .navbar-nav > .active > a:focus {
-        color: #ffffff;
+        color: #d93920;
         background-color: #000000;
     }
 

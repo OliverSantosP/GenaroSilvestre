@@ -16,6 +16,18 @@
     <div class="noticia-text-wrapper">
         <div class="areas-gray-background">
             <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6 hidden-sm hidden-xs">
+                        <div class="vertical-line-gray">
+                        </div>
+                    </div>
+                    <div class="col-md-6 hidden-sm hidden-xs">
+                        <div class="vertical-line-white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-6">
                     <div class="title-medium">Dirección</div>
                     <div class="times-regular">
@@ -24,7 +36,6 @@
                         casi esquina Francisco Rihiez Ducoudray,<br />
                         Centro de la ciudad de La Romana, Rep. Dom.
                     </div>
-
                 </div>
                 <div class="col-md-6">
                     <div class="title-medium">Teléfono</div>
@@ -49,46 +60,47 @@
     </div>
     <div class="areas-image-shadow"></div>
 
-@using (Html.BeginForm("Contact", "Home"))
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="areas-form-gray-background">
-        <div class="row">
-            <div class="gray-header">
-                Formulario de contacto
-            </div>
-            <div class="col-md-6">
-                @Html.ValidationSummary()
+    @using (Html.BeginForm("Contact", "Home"))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="areas-form-gray-background">
+
+            <div class="row">
+                <div class="gray-header">
+                    Formulario de contacto
+                </div>
                 <div class="times-regular">@ViewBag.ContactMessage</div>
-                <div class="input-spaced">
-                    @Html.TextBoxFor(m => m.Name, new  { @class = "input-wide", @placeholder = "Nombre"})
+                <div class="col-md-6">
+                    @Html.ValidationSummary()
+                    <div class="input-spaced">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "input-wide", @placeholder = "Nombre" })
+                    </div>
+                    <div class="input-spaced">
+                        @Html.TextBoxFor(m => m.Address, new { @class = "input-wide", @placeholder = "Dirección" })
+                    </div>
+                    <div class="input-spaced">
+                        @Html.TextBoxFor(m => m.Phone, new { @class = "input-wide", @placeholder = "Telefono" })
+                    </div>
+                    <div class="input-spaced">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "input-wide", @placeholder = "Email" })
+                    </div>
+                    <div class="input-spaced">
+                        @Html.TextBoxFor(m => m.City, new { @class = "input-wide", @placeholder = "Ciudad" })
+                    </div>
                 </div>
-                <div class="input-spaced">
-                    @Html.TextBoxFor(m => m.Address, new { @class = "input-wide", @placeholder = "Dirección" })
-                </div>
-                <div class="input-spaced">
-                    @Html.TextBoxFor(m => m.Phone, new { @class = "input-wide", @placeholder = "Telefono" })
-                </div>
-                <div class="input-spaced">
-                    @Html.TextBoxFor(m => m.Email, new { @class = "input-wide", @placeholder = "Email" })
-                </div>
-                <div class="input-spaced">
-                    @Html.TextBoxFor(m => m.City, new { @class = "input-wide", @placeholder = "Ciudad" })
+                <div class="col-md-6">
+                    <div class="input-spaced">
+                        @Html.TextAreaFor(m => m.Comment, new { @class = "input-wide span6", @placeholder = "Comentario", @rows = "12" })
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="input-spaced">
-                    @Html.TextAreaFor(m => m.Comment, new { @class = "input-wide span6", @placeholder = "Comentario", @rows = "12" })
-                </div>
+            <div class="form-button">
+                <input type="submit" class="btn btn-default" value="Enviar" />
             </div>
         </div>
-        <div class="form-button">
-            <input type="submit" class="btn btn-default" value="Enviar" />
-        </div>
-    </div>
-}
-    </div>
+    }
+</div>
 
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script>
