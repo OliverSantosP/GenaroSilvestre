@@ -15,38 +15,52 @@
     <div class="row">
         <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Title)
-        </div><div class="col-md-2 times-bold">
+        </div>
+        <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Text)
-        </div><div class="col-md-3 times-bold">
+        </div>
+        <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Image)
-        </div><div class="col-md-1 times-bold">
+        </div>
+        <div class="col-md-1 times-bold">
             @Html.DisplayNameFor(model => model.Created)
-        </div><div class="col-md-1 times-bold">
+        </div>
+        <div class="col-md-1 times-bold">
             @Html.DisplayNameFor(model => model.Updated)
-        </div><div class="col-md-2 times-bold">
+        </div>
+        <div class="col-md-1 times-bold">
             @Html.DisplayNameFor(model => model.User)
         </div>
-    </div>
-    @foreach (var item in Model)
-    {
-        <div class="row">
-            <div class="col-md-2 times-regular">
-                @Html.DisplayFor(modelItem => item.Title)
-            </div><div class="col-md-2 times-regular">
-                @Html.DisplayFor(modelItem => item.Text)
-            </div><div class="col-md-3 noticias-image-thumb">
-                <img src="@item.Image" />
-            </div><div class="col-md-1 times-regular">
-                @Html.DisplayFor(modelItem => item.Created)
-            </div><div class="col-md-1 times-regular">
-                @Html.DisplayFor(modelItem => item.Updated)
-            </div><div class="col-md-1 times-regular">
-                @Html.DisplayFor(modelItem => item.User)
-            </div><div class="col-md-2 times-regular">
-                @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Borrar", "Delete", new { id = item.Id })
-            </div>
+        <div class="col-md-2">
+
         </div>
-    }
-</div>
+        </div>
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <div class="col-md-2 times-regular">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </div>
+                <div class="col-md-2 times-regular">
+                    @Html.DisplayFor(modelItem => item.Text).ToString().Substring(0,100)...
+                </div>
+                <div class="col-md-2 noticias-image-thumb">
+                    <img src="@item.Image" />
+                </div>
+                <div class="col-md-1 times-regular">
+                    @Html.DisplayFor(modelItem => item.Created)
+                </div>
+                <div class="col-md-1 times-regular">
+                    @Html.DisplayFor(modelItem => item.Updated)
+                </div>
+                <div class="col-md-1 times-regular">
+                    @Html.DisplayFor(modelItem => item.User)
+                </div>
+                <div class="col-md-2 times-regular">
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Ver", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Borrar", "Delete", new { id = item.Id })
+                </div>
+            </div>
+        }
+    </div>

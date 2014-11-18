@@ -1,73 +1,76 @@
 ﻿@model GenaroSilvestre.Models.News
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Borrar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
+<div class="noticias-header">Borrar Noticia</div>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>News</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
+<div class="noticia-wrapper">
+    <div class="times-bold">
+        Está seguro que desea borrar esta noticia?
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Title)
-        </dt>
-
-        <dd>
+        </div><div class="col-md-6 times-regular">
             @Html.DisplayFor(model => model.Title)
-        </dd>
-
-        <dt>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Text)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Text)
-        </dd>
-
-        <dt>
+        </div><div class="col-md-6 times-regular">
+            @Html.DisplayFor(model => model.Text).ToString().Substring(0, 300)...
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Image)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Image)
-        </dd>
-
-        <dt>
+        </div><div class="col-md-2 noticias-image-thumb">
+            <img src="@Html.ValueFor(model=> model.Image)" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Created)
-        </dt>
-
-        <dd>
+        </div><div class="col-md-2 times-regular">
             @Html.DisplayFor(model => model.Created)
-        </dd>
-
-        <dt>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Updated)
-        </dt>
-
-        <dd>
+        </div><div class="col-md-2 times-regular">
             @Html.DisplayFor(model => model.Updated)
-        </dd>
-
-        <dt>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.User)
-        </dt>
-
-        <dd>
+        </div><div class="col-md-2 times-regular">
             @Html.DisplayFor(model => model.User)
-        </dd>
+        </div>
+    </div>
 
-    </dl>
-
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+        <div class="row">
+            <div class="form-actions no-color">
+                <div class="col-md-3">
+                    <br />
+                    <input type="submit" value="Borrar" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <br />
+                @Html.ActionLink("Volver a la lista", "Index")
+            </div>
         </div>
     }
 </div>

@@ -5,68 +5,57 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<div class="noticias-header">
+    Editar Noticia
+</div>
 
-@using (Html.BeginForm())
+@using ((Html.BeginForm("Edit", "News",
+      FormMethod.Post, new { enctype = "multipart/form-data" })))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>News</h4>
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.Id)
-
+        @Html.HiddenFor(model => model.Created)
+        @Html.HiddenFor(model => model.Image)
+        @Html.HiddenFor(model => model.User)
         <div class="form-group">
-            @Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.Title, new { @class = "form-label col-md-1" })
+            <div class="col-md-3">
                 @Html.EditorFor(model => model.Title)
                 @Html.ValidationMessageFor(model => model.Title)
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Text, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Text)
+            @Html.LabelFor(model => model.Text, new { @class = "form-label col-md-1" })
+            <div class="col-md-8">
+                @Html.TextAreaFor(model => model.Text)
                 @Html.ValidationMessageFor(model => model.Text)
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Image, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Image)
-                @Html.ValidationMessageFor(model => model.Image)
+        <div class="row">
+            <div class="form-label col-md-1">Imagen</div>
+            <div class="col-md-3">
+                <div class="noticias-image-thumb">
+                    <img src="@Model.Image" />
+                </div>
             </div>
+        </div>
+        <div class="row">
+            <br />
+            <div class="col-md-3">
+                <input type="file" name="file" value="Image">
+            </div>
+            <br />
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Created, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Created)
-                @Html.ValidationMessageFor(model => model.Created)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Updated, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Updated)
-                @Html.ValidationMessageFor(model => model.Updated)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.User, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.User)
-                @Html.ValidationMessageFor(model => model.User)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
+            <br />
+            <div class="col-md-3">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
@@ -74,5 +63,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Volver a la lista", "Index")
 </div>
