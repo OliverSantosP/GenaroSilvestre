@@ -117,8 +117,30 @@ namespace GenaroSilvestre.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,Text,Image,Created,Updated,User")] News news)
+        public ActionResult Edit([Bind(Include = "Id,Title,Text,Image,Created,Updated,User")] News news, HttpPostedFileBase file)
         {
+            news.Updated = System.DateTime.Now;
+            
+            var image = file;
+            if (image != null)
+            {
+                // Retrieve storage account from connection string.
+                CloudStorageAccount storageAccount = CloudStorageAccount.Parse(ConfigurationManager.ConnectionStrings["StorageConnectionString"].ConnectionString);
+
+                // Create the blob client.
+                CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+
+                // Retrieve reference to a previously created container.
+                CloudBlobContainer container = blobClient.GetContainerReference("genarosilvestreimages");
+
+                // Retrieve reference to a blob named "myblob".
+                CloudBlockBlob blockBlob = container.GetBlockBlobReference(file.FileName);
+
+                blockBlob.UploadFromStream(file.InputStream);
+
+                news.Image = blockBlob.Uri.ToString();
+            }
+
             if (ModelState.IsValid)
             {
                 db.Entry(news).State = EntityState.Modified;
@@ -149,6 +171,24 @@ namespace GenaroSilvestre.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             News news = db.News.Find(id);
+
+            //Deleting BLOB
+
+            // Retrieve storage account from connection string.
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(ConfigurationManager.ConnectionStrings["StorageConnectionString"].ConnectionString);
+
+            // Create the blob client.
+            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+
+            // Retrieve reference to a previously created container.
+            CloudBlobContainer container = blobClient.GetContainerReference("genarosilvestreimages");
+
+            // Retrieve reference to a blob named "myblob".
+            CloudBlockBlob blockBlob = container.GetBlockBlobReference(news.Image.Split('/').Last());
+
+            // Delete the blob.
+            blockBlob.Delete();
+
             db.News.Remove(news);
             db.SaveChanges();
             return RedirectToAction("Index");

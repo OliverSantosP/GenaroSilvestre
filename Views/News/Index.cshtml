@@ -5,60 +5,48 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<div class="noticias-header">Lista de noticias</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
+
+<div class="noticia-wrapper">
+    <p>
+        @Html.ActionLink("Crear Noticia", "Create", "", new { @class = "times-regular" })
+    </p>
+    <div class="row">
+        <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
+        </div><div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Text)
-        </th>
-        <th>
+        </div><div class="col-md-3 times-bold">
             @Html.DisplayNameFor(model => model.Image)
-        </th>
-        <th>
+        </div><div class="col-md-1 times-bold">
             @Html.DisplayNameFor(model => model.Created)
-        </th>
-        <th>
+        </div><div class="col-md-1 times-bold">
             @Html.DisplayNameFor(model => model.Updated)
-        </th>
-        <th>
+        </div><div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.User)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Text)
-        </td>
-        <td>
-            <img src="@item.Image"/>
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Created)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Updated)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.User)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Borrar", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
-</table>
+        </div>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="col-md-2 times-regular">
+                @Html.DisplayFor(modelItem => item.Title)
+            </div><div class="col-md-2 times-regular">
+                @Html.DisplayFor(modelItem => item.Text)
+            </div><div class="col-md-3 noticias-image-thumb">
+                <img src="@item.Image" />
+            </div><div class="col-md-1 times-regular">
+                @Html.DisplayFor(modelItem => item.Created)
+            </div><div class="col-md-1 times-regular">
+                @Html.DisplayFor(modelItem => item.Updated)
+            </div><div class="col-md-1 times-regular">
+                @Html.DisplayFor(modelItem => item.User)
+            </div><div class="col-md-2 times-regular">
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Borrar", "Delete", new { id = item.Id })
+            </div>
+        </div>
+    }
+</div>

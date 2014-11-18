@@ -6,16 +6,14 @@
 }
 
 <div class="noticias-header">
-   @Html.DisplayFor(model => model.Title)
+    @Html.DisplayFor(model => model.Title)
 </div>
 <div class="menu-spacer"></div>
 
 <div class="noticia-wrapper">
     <img src="@Html.DisplayFor(model => model.Image)" />
-        <hr />
-        <dl class="dl-horizontal">
-            <dd>
-                @Html.DisplayFor(model => model.Text)
-            </dd>
-        </dl>
+    <hr />
+    <div class="times-regular">
+        @Html.DisplayFor(model => model.Text)
     </div>
+</div>

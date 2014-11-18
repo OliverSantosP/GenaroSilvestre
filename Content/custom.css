@@ -3,6 +3,10 @@
     height: 464px;
 }
 
+.noticias-image-thumb{
+    max-width: 200px;
+}
+
 .header-text {
     font-family: 'Times New Roman';
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -106,6 +110,13 @@
 
 .times-regular {
     font-family: "Times New Roman";
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    font-size: 1.1em;
+}
+
+.times-bold {
+    font-family: "Times New Roman";
+    font-weight:bold;
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-size: 1.1em;
 }
