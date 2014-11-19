@@ -53,7 +53,7 @@ namespace GenaroSilvestre.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Invalid username or password.");
+                    ModelState.AddModelError("", "Nombre de usuario o password incorrecto.");
                 }
             }
 
@@ -119,10 +119,10 @@ namespace GenaroSilvestre.Controllers
         public ActionResult Manage(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
+                message == ManageMessageId.ChangePasswordSuccess ? "Se ha cambiado su contraseña."
+                : message == ManageMessageId.SetPasswordSuccess ? "Se ha establecido su contraseña."
                 : message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
-                : message == ManageMessageId.Error ? "An error has occurred."
+                : message == ManageMessageId.Error ? "Ha ocurrido un error."
                 : "";
             ViewBag.HasLocalPassword = HasPassword();
             ViewBag.ReturnUrl = Url.Action("Manage");
@@ -131,6 +131,7 @@ namespace GenaroSilvestre.Controllers
 
         //
         // POST: /Account/Manage
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Manage(ManageUserViewModel model)

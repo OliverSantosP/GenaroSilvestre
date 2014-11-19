@@ -9,4 +9,7 @@
   <parameter name="StorageConnectionString-Web.config Connection String" description="StorageConnectionString Connection String used in web.config by the application to access the database." defaultValue="DefaultEndpointsProtocol=https;AccountName=oliversantosp;AccountKey=bpSQ5azQk65+BxnLkCFClfqDHxRNig5HJgex0L9kEY4RRu6SoQ4HvN+x6cnEJBBDBohU9a74yOakJyVZyvmGQw==" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\Oliver\ Santos\\Documents\\Visual\ Studio\ 2013\\Projects\\GenaroSilvestre\\GenaroSilvestre\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='StorageConnectionString']/@connectionString" />
   </parameter>
+  <parameter name="GenaroSilvestre.Models.ApplicationDbContext-Web.config Connection String" description="GenaroSilvestre.Models.ApplicationDbContext Connection String used in web.config by the application to access the database." defaultValue="GenaroSilvestre.Models.ApplicationDbContext_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Oliver\ Santos\\Documents\\Visual\ Studio\ 2013\\Projects\\GenaroSilvestre\\GenaroSilvestre\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GenaroSilvestre.Models.ApplicationDbContext']/@connectionString" />
+  </parameter>
 </parameters>

@@ -50,8 +50,7 @@ namespace GenaroSilvestre.Controllers
                 try
                 {
                     MailMessage mailMsg = new MailMessage();
-                    mailMsg.To.Add(new MailAddress("oliversantosp@gmail.com", "Oliver Santos"));
-                    mailMsg.To.Add(new MailAddress("srsamuelvasquez@gmail.com", "Samuel Vasquez"));
+                    mailMsg.To.Add(new MailAddress("genarosilvestre@gmail.com", "Genaro Silvestre"));
                     mailMsg.From = new MailAddress("genarosilvestre@gmail.com", "GenaroSilvestre.com");
 
                     mailMsg.Subject = "Nuevo mensaje desde GenaroSilvestre.com";
