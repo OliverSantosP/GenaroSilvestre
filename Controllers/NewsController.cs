@@ -47,7 +47,6 @@ namespace GenaroSilvestre.Controllers
         }
 
         // GET: /News/Create
-        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -56,7 +55,6 @@ namespace GenaroSilvestre.Controllers
         // POST: /News/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Title,Text,Image,Created,Updated,User")] News news, HttpPostedFileBase file)
@@ -103,7 +101,6 @@ namespace GenaroSilvestre.Controllers
         }
 
         // GET: /News/Edit/5
-        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -121,7 +118,6 @@ namespace GenaroSilvestre.Controllers
         // POST: /News/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Title,Text,Image,Created,Updated,User")] News news, HttpPostedFileBase file)
@@ -158,7 +154,6 @@ namespace GenaroSilvestre.Controllers
         }
 
         // GET: /News/Delete/5
-        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -174,7 +169,6 @@ namespace GenaroSilvestre.Controllers
         }
 
         // POST: /News/Delete/5
-        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
