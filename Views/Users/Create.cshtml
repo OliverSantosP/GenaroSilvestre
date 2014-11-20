@@ -1,0 +1,84 @@
+﻿@model GenaroSilvestre.Models.Users
+
+
+<div class="noticias-header">
+    Registrarse
+</div>
+
+@using (Html.BeginForm("Create", "Users", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="noticia-wrapper">
+
+        @Html.AntiForgeryToken()
+        <div class="form-subtitle">Crear una nueva cuenta.</div>
+        <hr />
+        @Html.ValidationSummary()
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.Name, new { @class = "form-label" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.LastName, new { @class = "form-label" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.LastName)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.UserName, new { @class = "form-label" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.UserName)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.Email, new { @class = "form-label" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.Password, new { @class = "form-label" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" value="Crear" class="btn btn-default" />
+            </div>
+        </div>
+
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

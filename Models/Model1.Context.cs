@@ -26,5 +26,6 @@ namespace GenaroSilvestre.Models
         }
     
         public virtual DbSet<News> News { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }

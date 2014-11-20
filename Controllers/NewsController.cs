@@ -85,7 +85,9 @@ namespace GenaroSilvestre.Controllers
                     CloudBlockBlob blockBlob = container.GetBlockBlobReference(file.FileName);
 
                     blockBlob.UploadFromStream(file.InputStream);
-                    news.User = "1";
+                    GenaroSilvestre.Models.Users User;
+                    User = db.Users.Where(u => u.Id == 1).FirstOrDefault();
+                    news.User = User;
                     news.Created = System.DateTime.Now;
                     news.Updated = System.DateTime.Now;
                     news.Image = blockBlob.Uri.ToString();

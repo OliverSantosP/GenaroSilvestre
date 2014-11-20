@@ -20,6 +20,7 @@ namespace GenaroSilvestre.Models
         public string Image { get; set; }
         public System.DateTime Created { get; set; }
         public System.DateTime Updated { get; set; }
-        public string User { get; set; }
+    
+        public virtual Users User { get; set; }
     }
 }
