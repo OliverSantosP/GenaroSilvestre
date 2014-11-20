@@ -54,7 +54,7 @@
                     @Html.DisplayFor(modelItem => item.Updated)
                 </div>
                 <div class="col-md-1 times-regular">
-                    @Html.DisplayFor(modelItem => item.User)
+                    @Html.DisplayFor(modelItem => item.User.Name) @Html.DisplayFor(modelItem => item.User.LastName)
                 </div>
                 <div class="col-md-2 times-regular">
                     @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |

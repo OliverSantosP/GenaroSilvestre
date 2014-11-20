@@ -24,7 +24,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Title, new { @class = "form-label col-md-1" })
                 <div class="col-md-3">
-                    @Html.EditorFor(model => model.Title)
+                    @Html.EditorFor(model => model.Title, new { @class = "input-wide" })
                     @Html.ValidationMessageFor(model => model.Title)
                 </div>
             </div>

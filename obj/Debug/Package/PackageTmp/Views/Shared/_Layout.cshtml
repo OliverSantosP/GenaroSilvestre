@@ -6,7 +6,6 @@
     <title>Genaro Silvestre - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <link href="~/Content/custom.css" rel="stylesheet" />
 </head>
 <body>
     <div class="main">
@@ -28,51 +27,61 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                        @{ 
-                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
-                             {
+                        @{
+                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString() == "News")
+                            {
+                                <li class="active"><a href="/News/Home">Noticias</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="/News/Home">Noticias</a></li>
+                            }
+
+
+                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
+                            {
                                 <li class="active"><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
-                             }
-                             else
-                             {
+                            }
+                            else
+                            {
                                 <li><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
-                             }
+                            }
 
-                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Perfil")
-                             {
+                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Perfil")
+                            {
                                 <li class="active"><a href="/Home/Perfil">Perfil ejecutivo</a></li>
-                             }
-                             else
-                             {
+                            }
+                            else
+                            {
                                 <li><a href="/Home/Perfil">Perfil ejecutivo</a></li>
-                             }
+                            }
 
-                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilFirma")
-                             {
+                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilFirma")
+                            {
                                 <li class="active"><a href="#">Perfil de la firma</a></li>
-                             }
-                             else
-                             {
+                            }
+                            else
+                            {
                                 <li><a href="/Home/Perfil">Perfil de la firma</a></li>
-                             }
+                            }
 
-                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Notariado")
-                             {
+                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Notariado")
+                            {
                                 <li class="active"><a href="#">Notariado y legalización</a></li>
-                             }
-                             else
-                             {
+                            }
+                            else
+                            {
                                 <li><a href="#">Notariado y legalización</a></li>
-                             }
+                            }
 
-                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Contact")
-                             {
+                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Contact")
+                            {
                                 <li class="active"><a href="/Home/Contact">Contactos</a></li>
-                             }
-                             else
-                             {
+                            }
+                            else
+                            {
                                 <li><a href="/Home/Contact">Contactos</a></li>
-                             }
+                            }
 
                         }
                         <li>

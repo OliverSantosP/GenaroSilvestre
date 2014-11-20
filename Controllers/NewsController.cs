@@ -11,6 +11,7 @@ using System.Configuration;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Blob;
+using System.Web.Configuration;
 
 namespace GenaroSilvestre.Controllers
 {
@@ -19,7 +20,6 @@ namespace GenaroSilvestre.Controllers
         private Model1Container db = new Model1Container();
 
         // GET: /News/
-        [Authorize]
         public ActionResult Index()
         {
             return View(db.News.ToList());
@@ -77,7 +77,7 @@ namespace GenaroSilvestre.Controllers
                     CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
 
                     // Retrieve reference to a previously created container.
-                    CloudBlobContainer container = blobClient.GetContainerReference("genarosilvestreimages");
+                    CloudBlobContainer container = blobClient.GetContainerReference(WebConfigurationManager.AppSettings["AzureContainer"]);
 
                     // Retrieve reference to a blob named "myblob".
                     CloudBlockBlob blockBlob = container.GetBlockBlobReference(file.FileName);
@@ -134,7 +134,7 @@ namespace GenaroSilvestre.Controllers
                 CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
 
                 // Retrieve reference to a previously created container.
-                CloudBlobContainer container = blobClient.GetContainerReference("genarosilvestreimages");
+                CloudBlobContainer container = blobClient.GetContainerReference(WebConfigurationManager.AppSettings["AzureContainer"]);
 
                 // Retrieve reference to a blob named "myblob".
                 CloudBlockBlob blockBlob = container.GetBlockBlobReference(file.FileName);
@@ -184,7 +184,7 @@ namespace GenaroSilvestre.Controllers
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
 
             // Retrieve reference to a previously created container.
-            CloudBlobContainer container = blobClient.GetContainerReference("genarosilvestreimages");
+            CloudBlobContainer container = blobClient.GetContainerReference(WebConfigurationManager.AppSettings["AzureContainer"]);
 
             // Retrieve reference to a blob named "myblob".
             CloudBlockBlob blockBlob = container.GetBlockBlobReference(news.Image.Split('/').Last());

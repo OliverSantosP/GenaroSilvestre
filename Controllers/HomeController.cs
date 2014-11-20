@@ -23,12 +23,6 @@ namespace GenaroSilvestre.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
 
         public ActionResult Contact()
         {
@@ -39,7 +33,7 @@ namespace GenaroSilvestre.Controllers
         [HttpPost]
         public ActionResult Contact(ContactModels Contacto)
         {
-            
+
             if (ModelState.IsValid)
             {
                 var Name = Contacto.Name;
@@ -57,10 +51,10 @@ namespace GenaroSilvestre.Controllers
                     string FormSenderName = WebConfigurationManager.AppSettings["FormSenderName"];
                     string FormSubject = WebConfigurationManager.AppSettings["FormSubject"];
 
-                    mailMsg.To.Add(new MailAddress(FormRecipientEmail,FormRecipientName));
+                    mailMsg.To.Add(new MailAddress(FormRecipientEmail, FormRecipientName));
                     mailMsg.From = new MailAddress(FormSenderEmail, FormSenderName);
                     mailMsg.Subject = FormSubject;
-                    string text = "Ha recibido un mensaje nuevo desde GenaroSilvestre.com. \n\n Nombre: "+Contacto.Name+ "\n Dirección: "+ Contacto.Address+ "\n Email: "+Contacto.Email+ "\n Telefono: "+Contacto.Phone+ "\n Ciudad: "+ Contacto.City+ "\n Comentario: "+Contacto.Comment;
+                    string text = "Ha recibido un mensaje nuevo desde GenaroSilvestre.com. \n\n Nombre: " + Contacto.Name + "\n Dirección: " + Contacto.Address + "\n Email: " + Contacto.Email + "\n Telefono: " + Contacto.Phone + "\n Ciudad: " + Contacto.City + "\n Comentario: " + Contacto.Comment;
 
                     string SmtpClient = WebConfigurationManager.AppSettings["SmtpClient"];
                     string SmtpClientUser = WebConfigurationManager.AppSettings["SmtpClientUser"];
@@ -70,12 +64,12 @@ namespace GenaroSilvestre.Controllers
 
                     SmtpClient smtpClient = new SmtpClient(SmtpClient, Convert.ToInt32(587));
                     System.Net.NetworkCredential credentials = new System.Net.NetworkCredential(SmtpClientUser, SmtpClientPassword);
-                    
+
                     smtpClient.Credentials = credentials;
                     smtpClient.Send(mailMsg);
-                    
                 }
-                catch (Exception )
+
+                catch (Exception)
                 {
 
                 }
