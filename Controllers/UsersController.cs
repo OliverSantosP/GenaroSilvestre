@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using GenaroSilvestre.Models;
+using System.Security.Cryptography;
 
 namespace GenaroSilvestre.Controllers
 {
@@ -32,10 +33,20 @@ namespace GenaroSilvestre.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="Id,UserName,Password,Email,Name,LastName,Created,Updated")] Users users)
+        public ActionResult Create([Bind(Include = "Id,UserName,Password,Email,Name,LastName,Created,Updated")] Users users)
         {
             users.Created = System.DateTime.Now;
             users.Updated = System.DateTime.Now;
+
+            using (var deriveBytes = new Rfc2898DeriveBytes(users.Password, 20))
+            {
+
+                byte[] key = deriveBytes.GetBytes(20);
+                byte[] salt = deriveBytes.Salt;
+
+                users.Password = BitConverter.ToString(key);
+                users.Salt = BitConverter.ToString(salt);
+            }
 
             if (ModelState.IsValid)
             {
@@ -67,8 +78,9 @@ namespace GenaroSilvestre.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="Id,UserName,Password,Email,Name,LastName,Created,Updated")] Users users)
+        public ActionResult Edit([Bind(Include = "Id,UserName,Password,Email,Name,LastName,Created,Updated")] Users users)
         {
+
             users.Updated = System.DateTime.Now;
             if (ModelState.IsValid)
             {

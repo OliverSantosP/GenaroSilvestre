@@ -27,6 +27,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="UserName" Type="String" Nullable="false" />
     <Property Name="Password" Type="String" Nullable="false" />
+    <Property Name="Salt" Type="String" Nullable="false" />
     <Property Name="Email" Type="String" Nullable="false" />
     <Property Name="Name" Type="String" Nullable="false" />
     <Property Name="LastName" Type="String" Nullable="false" />
