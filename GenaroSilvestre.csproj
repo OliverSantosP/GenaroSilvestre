@@ -218,6 +218,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Services\Azure.cs" />
     <Compile Include="Services\Email.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

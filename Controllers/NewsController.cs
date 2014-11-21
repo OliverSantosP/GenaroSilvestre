@@ -70,25 +70,13 @@ namespace GenaroSilvestre.Controllers
                 }
                 else
                 {
-                    // Retrieve storage account from connection string.
-                    CloudStorageAccount storageAccount = CloudStorageAccount.Parse(ConfigurationManager.ConnectionStrings["StorageConnectionString"].ConnectionString);
-
-                    // Create the blob client.
-                    CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-
-                    // Retrieve reference to a previously created container.
-                    CloudBlobContainer container = blobClient.GetContainerReference(WebConfigurationManager.AppSettings["AzureContainer"]);
-
-                    // Retrieve reference to a blob named "myblob".
-                    CloudBlockBlob blockBlob = container.GetBlockBlobReference(file.FileName);
-
-                    blockBlob.UploadFromStream(file.InputStream);
+                    
                     GenaroSilvestre.Models.Users User;
                     User = db.Users.Where(u => u.Id == 1).FirstOrDefault();
                     news.User = User;
                     news.Created = System.DateTime.Now;
                     news.Updated = System.DateTime.Now;
-                    news.Image = blockBlob.Uri.ToString();
+                    news.Image = GenaroSilvestre.Services.Azure.UploadImage(file);
                     db.News.Add(news);
                     db.SaveChanges();
                     return RedirectToAction("Index");
@@ -127,21 +115,7 @@ namespace GenaroSilvestre.Controllers
             var image = file;
             if (image != null)
             {
-                // Retrieve storage account from connection string.
-                CloudStorageAccount storageAccount = CloudStorageAccount.Parse(ConfigurationManager.ConnectionStrings["StorageConnectionString"].ConnectionString);
-
-                // Create the blob client.
-                CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-
-                // Retrieve reference to a previously created container.
-                CloudBlobContainer container = blobClient.GetContainerReference(WebConfigurationManager.AppSettings["AzureContainer"]);
-
-                // Retrieve reference to a blob named "myblob".
-                CloudBlockBlob blockBlob = container.GetBlockBlobReference(file.FileName);
-
-                blockBlob.UploadFromStream(file.InputStream);
-
-                news.Image = blockBlob.Uri.ToString();
+                news.Image = news.Image = GenaroSilvestre.Services.Azure.UploadImage(file);
             }
 
             if (ModelState.IsValid)
@@ -174,24 +148,7 @@ namespace GenaroSilvestre.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             News news = db.News.Find(id);
-
-            //Deleting BLOB
-
-            // Retrieve storage account from connection string.
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(ConfigurationManager.ConnectionStrings["StorageConnectionString"].ConnectionString);
-
-            // Create the blob client.
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-
-            // Retrieve reference to a previously created container.
-            CloudBlobContainer container = blobClient.GetContainerReference(WebConfigurationManager.AppSettings["AzureContainer"]);
-
-            // Retrieve reference to a blob named "myblob".
-            CloudBlockBlob blockBlob = container.GetBlockBlobReference(news.Image.Split('/').Last());
-
-            // Delete the blob.
-            blockBlob.Delete();
-
+            GenaroSilvestre.Services.Azure.DeleteImage(news.Image);
             db.News.Remove(news);
             db.SaveChanges();
             return RedirectToAction("Index");
