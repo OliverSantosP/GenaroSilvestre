@@ -26,7 +26,6 @@ namespace GenaroSilvestre.Services
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -43,7 +42,6 @@ namespace GenaroSilvestre.Services
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

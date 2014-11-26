@@ -21,15 +21,14 @@ namespace GenaroSilvestre.Services
                 string FormSenderEmail = WebConfigurationManager.AppSettings["FormSenderEmail"];
                 string FormSenderName = WebConfigurationManager.AppSettings["FormSenderName"];
                 string FormSubject = WebConfigurationManager.AppSettings["FormSubject"];
+                string SmtpClient = WebConfigurationManager.AppSettings["SmtpClient"];
+                string SmtpClientUser = WebConfigurationManager.AppSettings["SmtpClientUser"];
+                string SmtpClientPassword = WebConfigurationManager.AppSettings["SmtpClientPassword"];
 
                 mailMsg.To.Add(new MailAddress(FormRecipientEmail, FormRecipientName));
                 mailMsg.From = new MailAddress(FormSenderEmail, FormSenderName);
                 mailMsg.Subject = FormSubject;
                 string text = "Ha recibido un mensaje nuevo desde GenaroSilvestre.com. \n\n Nombre: " + Contacto.Name + "\n Dirección: " + Contacto.Address + "\n Email: " + Contacto.Email + "\n Telefono: " + Contacto.Phone + "\n Ciudad: " + Contacto.City + "\n Comentario: " + Contacto.Comment;
-
-                string SmtpClient = WebConfigurationManager.AppSettings["SmtpClient"];
-                string SmtpClientUser = WebConfigurationManager.AppSettings["SmtpClientUser"];
-                string SmtpClientPassword = WebConfigurationManager.AppSettings["SmtpClientPassword"];
 
                 mailMsg.AlternateViews.Add(AlternateView.CreateAlternateViewFromString(text, null, MediaTypeNames.Text.Plain));
 

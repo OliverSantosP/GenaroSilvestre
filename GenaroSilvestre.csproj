@@ -235,6 +235,7 @@
     <Content Include="Content\images\Header.jpg" />
     <Content Include="Content\images\Header.png" />
     <Content Include="Content\images\Header2.jpg" />
+    <Content Include="Content\images\Header2.png" />
     <Content Include="Content\images\NoticiasFrameShadow.png" />
     <Content Include="Content\images\Pic Full.png" />
     <Content Include="Content\images\Picture-1.jpg" />
@@ -242,8 +243,10 @@
     <Content Include="Content\images\Picture-3.jpg" />
     <Content Include="Content\images\Picture-4.jpg" />
     <Content Include="Content\images\Profile.png" />
+    <Content Include="Content\images\RedDot.png" />
     <Content Include="Content\images\Top-Pic-Inside.jpg" />
     <Content Include="Content\images\TWLogo.png" />
+    <Content Include="Content\jquery.mCustomScrollbar.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -281,6 +284,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.mCustomScrollbar.concat.min.js" />
     <Content Include="Scripts\jquery.mCustomScrollbar.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />

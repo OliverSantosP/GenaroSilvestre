@@ -6,7 +6,11 @@
     <title>Genaro Silvestre - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <link href="~/Content/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.mCustomScrollbar.concat.min.js"></script>
+    
 </head>
 <body>
     <div class="main">
@@ -103,7 +107,7 @@
                     GENARO SILVESTRE, ESTUDIO JURIDICO – LAW OFFICE es un bufete de abogados, con sede principal en la ciudad de La Romana, en la región Este de la República Dominicana, con oficinas en Santo Domingo, Distrito Nacional, especializada en la asistencia y asesoría legal a personas públicas o privadas para la protección y defensa de sus intereses económicos, legales y derechos constitucionales, así como en la representación judicial y extrajudicial en casos de litigios Civiles, Administrativos y Arbitrales.
                 </div>
                 <div class="header-link">
-                    Leer Más
+                    <a href="/Home/Perfil">Leer Más</a>
                 </div>
             </div>
             <div class="container body-content" id="body-content">
@@ -112,8 +116,7 @@
             <footer></footer>
         </div>
     </div>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+   
     <script>
         window.onload = window.onresize = function () {
             var left = document.getElementById('menu-left').offsetHeight;
@@ -128,7 +131,13 @@
             }
         };
     </script>
-    
+    <script>
+        (function ($) {
+            $(window).load(function () {
+                $("#noticia-wrapper").mCustomScrollbar();
+            });
+        })(jQuery);
+    </script>
     @RenderSection("scripts", required: false)
 
 </body>
