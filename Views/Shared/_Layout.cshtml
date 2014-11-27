@@ -36,32 +36,22 @@
                         @{
                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString() == "News")
                             {
-                                <li class="active"><a href="/News/Home">Noticias</a></li>
+                                <li class="active"><a href="/News/Home">Inicio</a></li>
                             }
                             else
                             {
-                                <li><a href="/News/Home">Noticias</a></li>
+                                <li><a href="/News/Home">Inicio</a></li>
                             }
-
-
-                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
-                            {
-                                <li class="active"><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
-                            }
-                            else
-                            {
-                                <li><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
-                            }
-
+                            
                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Perfil")
                             {
-                                <li class="active"><a href="/Home/Perfil">Perfil ejecutivo</a></li>
+                                <li class="active"><a href="/Home/Perfil">Perfil del ejecutivo</a></li>
                             }
                             else
                             {
-                                <li><a href="/Home/Perfil">Perfil ejecutivo</a></li>
+                                <li><a href="/Home/Perfil">Perfil del ejecutivo</a></li>
                             }
-
+                            
                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilFirma")
                             {
                                 <li class="active"><a href="#">Perfil de la firma</a></li>
@@ -70,6 +60,16 @@
                             {
                                 <li><a href="/Home/Perfil">Perfil de la firma</a></li>
                             }
+                            
+                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
+                            {
+                                <li class="active"><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
+                            }
+                            
 
                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Notariado")
                             {
@@ -82,11 +82,11 @@
 
                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Contact")
                             {
-                                <li class="active"><a href="/Home/Contact">Contactos</a></li>
+                                <li class="active"><a href="/Home/Contact">Contacto</a></li>
                             }
                             else
                             {
-                                <li><a href="/Home/Contact">Contactos</a></li>
+                                <li><a href="/Home/Contact">Contacto</a></li>
                             }
 
                         }
@@ -97,6 +97,8 @@
                                 <a href="http://www.twitter.com"><img src="~/Content/images/TWLogo.png" /></a>
                             </div>
                         </li>
+                        <li>
+                        <li><a href="http://genarosilvestrescroggins.blogspot.com/">Blog</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </nav>

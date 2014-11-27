@@ -79,7 +79,7 @@ border-radius:10px;
 }
 
 .menu-right-background {
-    background-image: url("/Content/images/Header2.jpg");
+    background-image: url("/Content/images/Header2.png");
     height: 356px;
 }
 
@@ -204,7 +204,7 @@ border-radius:10px;
 .noticia-wrapper {
     padding-left: 22px;
     padding-right: 10px;
-    overflow-y: scroll;
+    max-height:700px;
     overflow-x: hidden;
 }
 
@@ -344,7 +344,6 @@ textarea {
 .noticia-title {
     font-family: 'Times New Roman';
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
-    font-style: italic;
     font-weight: bold;
     color: #000;
     margin-top: -20px;
