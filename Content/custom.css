@@ -95,10 +95,6 @@
 }
 
 
-.menu-spacer {
-    padding-bottom: 5px;
-    background: #fff;
-}
 
 .noticias-header {
     font-family: 'Times New Roman';
@@ -116,9 +112,10 @@
     text-align: left;
     margin-left: -15px;
     margin-right: -15px;
+    margin-bottom:30px;
 }
 
-}
+
 
 .title-medium {
     font-family: 'Times New Roman';
