@@ -33,14 +33,6 @@
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
                         @{
-                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString() == "News")
-                            {
-                                <li class="active"><a href="/News/Home">Inicio</a></li>
-                            }
-                            else
-                            {
-                                <li><a href="/News/Home">Inicio</a></li>
-                            }
                             
                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilEjecutivo")
                             {
