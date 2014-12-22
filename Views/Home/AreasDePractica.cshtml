@@ -21,14 +21,12 @@
         </div>
     </div>
 
-
-
     <div class="areas-wrapper">
         <div class="areas-container">
             <div class="areas-header">
-                <div class="arrow"></div>En el derecho Civil y Comercial
+                <div class="arrow" id="arrow1"></div>En el derecho Civil y Comercial
             </div>
-            <div class="areas-text-wrapper">
+            <div class="areas-text-wrapper" id="area-text-1">
                 Comprar, vender o, contratar un servicio u obra determinado, se puede convertir en un dolor de cabeza si no se tiene la adecuada asesoría en la toma de decisiones y el establecimiento de las condiciones contractuales. Nosotros le podemos brindar la asesoría en la toma de las decisiones importantes en cualquier negociación.
                 <br />
                 <br />
@@ -56,9 +54,9 @@
                 </div>
             </div>
             <div class="areas-header">
-                <div class="arrow"></div>El Derecho de Familia
+                <div class="arrow" id="arrow2"></div>El Derecho de Familia
             </div>
-            <div class="areas-text-wrapper">
+            <div class="areas-text-wrapper" id="area-text-2">
                 En cuanto se refiere a la familia, hay aspectos de especial sensibilidad por la naturaleza de los asuntos que les afectan, es por ello que se hace necesario colocar en manos expertas asuntos que conciernen a la intimidad de sus miembros, como los que, a titulo enunciativo, se indican a continuación:
                 <br />
                 <br />
@@ -80,9 +78,9 @@
             </div>
 
             <div class="areas-header">
-                <div class="arrow"></div>Derecho Constitucional y Administrativo
+                <div class="arrow" id="arrow3"></div>Derecho Constitucional y Administrativo
             </div>
-            <div class="areas-text-wrapper">
+            <div class="areas-text-wrapper" id="area-text-3">
                 El conocimiento del Derecho Constitucional adquirido bajo los más altos estándares académicos nos ha permitido fortalecer nuestros conocimientos en otras áreas del derecho y ser más eficientes en el manejo de casos relativos a violaciones de los derechos Constitucionales y Derechos Fundamentales, lo que envuelve aspectos como los que, a titulo enunciativo, se describen a continuación:
                 <br />
                 <br />
@@ -104,3 +102,51 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+
+        $("#arrow1").css('-webkit-transform', 'rotate(-90deg)');
+        $("#area-text-1").hide();
+
+
+        $("#arrow2").css('-webkit-transform', 'rotate(-90deg)');
+        $("#area-text-2").hide();
+
+        $("#arrow3").css('-webkit-transform', 'rotate(-90deg)');
+        $("#area-text-3").hide();
+    });
+</script>
+
+<script>
+    $("#arrow1").click(function () {
+
+        if ($("#area-text-1").is(":hidden")) {
+            $("#area-text-1").slideDown(1500,"linear");
+            $(this).css('-webkit-transform', 'rotate(0deg)');
+        } else {
+            $("#area-text-1").slideUp(1500, "linear");
+            $(this).css('-webkit-transform', 'rotate(-90deg)');
+        }
+    });
+    $("#arrow2").click(function () {
+
+        if ($("#area-text-2").is(":hidden")) {
+            $("#area-text-2").slideDown(1500, "linear");
+            $(this).css('-webkit-transform', 'rotate(0deg)');
+        } else {
+            $("#area-text-2").slideUp(1500, "linear");
+            $(this).css('-webkit-transform', 'rotate(-90deg)');
+        }
+    });
+    $("#arrow3").click(function () {
+
+        if ($("#area-text-3").is(":hidden")) {
+            $("#area-text-3").slideDown(1500, "linear");
+            $(this).css('-webkit-transform', 'rotate(0deg)');
+        } else {
+            $("#area-text-3").slideUp(1500, "linear");
+            $(this).css('-webkit-transform', 'rotate(-90deg)');
+        }
+    });
+</script>
