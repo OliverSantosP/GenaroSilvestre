@@ -42,22 +42,22 @@
                                 <li><a href="/News/Home">Inicio</a></li>
                             }
                             
-                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Perfil")
+                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilEjecutivo")
                             {
-                                <li class="active"><a href="/Home/Perfil">Perfil del ejecutivo</a></li>
+                                <li class="active"><a href="/Home/PerfilEjecutivo">Perfil del ejecutivo</a></li>
                             }
                             else
                             {
-                                <li><a href="/Home/Perfil">Perfil del ejecutivo</a></li>
+                                <li><a href="/Home/PerfilEjecutivo">Perfil del ejecutivo</a></li>
                             }
                             
-                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilFirma")
+                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilDeLaFirma")
                             {
-                                <li class="active"><a href="#">Perfil de la firma</a></li>
+                                <li class="active"><a href="/Home/PerfilDeLaFirma">Perfil de la firma</a></li>
                             }
                             else
                             {
-                                <li><a href="/Home/Perfil">Perfil de la firma</a></li>
+                                <li><a href="/Home/PerfilDeLaFirma">Perfil de la firma</a></li>
                             }
                             
                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
@@ -70,7 +70,7 @@
                             }
                             
 
-                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Notariado")
+                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "NotariadoYLegalizacion")
                             {
                                 <li class="active"><a href="/Home/NotariadoYLegalizacion">Notariado y legalización</a></li>
                             }

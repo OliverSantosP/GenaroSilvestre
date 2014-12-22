@@ -20,7 +20,20 @@ namespace GenaroSilvestre.Controllers
 
         public ActionResult AreasDePractica()
         {
-            ViewBag.Message = "Areas de Practica.";
+            ViewBag.Message = "Areas de práctica.";
+            return View();
+        }
+
+        public ActionResult PerfilEjecutivo()
+        {
+            ViewBag.Message = "Perfil ejecutivo.";
+
+            return View();
+        }
+
+        public ActionResult PerfilDeLaFirma()
+        {
+            ViewBag.Message = "Perfil de la firma.";
             return View();
         }
 
@@ -29,6 +42,7 @@ namespace GenaroSilvestre.Controllers
             ViewBag.Message = "Notariado y legalización.";
             return View();
         }
+
 
         public ActionResult Contact()
         {
@@ -61,11 +75,5 @@ namespace GenaroSilvestre.Controllers
 
         }
 
-        public ActionResult Perfil()
-        {
-            ViewBag.Message = "Perfil Ejecutivo.";
-
-            return View();
-        }
     }
 }
