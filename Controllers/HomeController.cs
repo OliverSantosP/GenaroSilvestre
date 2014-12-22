@@ -24,6 +24,11 @@ namespace GenaroSilvestre.Controllers
             return View();
         }
 
+        public ActionResult NotariadoYLegalizacion()
+        {
+            ViewBag.Message = "Notariado y legalización.";
+            return View();
+        }
 
         public ActionResult Contact()
         {
