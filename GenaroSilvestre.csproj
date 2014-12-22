@@ -246,6 +246,7 @@
     <Content Include="Content\images\Picture-4.jpg" />
     <Content Include="Content\images\Profile.png" />
     <Content Include="Content\images\RedDot.png" />
+    <Content Include="Content\images\Title-Bar.jpg" />
     <Content Include="Content\images\Top-Pic-Inside.jpg" />
     <Content Include="Content\images\TWLogo.png" />
     <Content Include="Content\jquery.mCustomScrollbar.css" />
