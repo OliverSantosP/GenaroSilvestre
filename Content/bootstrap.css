@@ -2227,6 +2227,15 @@ background-color: #CDCDCD;
 border-color: #cccccc;
 }
 
+.btn-contact-mini {
+color: #FFF !important;
+background-color: #D9391F;
+font-family: "Times New Roman";
+letter-spacing: 0.4em;
+text-transform: uppercase;
+font-weight: bold;
+}
+
     .btn-default:hover,
     .btn-default:focus,
     .btn-default:active,

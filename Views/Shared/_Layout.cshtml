@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -9,8 +11,11 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     <link href="~/Content/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <link href="~/Content/jquery.sidr.dark.css" rel="stylesheet" />
+
     <script src="~/Scripts/jquery.mCustomScrollbar.concat.min.js"></script>
-    
+    <script src="~/Scripts/jquery.sidr.min.js"></script>
+
 </head>
 <body>
     <div class="main">
@@ -33,7 +38,7 @@
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
                         @{
-                            
+
                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilEjecutivo")
                             {
                                 <li class="active"><a href="/Home/PerfilEjecutivo">Perfil del ejecutivo</a></li>
@@ -42,7 +47,7 @@
                             {
                                 <li><a href="/Home/PerfilEjecutivo">Perfil del ejecutivo</a></li>
                             }
-                            
+
                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilDeLaFirma")
                             {
                                 <li class="active"><a href="/Home/PerfilDeLaFirma">Perfil de la firma</a></li>
@@ -51,7 +56,7 @@
                             {
                                 <li><a href="/Home/PerfilDeLaFirma">Perfil de la firma</a></li>
                             }
-                            
+
                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
                             {
                                 <li class="active"><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
@@ -60,7 +65,7 @@
                             {
                                 <li><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
                             }
-                            
+
 
                             if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "NotariadoYLegalizacion")
                             {
@@ -109,7 +114,66 @@
             <footer></footer>
         </div>
     </div>
-   
+
+
+    <a href="#right-menu" id="right-menu">
+        <img src="~/Content/images/Contact-Icon.jpg" class="contact-mini" />
+    </a>
+    <div id="sidr" class="sidr right">
+        @using (Html.BeginForm("Contact", "Home"))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="contact-mini-gray-background">
+
+                <div class="contact-mini-header">
+                    Formulario de contacto
+                </div>
+                <div class="col-md-12">
+                    <div class="times-regular">@ViewBag.ContactMessage</div>
+                    @Html.ValidationSummary()
+                </div>
+
+
+                <div class="input-spaced-mini">
+                    <input type="text" name="Name" value="" placeholder="Nombre" class="input-spaced-mini-width" />
+                </div>
+
+
+                <div class="input-spaced-mini">
+                    <input type="text" name="Address" value="" placeholder="Direccion" class="input-spaced-mini-width" />
+                </div>
+                <div class="input-spaced-mini">
+                    <input type="text" name="Phone" value="" placeholder="Telefono" class="input-spaced-mini-width" />
+                </div>
+                <div class="input-spaced-mini">
+                    <input type="text" name="Email" value="" placeholder="E-mail" class="input-spaced-mini-width" />
+                </div>
+                <div class="input-spaced-mini">
+                    <input type="text" name="City" value="" placeholder="Ciudad" class="input-spaced-mini-width" />
+                </div>
+                <div class="input-spaced-mini">
+                    <textarea class="input-wide span6 input-spaced-mini-width" placeholder="Comentario" rows="12"></textarea>
+                </div>
+
+
+                <div class="form-button input-spaced">
+                    <input type="submit" class="btn btn-contact-mini input-spaced-mini-width" value=" enviar" />
+                </div>
+            </div>
+
+        }
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#right-menu').sidr({
+                side: 'right',
+                displace: false
+            });
+        });
+    </script>
+
     <script>
         window.onload = window.onresize = function () {
             var left = document.getElementById('menu-left').offsetHeight;
@@ -124,6 +188,7 @@
             }
         };
     </script>
+
     <script>
         (function ($) {
             $(window).load(function () {
@@ -131,6 +196,8 @@
             });
         })(jQuery);
     </script>
+
+
     @RenderSection("scripts", required: false)
 
 </body>

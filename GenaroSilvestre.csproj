@@ -230,6 +230,7 @@
     <Content Include="Content\images\AreasFrameShadow.png" />
     <Content Include="Content\images\AreasGrayBackground.png" />
     <Content Include="Content\images\Arrow.png" />
+    <Content Include="Content\images\Contact-Icon.jpg" />
     <Content Include="Content\images\Contactos-Image.jpg" />
     <Content Include="Content\images\FBLogo.png" />
     <Content Include="Content\images\Header.jpg" />
@@ -250,6 +251,7 @@
     <Content Include="Content\images\Top-Pic-Inside.jpg" />
     <Content Include="Content\images\TWLogo.png" />
     <Content Include="Content\jquery.mCustomScrollbar.css" />
+    <Content Include="Content\jquery.sidr.dark.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -289,6 +291,7 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.mCustomScrollbar.concat.min.js" />
     <Content Include="Scripts\jquery.mCustomScrollbar.js" />
+    <Content Include="Scripts\jquery.sidr.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
