@@ -115,9 +115,8 @@
         </div>
     </div>
 
-
     <a href="#right-menu" id="right-menu">
-        <img src="~/Content/images/Contact-Icon.jpg" class="contact-mini" />
+        <img src="~/Content/images/Contact-Icon.jpg" class="contact-mini" id="mini-image" onclick='changeImage("../Content/images/Contact-Icon-Close.jpg");' />
     </a>
     <div id="sidr" class="sidr right">
         @using (Html.BeginForm("Contact", "Home"))
@@ -197,6 +196,11 @@
         })(jQuery);
     </script>
 
+    <script type="text/javascript">
+        function changeImage(a) {
+            document.getElementById("mini-image").src = a;
+        }
+    </script>
 
     @RenderSection("scripts", required: false)
 

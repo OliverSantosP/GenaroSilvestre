@@ -230,6 +230,7 @@
     <Content Include="Content\images\AreasFrameShadow.png" />
     <Content Include="Content\images\AreasGrayBackground.png" />
     <Content Include="Content\images\Arrow.png" />
+    <Content Include="Content\images\Contact-Icon-Close.jpg" />
     <Content Include="Content\images\Contact-Icon.jpg" />
     <Content Include="Content\images\Contactos-Image.jpg" />
     <Content Include="Content\images\FBLogo.png" />

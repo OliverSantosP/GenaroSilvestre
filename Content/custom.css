@@ -133,6 +133,7 @@
     color: #FFF;
     background-color: #363940;
     background-image: url("/Content/images/Title-Bar.jpg");
+    background-repeat: repeat-x;
     text-transform: uppercase;
     padding-left: 45px;
     font-size: 3.0em;
@@ -244,6 +245,7 @@
     padding-right: 10px;
     max-height: 700px;
     overflow-x: hidden;
+    max-width: 1200px;
 }
 
 .noticia-text-wrapper {
