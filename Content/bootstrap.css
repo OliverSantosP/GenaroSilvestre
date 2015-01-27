@@ -371,7 +371,7 @@ a {
     }
 
 img {
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
 .img-responsive {
@@ -2222,54 +2222,54 @@ textarea.input-lg {
     }
 
 .btn-default {
-color: #FFFFFF;
-background-color: #CDCDCD;
-border-color: #cccccc;
+    color: #FFFFFF;
+    background-color: #CDCDCD;
+    border-color: #cccccc;
 }
 
 .btn-contact-mini {
-color: #FFF !important;
-background-color: #D9391F;
-font-family: "Times New Roman";
-letter-spacing: 0.4em;
-text-transform: uppercase;
-font-weight: bold;
+    color: #FFF !important;
+    background-color: #D9391F;
+    font-family: "Times New Roman";
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-    .btn-default:hover,
-    .btn-default:focus,
-    .btn-default:active,
-    .btn-default.active,
-    .open .dropdown-toggle.btn-default {
-        color: #333333;
-        background-color: #ebebeb;
-        border-color: #adadad;
-    }
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+    color: #333333;
+    background-color: #ebebeb;
+    border-color: #adadad;
+}
 
-    .btn-default:active,
-    .btn-default.active,
-    .open .dropdown-toggle.btn-default {
-        background-image: none;
-    }
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+    background-image: none;
+}
 
-    .btn-default.disabled,
-    .btn-default[disabled],
-    fieldset[disabled] .btn-default,
-    .btn-default.disabled:hover,
-    .btn-default[disabled]:hover,
-    fieldset[disabled] .btn-default:hover,
-    .btn-default.disabled:focus,
-    .btn-default[disabled]:focus,
-    fieldset[disabled] .btn-default:focus,
-    .btn-default.disabled:active,
-    .btn-default[disabled]:active,
-    fieldset[disabled] .btn-default:active,
-    .btn-default.disabled.active,
-    .btn-default[disabled].active,
-    fieldset[disabled] .btn-default.active {
-        background-color: #ffffff;
-        border-color: #cccccc;
-    }
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+    background-color: #ffffff;
+    border-color: #cccccc;
+}
 
 .btn-primary {
     color: #ffffff;
@@ -4209,7 +4209,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
     z-index: 1000;
     min-height: 50px;
     margin-bottom: 20px;
-    max-width: 197px;
     margin-right: 0;
     margin-left: 0;
 }
@@ -4384,19 +4383,20 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-brand {
-    float: left;
-    font-size: 18px;
-    line-height: 20px;
+    float: none;
 }
 
-.navbar-brand-logo{
+.navbar-brand-logo {
     width: 197px;
+    padding-left: 21.5px;
+    padding-right: 21.5px;
+    padding-top: 55px;
 }
 
-    .navbar-brand:hover,
-    .navbar-brand:focus {
-        text-decoration: none;
-    }
+.navbar-brand:hover,
+.navbar-brand:focus {
+    text-decoration: none;
+}
 
 @media (min-width: 768px) {
     .navbar > .container .navbar-brand {
@@ -4441,7 +4441,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
     .navbar-left,
     .navbar-right,
     .navbar-header {
-        float: none !important;
+        float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%
     }
 
 @media (max-width: 767px) {
@@ -4475,13 +4478,14 @@ textarea.input-group-sm > .input-group-btn > .btn {
         float: left;
         margin: 0;
         text-align: center;
-        background-color:#000;
+        background-color: #000;
         width: 197px;
     }
 
         .navbar-nav > li {
             float: left;
         }
+
             .navbar-nav > li > a {
                 padding-top: 15px;
                 padding-bottom: 15px;
@@ -4614,6 +4618,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
     .navbar-default .navbar-nav > li > a {
         color: #ffffff;
+        font-size: 1.1em;
     }
 
         .navbar-default .navbar-nav > li > a:hover,

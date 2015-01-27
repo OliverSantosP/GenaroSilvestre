@@ -234,10 +234,11 @@
     <Content Include="Content\images\Contact-Icon.jpg" />
     <Content Include="Content\images\Contactos-Image.jpg" />
     <Content Include="Content\images\FBLogo.png" />
-    <Content Include="Content\images\Header.jpg" />
-    <Content Include="Content\images\Header.png" />
+    <Content Include="Content\images\Header-2.jpg" />
+    <Content Include="Content\images\Header-3.jpg" />
     <Content Include="Content\images\Header2.jpg" />
     <Content Include="Content\images\Header2.png" />
+    <Content Include="Content\images\Logo.png" />
     <Content Include="Content\images\NotariadoYLegalizacionHeader.jpg" />
     <Content Include="Content\images\NoticiasFrameShadow.png" />
     <Content Include="Content\images\PerfilDeFirmaHeader.jpg" />
@@ -329,6 +330,7 @@
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Home\NotariadoYLegalizacion.cshtml" />
     <Content Include="Views\Home\PerfilDeLaFirma.cshtml" />
+    <Content Include="Views\Home\View1Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

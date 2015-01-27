@@ -50,6 +50,12 @@ namespace GenaroSilvestre.Controllers
             return View();
         }
 
+        public ActionResult View1Test()
+        {
+            ViewBag.Message = "View1Test.";
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Contact(ContactModels Contacto)
         {

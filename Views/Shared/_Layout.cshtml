@@ -19,112 +19,124 @@
 </head>
 <body>
     <div class="main">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="menu-left" id="menu-left">
+                <nav class="navbar navbar-default" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Cambiar navegación</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/News/Home">
+                            <img src="~/Content/images/Logo.png" class="navbar-brand-logo" />
+                        </a>
+                    </div>
+                    <div class="logo-spacer hidden-sm hidden-xs"></div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav">
+                            @{
 
-        <div class="menu-left" id="menu-left">
-            <nav class="navbar navbar-default" role="navigation">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                        <span class="sr-only">Cambiar navegación</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/News/Home">
-                        <img src="~/Content/images/Header.png" class="navbar-brand-logo" />
-                    </a>
+                                if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilEjecutivo")
+                                {
+                                    <li class="active"><a href="/Home/PerfilEjecutivo">Perfil del ejecutivo</a></li>
+                                }
+                                else
+                                {
+                                    <li><a href="/Home/PerfilEjecutivo">Perfil del ejecutivo</a></li>
+                                }
+
+                                if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilDeLaFirma")
+                                {
+                                    <li class="active"><a href="/Home/PerfilDeLaFirma">Perfil de la firma</a></li>
+                                }
+                                else
+                                {
+                                    <li><a href="/Home/PerfilDeLaFirma">Perfil de la firma</a></li>
+                                }
+
+                                if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
+                                {
+                                    <li class="active"><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
+                                }
+                                else
+                                {
+                                    <li><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
+                                }
+
+
+                                if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "NotariadoYLegalizacion")
+                                {
+                                    <li class="active"><a href="/Home/NotariadoYLegalizacion">Notariado y legalización</a></li>
+                                }
+                                else
+                                {
+                                    <li><a href="/Home/NotariadoYLegalizacion">Notariado y legalización</a></li>
+                                }
+
+                                if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Contact")
+                                {
+                                    <li class="active"><a href="/Home/Contact">Contacto</a></li>
+                                }
+                                else
+                                {
+                                    <li><a href="/Home/Contact">Contacto</a></li>
+                                }
+
+                            }
+                            <li>
+                                <br />
+                                <div class="social-mini">
+                                    <a href="http://www.facebook.com"><img src="~/Content/images/FBLogo.png" /></a>
+                                    <a href="http://www.twitter.com"><img src="~/Content/images/TWLogo.png" /></a>
+                                </div>
+                            </li>
+                            <li>
+                            <li><a href="http://genarosilvestrescroggins.blogspot.com/">Blog</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav">
-                        @{
 
-                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilEjecutivo")
-                            {
-                                <li class="active"><a href="/Home/PerfilEjecutivo">Perfil del ejecutivo</a></li>
-                            }
-                            else
-                            {
-                                <li><a href="/Home/PerfilEjecutivo">Perfil del ejecutivo</a></li>
-                            }
+            </div>
 
-                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilDeLaFirma")
-                            {
-                                <li class="active"><a href="/Home/PerfilDeLaFirma">Perfil de la firma</a></li>
-                            }
-                            else
-                            {
-                                <li><a href="/Home/PerfilDeLaFirma">Perfil de la firma</a></li>
-                            }
+            <div class="col-md-10">
+                <div class="menu-right">
+                    <div class="menu-right-background" id="menu-right-background">
+                        <div class="header-text" id="header-text">
+                            "Top shelf, high powered litigator"
+                        </div>
+                        <div class="header-link" id="header-link">
+                            New York Post
+                        </div>
+                    </div>
 
-                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
-                            {
-                                <li class="active"><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
-                            }
-                            else
-                            {
-                                <li><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
-                            }
-
-
-                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "NotariadoYLegalizacion")
-                            {
-                                <li class="active"><a href="/Home/NotariadoYLegalizacion">Notariado y legalización</a></li>
-                            }
-                            else
-                            {
-                                <li><a href="/Home/NotariadoYLegalizacion">Notariado y legalización</a></li>
-                            }
-
-                            if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Contact")
-                            {
-                                <li class="active"><a href="/Home/Contact">Contacto</a></li>
-                            }
-                            else
-                            {
-                                <li><a href="/Home/Contact">Contacto</a></li>
-                            }
-
-                        }
-                        <li>
-                            <br />
-                            <div class="social-mini">
-                                <a href="http://www.facebook.com"><img src="~/Content/images/FBLogo.png" /></a>
-                                <a href="http://www.twitter.com"><img src="~/Content/images/TWLogo.png" /></a>
-                            </div>
-                        </li>
-                        <li>
-                        <li><a href="http://genarosilvestrescroggins.blogspot.com/">Blog</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </nav>
-        </div>
-        <div class="menu-right">
-            <div class="menu-right-background hidden-sm hidden-xs" id="menu-right-background">
-                <div class="header-text">
-                    GENARO SILVESTRE, ESTUDIO JURIDICO – LAW OFFICE es un bufete de abogados, con sede principal en la ciudad de La Romana, en la región Este de la República Dominicana, con oficinas en Santo Domingo, Distrito Nacional, especializada en la asistencia y asesoría legal a personas públicas o privadas para la protección y defensa de sus intereses económicos, legales y derechos constitucionales, así como en la representación judicial y extrajudicial en casos de litigios Civiles, Administrativos y Arbitrales.
-                </div>
-                <div class="header-link">
-                    <a href="/Home/Perfil">Leer Más</a>
+                    <div class="container body-content" id="body-content">
+                        @RenderBody()
+                    </div>
+                    <footer></footer>
                 </div>
             </div>
-            <div class="container body-content" id="body-content">
-                @RenderBody()
-            </div>
-            <footer></footer>
+
         </div>
+
     </div>
 
     <a href="#right-menu" id="right-menu">
         <img src="~/Content/images/Contact-Icon.jpg" class="contact-mini" id="mini-image" onclick='changeImage("../Content/images/Contact-Icon-Close.jpg");' />
     </a>
     <div id="sidr" class="sidr right">
+
         @using (Html.BeginForm("Contact", "Home"))
         {
-            @Html.AntiForgeryToken()
+        @Html.AntiForgeryToken()
 
-            <div class="contact-mini-gray-background">
-
+        <div class="contact-mini-gray-background">
+            <div class="contact-mini-wrapper">
                 <div class="contact-mini-header">
                     Formulario de contacto
                 </div>
@@ -156,12 +168,14 @@
                 </div>
 
 
-                <div class="form-button input-spaced">
+                <div class="input-spaced">
                     <input type="submit" class="btn btn-contact-mini input-spaced-mini-width" value=" enviar" />
                 </div>
             </div>
+        </div>
 
         }
+
     </div>
 
     <script>
@@ -178,9 +192,11 @@
             var left = document.getElementById('menu-left').offsetHeight;
             var right = document.getElementById('body-content').offsetHeight + document.getElementById('menu-right-background').offsetHeight;
 
+
+
             if (left < right) {
                 left = right;
-                document.getElementById('menu-left').style.height = right + 'px'
+                document.getElementById('menu-left').style.height = right + 234 + 'px'
             }
             else {
                 ;
@@ -191,9 +207,79 @@
     <script>
         (function ($) {
             $(window).load(function () {
-                $("#noticia-wrapper").mCustomScrollbar({ mouseWheelPixels: 200 });
+                $(".header-text").animate({ opacity: 1, left: "+=200" }, 4000, "linear", function () {
+                    $(".header-text").animate({ opacity: 0, left: "+=200" }, 6000, "linear");
+                });
+
+                $(".header-link").animate({ opacity: 1 }, 4000, "linear", function () {
+                    $(".header-link").animate({ opacity: 0, left: "-=100" }, 4000, "linear", function () {
+                        $("#menu-right-background").animate({ opacity: 0 }, 2000, "linear", function () {
+                            document.getElementById("header-text").innerHTML = "\"One of New York's fiercest defenders\"";
+                            document.getElementById("header-link").innerHTML = "New York Daily";
+
+
+                            document.getElementById("header-text").style.left = "0px";
+
+
+                            $(".header-text").animate({ opacity: 1, left: "+=200" }, 4000, "linear");
+                            $(".header-link").animate({ opacity: 1 }, 4000, "linear");
+
+                            $(".header-text").animate({ opacity: 0 }, 4000, "linear");
+                            $(".header-link").animate({ opacity: 0 }, 4000, "linear");
+
+                            document.getElementById("menu-right-background").style.backgroundImage = "url('../Content/images/Header-2.jpg')";
+
+                            $("#menu-right-background").animate({ opacity: 1 }, 2000, "linear").delay(4000);
+                            $("#menu-right-background").animate({ opacity: 0 }, 2000, "linear", function () {
+                                document.getElementById("header-text").style.left = "0px";
+
+                                document.getElementById("header-text").innerHTML = "\"Elevated to the upper level of prominence\"";
+                                document.getElementById("header-link").innerHTML = "US Daily";
+
+                                document.getElementById("header-text").style.left = "0px";
+
+                                $(".header-link").animate({ opacity: 1 }, 4000, "linear");
+                                $(".header-text").animate({ opacity: 1, left: "+=200" }, 4000, "linear");
+                                $(".header-text").animate({ opacity: 0 }, 4000, "linear");
+                                $(".header-link").animate({ opacity: 0 }, 4000, "linear");
+
+                                document.getElementById("menu-right-background").style.backgroundImage = "url('../Content/images/Header-3.jpg')";
+                                $("#menu-right-background").animate({ opacity: 1 }, 2000, "linear");
+
+
+
+                            });
+                        });
+
+                    });
+                });
+                $("#noticia-wrapper").mCustomScrollbar({ mouseWheelPixels: 150 });
+
             });
         })(jQuery);
+    </script>
+
+
+    <script>
+        $(".noticias-header").click(function () {
+            if ($("#menu-right-background").is(":hidden")) {
+                $("#menu-right-background").slideDown(1500, "linear", function () {
+                    $("#header-text").show(function () {
+                        $("#header-text").fadeIn(500);
+                    });
+
+                    $("#header-link").fadeIn(500);
+                });
+
+            } else {
+                $("#menu-right-background").slideUp(1500, "linear");
+                $("#header-text").fadeOut(500, function () {
+                    $("#header-text").hide();
+                });
+
+                $("#header-link").fadeOut(500);
+            }
+        });
     </script>
 
     <script type="text/javascript">
