@@ -8,9 +8,9 @@
 }
 
 .contact-mini {
-    padding-top: 110px;
     position: absolute;
     right: 0;
+    top: 0;
     z-index: 9999;
 }
 
@@ -70,48 +70,14 @@
     opacity: 0;
 }
 
-.scrollbar {
-    height: 80%;
-    margin-top: 40px;
-    margin-left: 40px;
-    overflow-y: scroll;
-    float: left;
-}
-
-#ex3::-webkit-scrollbar {
-    width: 16px;
-    background-color: #cccccc;
-}
-
-#ex3::-webkit-scrollbar-thumb {
-    background-color: #B03C3F;
-    border-radius: 10px;
-}
-
-    #ex3::-webkit-scrollbar-thumb:hover {
-        background-color: #BF4649;
-        border: 1px solid #333333;
-    }
-
-    #ex3::-webkit-scrollbar-thumb:active {
-        background-color: #A6393D;
-        border: 1px solid #333333;
-    }
-
-#ex3::-webkit-scrollbar-track {
-    border: 1px gray solid;
-    border-radius: 10px;
-    -webkit-box-shadow: 0 0 6px gray inset;
-}
-
 .main {
     margin-left: auto;
     margin-right: auto;
 }
 
 .menu-left {
-    background-color: #000000;
     min-width: 197px;
+    background: #fff url("/Content/images/FakeBackground.png") repeat-y 50% 0;
 }
 
 .menu-right {
@@ -139,7 +105,7 @@
     color: #FFF;
     background-color: #363940;
     background-image: url("/Content/images/Title-Bar.jpg");
-    background-repeat: repeat-x;
+    background-repeat: repeat;
     text-transform: uppercase;
     padding-left: 45px;
     font-size: 3.0em;

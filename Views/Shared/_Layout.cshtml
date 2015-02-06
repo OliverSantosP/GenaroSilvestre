@@ -32,7 +32,7 @@
                                 <img src="~/Content/images/Logo.png" class="navbar-brand-logo" />
                             </a>
                         </div>
-                        <div class="logo-spacer hidden-sm hidden-xs"></div>
+                        <div class="logo-spacer hidden-xs"></div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav">
@@ -98,12 +98,11 @@
                         </div><!-- /.navbar-collapse -->
                     </nav>
                 </div>
-
             </div>
 
             <div class="col-md-12">
                 <div class="menu-right">
-                    <div class="menu-right-background  hidden-sm hidden-xs" id="menu-right-background">
+                    <div class="menu-right-background hidden-sm hidden-xs" id="menu-right-background">
                         <div class="header-text" id="header-text">
                             "Top shelf, high powered litigator"
                         </div>
@@ -185,26 +184,6 @@
     </script>
 
     <script>
-        window.onload = window.onresize = function () {
-            var left = document.getElementById('menu-left').offsetHeight;
-            var right = document.getElementById('body-content').offsetHeight + document.getElementById('menu-right-background').offsetHeight;
-
-
-
-            if (left < right) {
-                if (left > 768) {
-                    left = right;
-                    document.getElementById('menu-left').style.height = right + 234 + 'px'
-                }
-
-            }
-            else {
-                ;
-            }
-        };
-    </script>
-
-    <script>
         (function ($) {
             $(window).load(function () {
                 $(".header-text").animate({ opacity: 1, left: "+=200" }, 4000, "linear", function () {
@@ -253,7 +232,7 @@
 
                     });
                 });
-               
+
 
             });
         })(jQuery);

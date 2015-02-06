@@ -233,6 +233,7 @@
     <Content Include="Content\images\Contact-Icon-Close.jpg" />
     <Content Include="Content\images\Contact-Icon.jpg" />
     <Content Include="Content\images\Contactos-Image.jpg" />
+    <Content Include="Content\images\FakeBackground.png" />
     <Content Include="Content\images\FBLogo.png" />
     <Content Include="Content\images\Header-2.jpg" />
     <Content Include="Content\images\Header-3.jpg" />
