@@ -101,11 +101,64 @@
             </div>
 
             <div class="col-md-12">
+                <a href="#right-menu" id="right-menu">
+                    <img src="~/Content/images/Contact-Icon.jpg" class="contact-mini hidden-sm hidden-xs" id="mini-image" onclick='changeImage("../Content/images/Contact-Icon-Close.jpg");' />
+                </a>
+                <div id="sidr" class="sidr right">
+
+                    @using (Html.BeginForm("Contact", "Home"))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="contact-mini-gray-background">
+                            <div class="contact-mini-wrapper">
+                                <div class="contact-mini-header">
+                                    Formulario de contacto
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="times-regular">@ViewBag.ContactMessage</div>
+                                    @Html.ValidationSummary()
+                                </div>
+
+
+                                <div class="input-spaced-mini">
+                                    <input type="text" name="Name" value="" placeholder="Nombre" class="input-spaced-mini-width" />
+                                </div>
+
+
+                                <div class="input-spaced-mini">
+                                    <input type="text" name="Address" value="" placeholder="Direccion" class="input-spaced-mini-width" />
+                                </div>
+                                <div class="input-spaced-mini">
+                                    <input type="text" name="Phone" value="" placeholder="Telefono" class="input-spaced-mini-width" />
+                                </div>
+                                <div class="input-spaced-mini">
+                                    <input type="text" name="Email" value="" placeholder="E-mail" class="input-spaced-mini-width" />
+                                </div>
+                                <div class="input-spaced-mini">
+                                    <input type="text" name="City" value="" placeholder="Ciudad" class="input-spaced-mini-width" />
+                                </div>
+                                <div class="input-spaced-mini">
+                                    <textarea class="input-wide span6 input-spaced-mini-width" placeholder="Comentario" rows="12"></textarea>
+                                </div>
+
+
+                                <div class="input-spaced">
+                                    <input type="submit" class="btn btn-contact-mini input-spaced-mini-width" value=" enviar" />
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+
+                </div>
+
                 <div class="menu-right">
                     <div class="menu-right-background hidden-sm hidden-xs" id="menu-right-background">
                         <div class="header-text" id="header-text">
                             "Top shelf, high powered litigator"
                         </div>
+
                         <div class="header-link" id="header-link">
                             New York Post
                         </div>
@@ -122,57 +175,7 @@
 
     </div>
 
-    <a href="#right-menu" id="right-menu">
-        <img src="~/Content/images/Contact-Icon.jpg" class="contact-mini" id="mini-image" onclick='changeImage("../Content/images/Contact-Icon-Close.jpg");' />
-    </a>
-    <div id="sidr" class="sidr right">
-
-        @using (Html.BeginForm("Contact", "Home"))
-        {
-            @Html.AntiForgeryToken()
-
-            <div class="contact-mini-gray-background">
-                <div class="contact-mini-wrapper">
-                    <div class="contact-mini-header">
-                        Formulario de contacto
-                    </div>
-                    <div class="col-md-12">
-                        <div class="times-regular">@ViewBag.ContactMessage</div>
-                        @Html.ValidationSummary()
-                    </div>
-
-
-                    <div class="input-spaced-mini">
-                        <input type="text" name="Name" value="" placeholder="Nombre" class="input-spaced-mini-width" />
-                    </div>
-
-
-                    <div class="input-spaced-mini">
-                        <input type="text" name="Address" value="" placeholder="Direccion" class="input-spaced-mini-width" />
-                    </div>
-                    <div class="input-spaced-mini">
-                        <input type="text" name="Phone" value="" placeholder="Telefono" class="input-spaced-mini-width" />
-                    </div>
-                    <div class="input-spaced-mini">
-                        <input type="text" name="Email" value="" placeholder="E-mail" class="input-spaced-mini-width" />
-                    </div>
-                    <div class="input-spaced-mini">
-                        <input type="text" name="City" value="" placeholder="Ciudad" class="input-spaced-mini-width" />
-                    </div>
-                    <div class="input-spaced-mini">
-                        <textarea class="input-wide span6 input-spaced-mini-width" placeholder="Comentario" rows="12"></textarea>
-                    </div>
-
-
-                    <div class="input-spaced">
-                        <input type="submit" class="btn btn-contact-mini input-spaced-mini-width" value=" enviar" />
-                    </div>
-                </div>
-            </div>
-
-        }
-
-    </div>
+    
 
     <script>
         $(document).ready(function () {
