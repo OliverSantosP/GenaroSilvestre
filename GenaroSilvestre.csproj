@@ -252,7 +252,6 @@
     <Content Include="Content\images\Title-Bar.jpg" />
     <Content Include="Content\images\Top-Pic-Inside.jpg" />
     <Content Include="Content\images\TWLogo.png" />
-    <Content Include="Content\jquery.mCustomScrollbar.css" />
     <Content Include="Content\jquery.sidr.dark.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

@@ -116,7 +116,6 @@
 
 .menu-right {
     height: 356px;
-    float: left;
 }
 
 .menu-right-background {
@@ -153,6 +152,7 @@
     margin-right: -15px;
     margin-bottom: 30px;
 }
+
 
 
 
@@ -250,8 +250,6 @@
 .noticia-wrapper {
     padding-left: 22px;
     padding-right: 10px;
-    max-height: 900px;
-    overflow-x: visible;
     max-width: 1200px;
 }
 
@@ -263,6 +261,11 @@
 .noticia-container {
     max-height: 300px;
     max-width: 580px;
+}
+
+.noticia-wrapper2 {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .areas-wrapper {

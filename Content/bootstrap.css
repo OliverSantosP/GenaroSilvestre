@@ -880,8 +880,7 @@ pre {
 .col-lg-12 {
     position: relative;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 0px 15px 0px 15px;
 }
 
 .col-xs-1,
@@ -4296,7 +4295,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
     }
 
     .navbar-collapse.in {
-        overflow-y: auto;
     }
 
 @media (min-width: 768px) {
@@ -4643,6 +4641,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     }
 
     .navbar-default .navbar-toggle {
+        border:none;
     }
 
         .navbar-default .navbar-toggle:hover,
