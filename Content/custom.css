@@ -12,6 +12,7 @@
     z-index: 9999;
     text-align: right;
     right: 0;
+    top: 466px;
 }
 
 .contact-mini-header {
@@ -213,12 +214,6 @@
 }
 
 
-.noticia-wrapper {
-    padding-left: 22px;
-    padding-right: 10px;
-    max-width: 1200px;
-}
-
 .noticia-text-wrapper {
     padding-left: 15px;
     padding-top: 20px;
@@ -229,7 +224,7 @@
     max-width: 580px;
 }
 
-.noticia-wrapper2 {
+.noticia-wrapper {
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -355,10 +350,8 @@ img {
 
 .input-wide {
     color: #C0C0C0;
-    width: 100%;
     padding: 10px;
     padding-left: 20px;
-    max-width: 296px;
 }
 
 .contact-mini-wrapper {
