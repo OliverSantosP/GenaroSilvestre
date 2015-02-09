@@ -108,16 +108,12 @@
     background-image: url("/Content/images/Title-Bar.jpg");
     background-repeat: repeat;
     text-transform: uppercase;
-    padding-left: 45px;
+    padding: 10px 10px 10px 45px;
     font-size: 3.0em;
     top: 200px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     letter-spacing: 8px;
     text-align: left;
-    margin-left: -15px;
-    margin-right: -15px;
-    margin-bottom: 30px;
+    margin: 0px -15px 30px -15px;
 }
 
 
@@ -326,10 +322,49 @@ img {
     text-align: center;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .gray-header {
         font-size: 1.0em;
     }
+
+    .noticias-header {
+        font-size: 2em;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+    }
+
+    .noticia-text-wrapper
+    {
+        padding-top: 10px;
+    }
+
+    .areas-gray-background {
+        padding: 25px;
+        font-size: 1.1em;
+    }
+
+    .areas-header {
+        font-size: 1.2em;
+        padding-left: 0px;
+    }
+
+    .areas-text-wrapper
+    {
+        padding-left:0px;
+        font-size: 1.1em;
+    }
+
+    .input-spaced
+    {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .areas-form-gray-background
+    {
+       padding: 10px 20px 10px 10px;
+    }
+
 }
 
 .input-spaced {
@@ -358,8 +393,8 @@ img {
 .input-wide {
     color: #C0C0C0;
     padding: 10px;
-    width:100%;
-    padding-left:15px;
+    width: 100%;
+    padding-left: 15px;
 }
 
 .contact-mini-wrapper {
