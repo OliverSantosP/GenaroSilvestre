@@ -7,6 +7,11 @@
     padding-bottom: 110px;
 }
 
+.bottom-spacer
+{
+    padding-bottom: 30px;
+    background-color: black;
+}
 .contact-mini {
     position: absolute;
     z-index: 9999;

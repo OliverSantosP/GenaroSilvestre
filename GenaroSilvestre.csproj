@@ -239,6 +239,7 @@
     <Content Include="Content\images\Header-3.jpg" />
     <Content Include="Content\images\Header2.jpg" />
     <Content Include="Content\images\Header2.png" />
+    <Content Include="Content\images\Jump.png" />
     <Content Include="Content\images\Logo.png" />
     <Content Include="Content\images\NotariadoYLegalizacionHeader.jpg" />
     <Content Include="Content\images\NoticiasFrameShadow.png" />

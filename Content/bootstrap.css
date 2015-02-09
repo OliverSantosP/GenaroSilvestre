@@ -35,8 +35,6 @@ nav,
 section,
 summary {
     display: block;
-    padding-bottom: 30px;
-    background-color: white;
 }
 
 audio,
@@ -4409,6 +4407,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     margin-top: 8px;
     background-color: #000000;
     right: 15px;
+    border-style: none;
 }
 
     .navbar-toggle .icon-bar {

@@ -1,5 +1,6 @@
 ﻿body {
     background: url("/Content/images/FakeBackground.png") repeat-y 0;
+    background-color: black;
 }
 
 /* Set padding to keep content from hitting the edges */
