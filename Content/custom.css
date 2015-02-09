@@ -309,7 +309,7 @@ img {
     background-image: url('/Content/images/AreasGrayBackground.png');
     background-repeat: repeat-y;
     max-width: 1152px;
-    padding: 50px;
+    padding: 50px 50px 50px 20px;
     margin-bottom: 30px;
     font-family: 'Times New Roman';
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -326,13 +326,20 @@ img {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .gray-header {
+        font-size: 1.0em;
+    }
+}
+
 .input-spaced {
-    padding-bottom: 12px;
+    padding: 0px 0px 12px 20px;
     padding-top: 18px;
     font-family: "Times New Roman";
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     color: #C0C0C0;
     font-size: 1.18em;
+    width: 100%;
 }
 
 .input-spaced-mini {
@@ -351,7 +358,8 @@ img {
 .input-wide {
     color: #C0C0C0;
     padding: 10px;
-    padding-left: 20px;
+    width:100%;
+    padding-left:15px;
 }
 
 .contact-mini-wrapper {
