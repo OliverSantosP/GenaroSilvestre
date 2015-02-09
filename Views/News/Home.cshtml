@@ -24,7 +24,14 @@
                             <div class="noticia-title">
                                 @item.Title
                             </div>
-                            <div class="noticia-text">@item.Text.Substring(0, 300)...</div>
+                            @if (item.Text.Length>300)
+                            {
+                                 <div class="noticia-text">@item.Text.Substring(0, 300)...</div>
+                            }
+                            else
+                            {
+                                    <div class="noticia-text">...</div>
+                            }
                             <div class="noticia-link">@Html.ActionLink("Leer más", "Details", new { id = item.Id })</div>
                         </div>
                     </div>
