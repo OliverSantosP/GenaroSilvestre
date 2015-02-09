@@ -8,7 +8,7 @@
 </div>
 <div class="menu-spacer"></div>
         <div class="row">
-            @foreach (var item in Model)
+            @foreach (var item in Model.OrderByDescending(x=>x.Created))
             {
                 <div class="col-md-6">
                     <div class="noticia-wrapper">

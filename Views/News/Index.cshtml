@@ -12,15 +12,23 @@
     <p>
         @Html.ActionLink("Crear Noticia", "Create", "", new { @class = "btn btn-default" })
     </p>
-    
-    @foreach (var item in Model)
+
+    @foreach (var item in Model.OrderByDescending(x=>x.Created))
     {
         <div class="row">
             <div class="col-md-2 times-bold table-padding uppercase">
                 @Html.DisplayFor(modelItem => item.Title)
             </div>
             <div class="col-md-3 times-regular table-padding">
-                @Html.DisplayFor(modelItem => item.Text).ToString().Substring(0, 100)...
+                @if (item.Text.Length > 300)
+                {
+                    @Html.DisplayFor(modelItem => item.Text).ToString().Substring(0, 100)
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.Text)
+                }
+
             </div>
             <div class="col-md-2 noticias-image-thumb table-padding">
                 <img src="@item.Image" />
