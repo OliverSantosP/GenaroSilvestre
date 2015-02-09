@@ -7,11 +7,6 @@
     padding-bottom: 110px;
 }
 
-.bottom-spacer
-{
-    padding-bottom: 30px;
-    background-color: black;
-}
 .contact-mini {
     position: absolute;
     z-index: 9999;
@@ -45,7 +40,7 @@
 
 
 .noticias-image-thumb {
-    max-width: 200px;
+    max-width: 400px;
 }
 
 .header-text {
@@ -155,14 +150,28 @@
 .times-regular {
     font-family: "Times New Roman";
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
-    font-size: 1.1em;
 }
 
 .times-bold {
     font-family: "Times New Roman";
     font-weight: bold;
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+.uppercase
+{
+    text-transform:uppercase !important;
+}
+
+.text-medium
+{
     font-size: 1.1em;
+}
+
+
+.text-big
+{
+    font-size: 2em;
 }
 
 .form-subtitle {
@@ -187,25 +196,6 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
-
-.vertical-line-gray {
-    width: 2px;
-    background-color: rgb(229, 229, 229);
-    height: 250px;
-    margin-left: auto;
-    margin-bottom: -205px;
-    margin-top: -50px;
-}
-
-.vertical-line-white {
-    width: 2px;
-    background-color: #FFF;
-    height: 250px;
-    margin-right: auto;
-    margin-bottom: -205px;
-    margin-top: -50px;
-    margin-left: -30px;
 }
 
 
@@ -297,7 +287,7 @@ img {
     background-image: url('/Content/images/AreasGrayBackground.png');
     background-repeat: repeat-y;
     max-width: 1152px;
-    padding: 50px;
+    padding: 50px 50px 35px 50px;
     margin-bottom: 30px;
     font-family: 'Times New Roman';
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -416,6 +406,10 @@ textarea {
     width: 100%;
 }
 
+.text-decoration-off
+{
+    text-decoration:none !important;
+}
 
 .noticia-title {
     font-family: 'Times New Roman';
@@ -445,4 +439,10 @@ textarea {
     font-size: 1.0em;
     padding-top: 10px;
     padding-bottom: 20px;
+}
+
+.table-padding
+{
+    padding-left:5px;
+    padding-right:5px;
 }

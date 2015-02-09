@@ -167,11 +167,6 @@
                     <div class="container body-content" id="body-content">
                         @RenderBody()
                     </div>
-                    <div class="bottom-spacer hidden-lg hidden-md hidden-print">
-                        <button onclick="scrollTopAnimated(1000)" class="navbar-toggle">
-                            <img src="~/Content/images/Jump.png" />
-                        </button>
-                    </div>
                 </div>
             </div>
 
@@ -190,11 +185,6 @@
         });
     </script>
 
-    <script>
-        var scrollTopAnimated = function () {
-            $('html, body').animate({ scrollTop: 0 }, 'slow');
-        };
-    </script>
 
     <script>
         (function ($) {

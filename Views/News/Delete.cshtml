@@ -8,17 +8,18 @@
 <div class="noticias-header">Borrar Noticia</div>
 
 <div class="noticia-wrapper">
-    <div class="times-bold">
-        Está seguro que desea borrar esta noticia?
-    </div>
+    <div class="alert alert-danger times-bold text-big" role="alert">Está seguro que desea borrar esta noticia?</div>
+        
     <br />
     <div class="row">
-        <div class="col-md-2 times-bold">
+        <div class="col-md-2 times-bold" >
             @Html.DisplayNameFor(model => model.Title)
         </div><div class="col-md-6 times-regular">
             @Html.DisplayFor(model => model.Title)
         </div>
     </div>
+    <br />
+
     <div class="row">
         <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Text)
@@ -26,6 +27,8 @@
             @Html.DisplayFor(model => model.Text).ToString().Substring(0, 300)...
         </div>
     </div>
+    <br />
+
     <div class="row">
         <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Image)
@@ -33,6 +36,8 @@
             <img src="@Html.ValueFor(model=> model.Image)" />
         </div>
     </div>
+    <br />
+
     <div class="row">
         <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Created)
@@ -40,6 +45,8 @@
             @Html.DisplayFor(model => model.Created)
         </div>
     </div>
+    <br />
+
     <div class="row">
         <div class="col-md-2 times-bold">
             @Html.DisplayNameFor(model => model.Updated)
@@ -47,11 +54,13 @@
             @Html.DisplayFor(model => model.Updated)
         </div>
     </div>
+    <br />
+
     <div class="row">
         <div class="col-md-2 times-bold">
-            @Html.DisplayNameFor(model => model.User)
+            @Html.DisplayNameFor(model => model.User.UserName)
         </div><div class="col-md-2 times-regular">
-            @Html.DisplayFor(model => model.User)
+            @Html.DisplayFor(model => model.User.UserName)
         </div>
     </div>
 

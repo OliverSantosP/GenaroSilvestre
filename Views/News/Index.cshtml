@@ -10,57 +10,45 @@
 
 <div class="noticia-wrapper">
     <p>
-        @Html.ActionLink("Crear Noticia", "Create", "", new { @class = "times-regular" })
+        @Html.ActionLink("Crear Noticia", "Create", "", new { @class = "btn btn-default" })
     </p>
-    <div class="row">
-        <div class="col-md-2 times-bold">
-            @Html.DisplayNameFor(model => model.Title)
-        </div>
-        <div class="col-md-2 times-bold">
-            @Html.DisplayNameFor(model => model.Text)
-        </div>
-        <div class="col-md-2 times-bold">
-            @Html.DisplayNameFor(model => model.Image)
-        </div>
-        <div class="col-md-1 times-bold">
-            @Html.DisplayNameFor(model => model.Created)
-        </div>
-        <div class="col-md-1 times-bold">
-            @Html.DisplayNameFor(model => model.Updated)
-        </div>
-        <div class="col-md-1 times-bold">
-            @Html.DisplayNameFor(model => model.User)
-        </div>
-        <div class="col-md-2">
-
-        </div>
-        </div>
-        @foreach (var item in Model)
-        {
-            <div class="row">
-                <div class="col-md-2 times-regular">
-                    @Html.DisplayFor(modelItem => item.Title)
-                </div>
-                <div class="col-md-2 times-regular">
-                    @Html.DisplayFor(modelItem => item.Text).ToString().Substring(0,100)...
-                </div>
-                <div class="col-md-2 noticias-image-thumb">
-                    <img src="@item.Image" />
-                </div>
-                <div class="col-md-1 times-regular">
-                    @Html.DisplayFor(modelItem => item.Created)
-                </div>
-                <div class="col-md-1 times-regular">
-                    @Html.DisplayFor(modelItem => item.Updated)
-                </div>
-                <div class="col-md-1 times-regular">
-                    @Html.DisplayFor(modelItem => item.User.Name) @Html.DisplayFor(modelItem => item.User.LastName)
-                </div>
-                <div class="col-md-2 times-regular">
-                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Ver", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Borrar", "Delete", new { id = item.Id })
-                </div>
+    
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="col-md-2 times-bold table-padding uppercase">
+                @Html.DisplayFor(modelItem => item.Title)
             </div>
-        }
-    </div>
+            <div class="col-md-3 times-regular table-padding">
+                @Html.DisplayFor(modelItem => item.Text).ToString().Substring(0, 100)...
+            </div>
+            <div class="col-md-2 noticias-image-thumb table-padding">
+                <img src="@item.Image" />
+            </div>
+            <div class="col-md-1 times-regular table-padding">
+                @Html.DisplayFor(modelItem => item.Created)
+            </div>
+            <div class="col-md-1 times-regular table-padding">
+                @Html.DisplayFor(modelItem => item.Updated)
+            </div>
+            <div class="col-md-1 times-regular table-padding">
+                @Html.DisplayFor(modelItem => item.User.Name) @Html.DisplayFor(modelItem => item.User.LastName)
+            </div>
+            <div class="col-md-2 times-regular table-padding">
+
+
+                <div class="btn btn-default" aria-label="Left Align">
+                    @Html.ActionLink(" ", "Details", new { id = item.Id }, new { @class = "glyphicon glyphicon-search text-decoration-none" })
+                </div>
+                <div class="btn btn-default" aria-label="Left Align">
+                    @Html.ActionLink(" ", "Edit", new { id = item.Id }, new { @class = "glyphicon glyphicon-pencil text-decoration-none" })
+                </div>
+                <div class="btn btn-default" aria-label="Left Align">
+                    @Html.ActionLink(" ", "Delete", new { id = item.Id }, new { @class = "glyphicon glyphicon-trash text-decoration-none" })
+                </div>
+                <br />
+                <br />
+            </div>
+        </div>
+    }
+</div>
