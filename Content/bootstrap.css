@@ -4472,6 +4472,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
         margin: 0;
         text-align: center;
         background-color: #000;
+        max-width: 225px;
     }
 
         .navbar-nav > li {
@@ -4592,6 +4593,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.8em;
+    max-width: 225px;
 }
 
     .navbar-default .navbar-brand {
@@ -4615,7 +4617,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
         .navbar-default .navbar-nav > li > a:hover,
         .navbar-default .navbar-nav > li > a:focus {
-            color: #333333;
+            color: #fff;
             background-color: transparent;
         }
 
@@ -4685,7 +4687,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
         .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
         .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-            color: #333333;
+            color: #fff;
             background-color: transparent;
         }
 
@@ -4709,7 +4711,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
     .navbar-default .navbar-link:hover {
-        color: #333333;
+        color: #fff;
     }
 
 .navbar-inverse {
@@ -5213,7 +5215,7 @@ a.thumbnail:focus {
 
 .thumbnail .caption {
     padding: 9px;
-    color: #333333;
+    color: #fff;
 }
 
 .alert {
@@ -5506,7 +5508,7 @@ a.list-group-item {
 }
 
     a.list-group-item .list-group-item-heading {
-        color: #333333;
+        color: #fff;
     }
 
     a.list-group-item:hover,

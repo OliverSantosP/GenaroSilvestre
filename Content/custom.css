@@ -78,7 +78,6 @@
 
 .menu-left {
     min-width: 197px;
-    background: #fff url("/Content/images/FakeBackground.png") repeat-y 50% 0;
 }
 
 .menu-right {
@@ -158,19 +157,16 @@
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
 
-.uppercase
-{
-    text-transform:uppercase !important;
+.uppercase {
+    text-transform: uppercase !important;
 }
 
-.text-medium
-{
+.text-medium {
     font-size: 1.1em;
 }
 
 
-.text-big
-{
+.text-big {
     font-size: 2em;
 }
 
@@ -206,7 +202,6 @@
 
 
 .noticia-text-wrapper {
-    padding-left: 15px;
     padding-top: 20px;
 }
 
@@ -218,18 +213,22 @@
 .noticia-wrapper {
     padding-left: 15px;
     padding-right: 15px;
+    max-width: 1080px;
 }
 
 .areas-wrapper {
-    padding-left: 13px;
+padding-left: 35px;
+padding-right: 35px;
+max-width: 1080px;
 }
 
 .areas-text-wrapper {
-    padding-left: 13px;
-    max-width: 1152px;
+    max-width: 1080px;
     font-family: 'Times New Roman';
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    text-align: justify;
+    padding: 0px 15px 0px 15px;
 }
 
 .areas-container {
@@ -286,13 +285,12 @@ img {
 .areas-gray-background {
     background-image: url('/Content/images/AreasGrayBackground.png');
     background-repeat: repeat-y;
-    max-width: 1152px;
+    max-width: 1080px;
     padding: 50px 50px 35px 50px;
     margin-bottom: 30px;
     font-family: 'Times New Roman';
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-size: 1.3em;
-    margin-left: -15px;
     overflow: hidden;
 }
 
@@ -329,10 +327,6 @@ img {
         text-align: center;
     }
 
-    .noticia-text-wrapper
-    {
-        padding-top: 10px;
-    }
 
     .areas-gray-background {
         padding: 25px;
@@ -344,22 +338,18 @@ img {
         padding-left: 0px;
     }
 
-    .areas-text-wrapper
-    {
-        padding-left:0px;
+    .areas-text-wrapper {
+        padding-left: 0px;
         font-size: 1.1em;
     }
 
-    .input-spaced
-    {
+    .input-spaced {
         padding: 0px 0px 0px 0px;
     }
 
-    .areas-form-gray-background
-    {
-       padding: 10px 20px 10px 10px;
+    .areas-form-gray-background {
+        padding: 10px 20px 10px 10px;
     }
-
 }
 
 .input-spaced {
@@ -383,7 +373,7 @@ img {
 
 .input-spaced-mini-width {
     width: 295px;
-    padding-left: 15px
+    padding-left: 15px;
 }
 
 .input-wide {
@@ -407,9 +397,8 @@ textarea {
     width: 100%;
 }
 
-.text-decoration-off
-{
-    text-decoration:none !important;
+.text-decoration-off {
+    text-decoration: none !important;
 }
 
 .noticia-title {
@@ -442,8 +431,11 @@ textarea {
     padding-bottom: 20px;
 }
 
-.table-padding
-{
-    padding-left:5px;
-    padding-right:5px;
+.table-padding {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.profile {
+    padding: 0px 15px 15px 15px;
 }
