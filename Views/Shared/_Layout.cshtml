@@ -102,7 +102,7 @@
 
             <div class="col-md-12">
                 <a href="#right-menu" id="right-menu">
-                    <img src="~/Content/images/Contact-Icon.jpg" class="contact-mini hidden-sm hidden-xs" id="mini-image" onclick='changeImage("../Content/images/Contact-Icon-Close.jpg");' />
+                    <img src="~/Content/images/Contact-Icon.jpg" class="contact-mini hidden-sm hidden-xs" id="mini-image" />
                 </a>
                 <div id="sidr" class="sidr right">
 
@@ -265,9 +265,13 @@
     </script>
 
     <script type="text/javascript">
-        function changeImage(a) {
-            document.getElementById("mini-image").src = a;
-        }
+        $("#mini-image").click(function () {
+
+            var image = $("#mini-image");
+
+            if (image[0].src.indexOf("Contact-Icon.jpg") > -1) {image[0].src = "../Content/images/Contact-Icon-Close.jpg";}
+            else {image[0].src = "../Content/images/Contact-Icon.jpg";}
+        });
     </script>
 
     @RenderSection("scripts", required: false)
