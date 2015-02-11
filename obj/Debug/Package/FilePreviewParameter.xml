@@ -1,16 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="IIS Web Application Name" description="" value="GenaroSilvestre" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Oliver\ Santos\\Documents\\Visual\ Studio\ 2013\\Projects\\GenaroSilvestre\\GenaroSilvestre\\obj\\Debug\\Package\\PackageTmp$" />
-    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Oliver\ Santos\\Documents\\Visual\ Studio\ 2013\\Projects\\GenaroSilvestre\\GenaroSilvestre\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Oliver\ Santos\\Documents\\Visual\ Studio\ 2013\\Projects\\GenaroSilvestre\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Oliver\ Santos\\Documents\\Visual\ Studio\ 2013\\Projects\\GenaroSilvestre\\obj\\Debug\\Package\\PackageTmp$" />
   </parameter>
-  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:kuyz9z4ktw.database.windows.net,1433;Initial Catalog=GenaroSilvestre_db;User Id=GenaroUser@kuyz9z4ktw;Password=Claro*12;" tags="">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Oliver\ Santos\\Documents\\Visual\ Studio\ 2013\\Projects\\GenaroSilvestre\\GenaroSilvestre\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  <parameter name="Model1Container-Web.config Connection String" description="" value="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=kuyz9z4ktw.database.windows.net;Initial Catalog=GenaroSilvestre_DB;Persist Security Info=True;User ID=GenaroUser@kuyz9z4ktw;Password=Claro2014*;MultipleActiveResultSets=True;Application Name=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Oliver\ Santos\\Documents\\Visual\ Studio\ 2013\\Projects\\GenaroSilvestre\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Model1Container']/@connectionString" />
   </parameter>
-  <parameter name="Model1Container-Web.config Connection String" description="" value="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=kuyz9z4ktw.database.windows.net;initial catalog=GenaroSilvestre_DB;persist security info=True;user id=GenaroUser@kuyz9z4ktw;password=Claro2014*;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Oliver\ Santos\\Documents\\Visual\ Studio\ 2013\\Projects\\GenaroSilvestre\\GenaroSilvestre\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Model1Container']/@connectionString" />
-  </parameter>
-  <parameter name="StorageConnectionString-Web.config Connection String" description="StorageConnectionString Connection String used in web.config by the application to access the database." value="DefaultEndpointsProtocol=https;AccountName=oliversantosp;AccountKey=bpSQ5azQk65+BxnLkCFClfqDHxRNig5HJgex0L9kEY4RRu6SoQ4HvN+x6cnEJBBDBohU9a74yOakJyVZyvmGQw==" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Oliver\ Santos\\Documents\\Visual\ Studio\ 2013\\Projects\\GenaroSilvestre\\GenaroSilvestre\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='StorageConnectionString']/@connectionString" />
+  <parameter name="StorageConnectionString-Web.config Connection String" description="" value="DefaultEndpointsProtocol=https;AccountName=oliversantosp;AccountKey=bpSQ5azQk65+BxnLkCFClfqDHxRNig5HJgex0L9kEY4RRu6SoQ4HvN+x6cnEJBBDBohU9a74yOakJyVZyvmGQw==" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Oliver\ Santos\\Documents\\Visual\ Studio\ 2013\\Projects\\GenaroSilvestre\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='StorageConnectionString']/@connectionString" />
   </parameter>
 </parameters>

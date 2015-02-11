@@ -8,36 +8,35 @@
 </div>
 <div class="menu-spacer"></div>
         <div class="row">
-            @foreach (var item in Model.OrderByDescending(x=>x.Created))
-            {
-                <div class="col-md-6">
-                    <div class="noticia-wrapper">
-                        <div class="noticia-image-frame">
-                            <div class="image-responsive">
-                                <img src="@item.Image" />
+                @foreach (var item in Model.OrderByDescending(x => x.Created))
+                {
+                    <div class="col-md-6">
+                        <div class="main-wrapper">
+                            <div class="noticia-image-frame">
+                                <div class="image-responsive">
+                                    <img src="@item.Image" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="noticia-image-shadow">
-                            <img src="~/Content/images/NoticiasFrameShadow.png" class="noticia-image-shadow" />
-                        </div>
-                        <div class="noticia-text-wrapper">
-                            <div class="noticia-title">
-                                @item.Title
+                            <div class="noticia-image-shadow">
+                                <img src="~/Content/images/NoticiasFrameShadow.png" class="noticia-image-shadow" />
                             </div>
-                            @if (item.Text.Length>300)
-                            {
-                                 <div class="noticia-text">@item.Text.Substring(0, 300)...</div>
-                            }
-                            else
-                            {
+                            <div class="noticia-text-wrapper">
+                                <div class="noticia-title">
+                                    @item.Title
+                                </div>
+                                @if (item.Text.Length > 300)
+                                {
+                                    <div class="noticia-text">@item.Text.Substring(0, 300)...</div>
+                                }
+                                else
+                                {
                                     <div class="noticia-text">...</div>
-                            }
-                            <div class="noticia-link">@Html.ActionLink("Leer más", "Details", new { id = item.Id })</div>
+                                }
+                                <div class="noticia-link">@Html.ActionLink("Leer más", "Details", new { id = item.Id })</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            }
-
+                }
         </div>
 
 

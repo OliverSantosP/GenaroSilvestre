@@ -967,7 +967,7 @@ pre {
 
     .col-sm-2 {
         width: 16.666666666666664%;
-        min-width: 225px;
+        max-width: 225px;
     }
 
     .col-sm-3 {
@@ -4593,7 +4593,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.8em;
-    max-width: 225px;
 }
 
     .navbar-default .navbar-brand {
