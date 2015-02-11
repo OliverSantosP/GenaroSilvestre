@@ -156,9 +156,8 @@
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
 
-.text-justify
-{
-    text-align:justify;
+.text-justify {
+    text-align: justify;
 }
 
 .uppercase {
@@ -296,7 +295,7 @@ img {
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     font-size: 1.3em;
     overflow: hidden;
-    text-align:justify;
+    text-align: justify;
 }
 
 .areas-form-gray-background {
@@ -363,6 +362,14 @@ img {
         padding-left: 20px;
         padding-right: 20px;
         max-width: 1080px;
+    }
+
+    .arrow {
+        background-image: url("/Content/images/Arrow-mini.png");
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 14px;
+        display: inline-block;
     }
 }
 
