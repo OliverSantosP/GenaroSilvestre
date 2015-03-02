@@ -967,7 +967,8 @@ pre {
 
     .col-sm-2 {
         width: 16.666666666666664%;
-        max-width: 225px;
+        max-width: 224px;
+        min-width: 224px;
     }
 
     .col-sm-3 {
@@ -983,7 +984,8 @@ pre {
     }
 
     .col-sm-6 {
-        width: 50%;
+        width: 22%;
+        min-width: 532px;
     }
 
     .col-sm-7 {

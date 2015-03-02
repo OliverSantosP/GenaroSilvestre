@@ -142,10 +142,7 @@
                                     <textarea class="input-wide span6 input-spaced-mini-width" placeholder="Comentario" rows="12"></textarea>
                                 </div>
 
-
-                                <div class="input-spaced">
-                                    <input type="submit" class="btn btn-contact-mini input-spaced-mini-width" value=" enviar" />
-                                </div>
+                                <input type="submit" class="btn btn-contact-mini" value=" enviar" />
                             </div>
                         </div>
 
@@ -243,25 +240,25 @@
 
 
     <script>
-        $(".noticias-header").click(function () {
-            if ($("#menu-right-background").is(":hidden")) {
-                $("#menu-right-background").slideDown(1500, "linear", function () {
-                    $("#header-text").show(function () {
-                        $("#header-text").fadeIn(500);
-                    });
-
-                    $("#header-link").fadeIn(500);
-                });
-
-            } else {
-                $("#menu-right-background").slideUp(1500, "linear");
-                $("#header-text").fadeOut(500, function () {
+        $(document).ready(function () {
+            $(".noticias-header").click(function () {
+                if (document.getElementById("menu-right-background").style.height.toString() == "0px") {
+                    $("#header-text").show();
+                    $("#header-link").show();
+                    document.getElementById("menu-right-background").style.height = 350 + "px";
+                    document.getElementById("mini-image").style.top = 466 + "px";
+                    
+                }
+                else {
                     $("#header-text").hide();
-                });
-
-                $("#header-link").fadeOut(500);
-            }
-        });
+                    $("#header-link").hide();
+                    $("#menu-right-background").slideUp(1500, "linear", function () {
+                        document.getElementById("menu-right-background").style.height = 0 + "px";
+                        document.getElementById("mini-image").style.top=100+"px";
+                    })
+                }
+            });
+        })
     </script>
 
     <script type="text/javascript">
@@ -269,8 +266,8 @@
 
             var image = $("#mini-image");
 
-            if (image[0].src.indexOf("Contact-Icon.jpg") > -1) {image[0].src = "../Content/images/Contact-Icon-Close.jpg";}
-            else {image[0].src = "../Content/images/Contact-Icon.jpg";}
+            if (image[0].src.indexOf("Contact-Icon.jpg") > -1) { image[0].src = "../Content/images/Contact-Icon-Close.jpg"; }
+            else { image[0].src = "../Content/images/Contact-Icon.jpg"; }
         });
     </script>
 
