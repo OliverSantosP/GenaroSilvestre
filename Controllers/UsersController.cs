@@ -11,7 +11,7 @@ using System.Security.Cryptography;
 
 namespace GenaroSilvestre.Controllers
 {
-    public class UsersController : Controller
+    public class UsersController : BaseController
     {
         private Model1Container db = new Model1Container();
 

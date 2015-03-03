@@ -15,7 +15,7 @@ using System.Web.Configuration;
 
 namespace GenaroSilvestre.Controllers
 {
-    public class NewsController : Controller
+    public class NewsController : BaseController
     {
         private Model1Container db = new Model1Container();
 

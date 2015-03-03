@@ -77,11 +77,11 @@
 
                                     if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Contact")
                                     {
-                                        <li class="active"><a href="/Home/Contact">Contacto</a></li>
+                                        <li class="active"><a href="/Home/Contact">@Resources.Resources.ContactFormTitle</a></li>
                                     }
                                     else
                                     {
-                                        <li><a href="/Home/Contact">Contacto</a></li>
+                                        <li><a href="/Home/Contact">@Resources.Resources.ContactFormTitle</a></li>
                                     }
 
                                 }
