@@ -98,6 +98,39 @@
                         </div><!-- /.navbar-collapse -->
                     </nav>
                 </div>
+
+                @{
+                    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+                }
+
+                @helper selected(string c, string culture)
+{
+    if (c == culture)
+    {
+        @:checked="checked"
+    }
+}
+
+                @using (Html.BeginForm("SetCulture", "Home"))
+                {
+                    <div class="navbar-brand">
+                        <div class="control-group">
+                            <div class="controls">
+                                <label for="en-us">
+                                    <input name="culture" id="en-us" value="en-us" type="radio" @selected("en", culture) /> English
+                                </label>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <label for="es">
+                                    <input name="culture" id="es" value="es" type="radio" @selected("es", culture) /> Español
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                }
+                
             </div>
 
             <div class="col-md-12">
@@ -248,7 +281,7 @@
                     document.getElementById("menu-right-background").style.height = 350 + "px";
                     document.getElementById("mini-image").style.top = 466 + "px";
                     document.getElementById("sidr").style.top = 466 + "px";
-                    
+
                 }
                 else {
                     $("#header-text").hide();
@@ -271,6 +304,18 @@
             if (image[0].src.indexOf("Contact-Icon.jpg") > -1) { image[0].src = "../Content/images/Contact-Icon-Close.jpg"; }
             else { image[0].src = "../Content/images/Contact-Icon.jpg"; }
         });
+    </script>
+
+
+    <script type="text/javascript">
+        (function ($) {
+            $("input[type = 'radio']").click(function () {
+
+                $(this).parents("form").submit(); // post form
+                
+            });
+
+        })(jQuery);
     </script>
 
     @RenderSection("scripts", required: false)

@@ -462,3 +462,9 @@ textarea {
 .profile {
     padding: 0px 15px 15px 15px;
 }
+
+.control-group {
+    background-color: #000;
+    text-align:center;
+    padding-bottom:10px;
+}
