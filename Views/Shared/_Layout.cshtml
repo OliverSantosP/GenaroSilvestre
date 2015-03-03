@@ -58,11 +58,11 @@
 
                                     if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
                                     {
-                                        <li class="active"><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
+                                        <li class="active"><a href="/Home/AreasDePractica">@Resources.Resources.PracticeAreasTitle</a></li>
                                     }
                                     else
                                     {
-                                        <li><a href="/Home/AreasDePractica">Áreas de práctica</a></li>
+                                        <li><a href="/Home/AreasDePractica">@Resources.Resources.PracticeAreasTitle</a></li>
                                     }
 
 
@@ -77,11 +77,11 @@
 
                                     if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Contact")
                                     {
-                                        <li class="active"><a href="/Home/Contact">@Resources.Resources.ContactFormTitle</a></li>
+                                        <li class="active"><a href="/Home/Contact">@Resources.Resources.ContactTitle</a></li>
                                     }
                                     else
                                     {
-                                        <li><a href="/Home/Contact">@Resources.Resources.ContactFormTitle</a></li>
+                                        <li><a href="/Home/Contact">@Resources.Resources.ContactTitle</a></li>
                                     }
 
                                 }
