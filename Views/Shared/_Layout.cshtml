@@ -68,11 +68,11 @@
 
                                     if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "NotariadoYLegalizacion")
                                     {
-                                        <li class="active"><a href="/Home/NotariadoYLegalizacion">Notariado y legalización</a></li>
+                                        <li class="active"><a href="/Home/NotariadoYLegalizacion">@Resources.Resources.NotaryTitle</a></li>
                                     }
                                     else
                                     {
-                                        <li><a href="/Home/NotariadoYLegalizacion">Notariado y legalización</a></li>
+                                        <li><a href="/Home/NotariadoYLegalizacion">@Resources.Resources.NotaryTitle</a></li>
                                     }
 
                                     if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Contact")
@@ -113,7 +113,7 @@
                         <div class="contact-mini-gray-background">
                             <div class="contact-mini-wrapper">
                                 <div class="contact-mini-header">
-                                    Formulario de contacto
+                                    @Resources.Resources.ContactFormTitle
                                 </div>
                                 <div class="col-md-12">
                                     <div class="times-regular">@ViewBag.ContactMessage</div>
@@ -122,27 +122,27 @@
 
 
                                 <div class="input-spaced-mini">
-                                    <input type="text" name="Name" value="" placeholder="Nombre" class="input-spaced-mini-width" />
+                                    <input type="text" name="Name" value="" placeholder="@Resources.Resources.ContactFormName" class="input-spaced-mini-width" />
                                 </div>
 
 
                                 <div class="input-spaced-mini">
-                                    <input type="text" name="Address" value="" placeholder="Direccion" class="input-spaced-mini-width" />
+                                    <input type="text" name="Address" value="" placeholder="@Resources.Resources.ContactFormAddress" class="input-spaced-mini-width" />
                                 </div>
                                 <div class="input-spaced-mini">
-                                    <input type="text" name="Phone" value="" placeholder="Telefono" class="input-spaced-mini-width" />
+                                    <input type="text" name="Phone" value="" placeholder="@Resources.Resources.ContactFormPhone" class="input-spaced-mini-width" />
                                 </div>
                                 <div class="input-spaced-mini">
-                                    <input type="text" name="Email" value="" placeholder="E-mail" class="input-spaced-mini-width" />
+                                    <input type="text" name="Email" value="" placeholder="@Resources.Resources.ContactFormEmail" class="input-spaced-mini-width" />
                                 </div>
                                 <div class="input-spaced-mini">
-                                    <input type="text" name="City" value="" placeholder="Ciudad" class="input-spaced-mini-width" />
+                                    <input type="text" name="City" value="" placeholder="@Resources.Resources.ContactFormCity" class="input-spaced-mini-width" />
                                 </div>
                                 <div class="input-spaced-mini">
-                                    <textarea class="input-wide span6 input-spaced-mini-width" placeholder="Comentario" rows="12"></textarea>
+                                    <textarea class="input-wide span6 input-spaced-mini-width" placeholder="@Resources.Resources.ContactFormComment" rows="12"></textarea>
                                 </div>
 
-                                <input type="submit" class="btn btn-contact-mini" value=" enviar" />
+                                <input type="submit" class="btn btn-contact-mini" value="@Resources.Resources.ConctactFormSend" />
                             </div>
                         </div>
 

@@ -1,8 +1,8 @@
 ﻿@{
-    ViewBag.Title = "Genaro Silvestre - Notariado y legalización";
+    ViewBag.Title = "Genaro Silvestre - " + @Resources.Resources.NotaryTitle;
 }
 <div class="noticias-header">
-    Notariado y legalización
+    @Resources.Resources.NotaryTitle
 </div>
 <div class="menu-spacer"></div>
 <div class="main-wrapper" id="noticia-wrapper">
@@ -13,33 +13,27 @@
     </div>
     <img src="~/Content/images/AreasFrameShadow.png" class="areas-image-shadow" />
     <div class="noticia-text-wrapper">
-        <div class="areas-gray-background">La Fe Pública significa: “Autoridad legítima atribuida a notarios, escribanos, agentes de cambio y bolsa, cónsules y secretarios de juzgados, tribunales y otros institutos oficiales, para que los documentos que autorizan en debida forma sean considerados como auténticos y lo contenido en ellos sea tenido por verdadero mientras no se haga prueba en contrario.”</div>
+        <div class="areas-gray-background">@Resources.Resources.NotaryGray</div>
     </div>
 
     <div class="areas-wrapper">
         <div class="areas-container">
             <div class="areas-text-wrapper">
                 <p>
-                El Notario, es un profesional del Derecho investido de Fe Pública por el Estado, que brinda seguridad jurídica y certeza en los actos y hechos de los que da fe, para ello está investido con la autoridad para darles autenticidad y fecha cierta, conservarlos en depósito y expedir copias de los mismos. Tendrán facultad además, para legalizar las firmas o las huellas digitales de las partes, en la forma establecida por la Ley.
+                @Resources.Resources.NotaryDefinition
                 </p>
                 <p>
-                La delicada naturaleza de estas funciones es tal que hemos dedicado a ellas un capítulo aparte en nuestra Web y en nuestro despacho profesional.
-                </p>
+                @Resources.Resources.NotaryDefinition1</p>
                 <p>
-                El Notario tiene a su cargo redactar, perfeccionar, conservar y reproducir los instrumentos en que consta su actuación, es decir, las escrituras o actas notariales.
-                </p>
+                @Resources.Resources.NotaryDefinition2</p>
                 <p>
-                    La escritura o Acta notarial la constituye el documento original redactado y autorizado por el Notario, en el que este hace constar los actos jurídicos, tales como: Testamentos, Poderes, Adjudicación de Bienes por herencia y contratos como compra ventas, donaciones, constitución de sociedades, constitución de condominios, etc., para los cuales la ley exige el cumplimiento de ciertas formalidades, con la finalidad de que surtan los efectos deseados por quienes los otorgan, garantizando con ello la seguridad jurídica.
-                    Las actas se conservan permanentemente en el protocolo notarial y se pueden reproducir cuantas veces sea necesario de conformidad con la ley.
-                </p>
+                   @Resources.Resources.NotaryDefinition3</p>
                 <p>
-                    Es nuestro compromiso solemne, garantizar que los actos y documentaciones que requieran la intervención de un notario sean realizados bajo un estricto cumplimiento de las formalidades establecidas en la ley para su efectividad, así como conservarlos en estricta confidencialidad y seguridad.
-                </p>
+                    @Resources.Resources.NotaryDefinition4</p>
                 <p>
-                    Si su firma tiene algún valor para usted, no la ponga nunca en un documento sin la debida asesorarse.
-                </p>
+                    @Resources.Resources.NotaryDefinition5</p>
                 <p>
-                    Para concertar una cita, llame al 809-707-7052, o complete el formulario virtual con conexión al correo electrónico, haciendo clic @Html.ActionLink("aquí.", "Contact")
+                    @Resources.Resources.CommonApointment @Html.ActionLink(@Resources.Resources.CommonApointmentHere, "Contact")
                 </p>
                 </div>
             </div>

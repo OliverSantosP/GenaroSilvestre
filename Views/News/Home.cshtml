@@ -4,7 +4,7 @@
     ViewBag.Title = "Home Page";
 }
 <div class="noticias-header">
-    Noticias
+    @Resources.Resources.NewsTitle
 </div>
 <div class="menu-spacer"></div>
 <div class="row">
@@ -32,7 +32,7 @@
                 {
                     <div class="noticia-text">...</div>
                 }
-                <div class="noticia-link">@Html.ActionLink("Leer más", "Details", new { id = item.Id })</div>
+                <div class="noticia-link">@Html.ActionLink(@Resources.Resources.CommonReadMore, "Details", new { id = item.Id })</div>
             </div>
         </div>
     </div>
