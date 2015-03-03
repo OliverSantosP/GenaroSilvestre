@@ -247,6 +247,7 @@
                     $("#header-link").show();
                     document.getElementById("menu-right-background").style.height = 350 + "px";
                     document.getElementById("mini-image").style.top = 466 + "px";
+                    document.getElementById("sidr").style.top = 466 + "px";
                     
                 }
                 else {
@@ -254,7 +255,8 @@
                     $("#header-link").hide();
                     $("#menu-right-background").slideUp(1500, "linear", function () {
                         document.getElementById("menu-right-background").style.height = 0 + "px";
-                        document.getElementById("mini-image").style.top=100+"px";
+                        document.getElementById("mini-image").style.top = 100 + "px";
+                        document.getElementById("sidr").style.top = 100 + "px";
                     })
                 }
             });

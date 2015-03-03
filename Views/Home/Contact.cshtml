@@ -31,6 +31,11 @@
                         809-813-3131
                     </div>
                     <br />
+                    <div class="title-medium">Celular</div>
+                    <div class="times-regular">
+                        809-707-7052
+                    </div>
+                    <br />
                     <div class="title-medium">E.Mail</div>
                     <div class="times-regular">
                         genarosilvestre@gmail.com
@@ -40,13 +45,6 @@
             </div>
         </div>
     </div>
-
-    <div class="areas-map-image-frame">
-        <div class="noticia-image">
-            <div id="map_canvas"></div>
-        </div>
-    </div>
-    <div class="areas-image-shadow"></div>
 
     @using (Html.BeginForm("Contact", "Home"))
     {
@@ -93,17 +91,24 @@
         </div>
     }
 </div>
-
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<script>
-    function initialize() {
-        var mapCanvas = document.getElementById('map_canvas');
-        var mapOptions = {
-            center: new google.maps.LatLng(18.428031, -68.980013),
-            zoom: 14,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+<div class="main-wrapper" id="noticia-wrapper">
+    <div class="areas-map-image-frame">
+        <div class="noticia-image">
+            <div id="map_canvas"></div>
+        </div>
+    </div>
+    <div class="areas-image-shadow"></div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize() {
+            var mapCanvas = document.getElementById('map_canvas');
+            var mapOptions = {
+                center: new google.maps.LatLng(18.428031, -68.980013),
+                zoom: 14,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions)
         }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
