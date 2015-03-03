@@ -40,11 +40,11 @@
 
                                     if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilEjecutivo")
                                     {
-                                        <li class="active"><a href="/Home/PerfilEjecutivo">Perfil del ejecutivo</a></li>
+                                        <li class="active"><a href="/Home/PerfilEjecutivo">@Resources.Resources.ExecutiveProfileTitle</a></li>
                                     }
                                     else
                                     {
-                                        <li><a href="/Home/PerfilEjecutivo">Perfil del ejecutivo</a></li>
+                                        <li><a href="/Home/PerfilEjecutivo">@Resources.Resources.ExecutiveProfileTitle</a></li>
                                     }
 
                                     if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilDeLaFirma")
