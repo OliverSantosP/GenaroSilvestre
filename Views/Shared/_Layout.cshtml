@@ -49,11 +49,11 @@
 
                                     if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilDeLaFirma")
                                     {
-                                        <li class="active"><a href="/Home/PerfilDeLaFirma">Perfil de la firma</a></li>
+                                        <li class="active"><a href="/Home/PerfilDeLaFirma">@Resources.Resources.FirmProfileTitle</a></li>
                                     }
                                     else
                                     {
-                                        <li><a href="/Home/PerfilDeLaFirma">Perfil de la firma</a></li>
+                                        <li><a href="/Home/PerfilDeLaFirma">@Resources.Resources.FirmProfileTitle</a></li>
                                     }
 
                                     if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")

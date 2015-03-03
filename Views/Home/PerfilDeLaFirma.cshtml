@@ -1,8 +1,8 @@
 ﻿@{
-    ViewBag.Title = "Genaro Silvestre - Perfil de la firma";
+    ViewBag.Title = "Genaro Silvestre - " + @Resources.Resources.FirmProfileTitle;
 }
 <div class="noticias-header">
-    Perfil de la firma
+    @Resources.Resources.FirmProfileTitle
 </div>
 <div class="menu-spacer"></div>
 <div class="main-wrapper" id="noticia-wrapper">
@@ -13,29 +13,24 @@
     </div>
     <img src="~/Content/images/AreasFrameShadow.png" class="areas-image-shadow" />
     <div class="noticia-text-wrapper">
-        <div class="areas-gray-background">G E N A R O  S I L V E S T R E, ESTUDIO JURIDICO – LAW OFFICE es un bufete de abogados, con sede principal en la ciudad de La Romana, en la región Este de la República Dominicana, con oficinas en Santo Domingo, Distrito Nacional, especializada en la asistencia y asesoría legal a personas públicas o privadas para la protección y defensa de sus intereses económicos, legales y derechos constitucionales, así como en la representación judicial y extrajudicial en casos de litigios Civiles, Administrativos y Arbitrales.</div>
+        <div class="areas-gray-background">@Resources.Resources.FirmProfileGray</div>
     </div>
 
     <div class="areas-wrapper">
         <div class="areas-container">
             <div class="areas-text-wrapper">
                 <p>
-                    Nuestra trayectoria profesional inicia en el año 1990 y, desde entonces, nuestro quehacer profesional se ha sustentado en la combinación única de formación académica continua, experiencia, tenacidad, habilidad y un compromiso sin límites de proporcionar a nuestros clientes la solución más positiva de sus casos.
-                </p>
+                    @Resources.Resources.FirmProfileDefinition</p>
                 <p>
-                    Tenemos, como principal misión, aportar beneficio a nuestros clientes, manteniendo un compromiso con los resultados y la defensa agresiva de sus intereses. Esto lo hacemos, manteniendo el más alto nivel de profesionalismo, integridad y estándares éticos.
-                </p>
+                    @Resources.Resources.FirmProfileDefinition1</p>
                 <p>
-                    Nosotros  asumimos los casos de nuestra especialidad de manera directa, a título personal o mediante alianzas estratégicas con otros profesionales especializados, garantizando una correcta representación en los tribunales ordinarios y en las jurisdicciones especializadas así como también en las Altas Cortes e, igualmente, cuando se trata de un litigio de arbitraje.
-                </p>
+                    @Resources.Resources.FirmProfileDefinition2</p>
                 <p>
-                    Mantenemos el más alto nivel de exigencia en el diseño de estrategias innovadoras, así como en la preparación meticulosa de los casos, con la inquebrantable determinación y dedicación a la solución de los problemas de nuestros clientes.
-                </p>
+                    @Resources.Resources.FirmProfileDefinition3</p>
                 <p>
-                    Somos conscientes de preocupaciones de nuestros clientes acerca de los costos fuera de control y la litigación descontrolada o temeraria, es por esto que nos comprometemos con la elaboración de presupuestos, estrategia y diseño de la metodología de trabajo que evite gastos innecesarios. El nuestro es un compromiso con la excelencia profesional y servicio al cliente proporcionado de manera económica y eficaz.
-                </p>
+                    @Resources.Resources.FirmProfileDefinition4</p>
                 <p>
-                    Para concertar una cita, llame al 809-707-7052, o complete el formulario virtual con conexión al correo electrónico, haciendo clic @Html.ActionLink("aquí.", "Contact")
+                    @Resources.Resources.CommonApointment @Html.ActionLink(@Resources.Resources.CommonApointmentHere, "Contact")
                 </p>
             </div>
         </div>
