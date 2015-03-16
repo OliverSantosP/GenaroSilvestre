@@ -22,11 +22,11 @@
             <div class="col-md-3 times-regular table-padding">
                 @if (item.Text.Length > 300)
                 {
-                    @Html.DisplayFor(modelItem => item.Text).ToString().Substring(0, 100)
+                    @Html.Raw(item.Text.Substring(0, 100));
                 }
                 else
                 {
-                    @Html.DisplayFor(modelItem => item.Text)
+                    @Html.Raw(item.Text)
                 }
 
             </div>

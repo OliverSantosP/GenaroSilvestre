@@ -27,11 +27,11 @@
         <div class="col-md-6 times-regular">
             @if (Model.Text.Length > 300)
             {
-                @Html.DisplayFor(model => model.Text).ToString().Substring(0, 300)
+                @Html.DisplayFor(model => model.Text.Substring(0, 300))
             }
             else
             {
-                   @Html.DisplayFor(model => model.Text);
+                @Html.DisplayFor(model => model.Text);
             }
         </div>
     </div>

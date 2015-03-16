@@ -108,10 +108,12 @@ namespace GenaroSilvestre.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,Text,Image,Created,Updated,User")] News news, HttpPostedFileBase file)
+        public ActionResult Edit([Bind(Include = "Id,Title,Text,Image,Created,Updated")] News news, HttpPostedFileBase file)
         {
             news.Updated = System.DateTime.Now;
-            
+            GenaroSilvestre.Models.Users User;
+            User = db.Users.Where(u => u.Id == 1).FirstOrDefault();
+            news.User = User;
             var image = file;
             if (image != null)
             {

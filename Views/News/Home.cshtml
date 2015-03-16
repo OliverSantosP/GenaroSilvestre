@@ -26,11 +26,11 @@
                     </div>
                     @if (item.Text.Length > 300)
                     {
-                        <div class="noticia-text">@item.Text.Substring(0, 300)...</div>
+                        <div class="noticia-text">@Html.Raw(item.Text.Substring(0, 100));</div>
                     }
                     else
                     {
-                        <div class="noticia-text">...</div>
+                        <div class="noticia-text">@Html.Raw(item.Text)</div>
                     }
                     <div class="noticia-link">@Html.ActionLink(@Resources.Resources.CommonReadMore, "Details", new { id = item.Id })</div>
                 </div>

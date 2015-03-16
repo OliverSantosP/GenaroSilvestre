@@ -14,6 +14,6 @@
     <img src="@Html.DisplayFor(model => model.Image)" />
     <hr />
     <div class="times-regular text-justify">
-        @Html.DisplayFor(model => model.Text)
+        @Html.Raw(Model.Text)
     </div>
 </div>

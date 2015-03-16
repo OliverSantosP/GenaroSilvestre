@@ -10,6 +10,8 @@
 </div>
 
 <div class="main-wrapper">
+
+    @Html.ValidationSummary()
     @using ((Html.BeginForm("Edit", "News",
       FormMethod.Post, new { enctype = "multipart/form-data" })))
     {
@@ -33,9 +35,8 @@
 
         <div class="row">
             <div class="form-group">
-                @Html.LabelFor(model => model.Text, new { @class = "form-label col-md-1" })
                 <div class="col-md-12">
-                    @Html.TextAreaFor(model => model.Text)
+                    @Html.TextAreaFor(model => model.Text, new {@id="my-textarea" })
                     @Html.ValidationMessageFor(model => model.Text)
                 </div>
             </div>
@@ -56,19 +57,27 @@
             </div>
             <br />
         </div>
-
+        <br />
         <div class="form-group">
-            <br />
-            <div class="col-md-3">
+            <div class="col-md-10">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
     }
     <br />
-    
+    <br />
     <div>
         @Html.ActionLink("Volver a la lista", "Index")
     </div>
 
     <br />
 </div>
+
+<script src="~/Scripts/ckeditor/ckeditor.js"></script>
+<script src="~/Scripts/ckeditor/adapters/jquery.js"></script>
+
+<script type="text/javascript">
+        $(function () {
+            $('#my-textarea').ckeditor();
+        });
+</script>

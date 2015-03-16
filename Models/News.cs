@@ -16,6 +16,7 @@ namespace GenaroSilvestre.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        [System.Web.Mvc.AllowHtml]
         public string Text { get; set; }
         public string Image { get; set; }
         public System.DateTime Created { get; set; }
