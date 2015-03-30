@@ -130,7 +130,7 @@
                         </div>
                     </div>
                 }
-                
+
             </div>
 
             <div class="col-md-12">
@@ -186,11 +186,18 @@
                 <div class="menu-right">
                     <div class="menu-right-background hidden-sm hidden-xs" id="menu-right-background">
                         <div class="header-text" id="header-text">
-                            "Top shelf, high powered litigator"
+                            @if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilDeLaFirma" || HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
+                            {
+                                @Resources.Resources.HeaderText2.ToString();
+                            }
+                            else
+                            {
+                                @Resources.Resources.HeaderText.ToString();
+                            }
                         </div>
 
                         <div class="header-link" id="header-link">
-                            New York Post
+                           
                         </div>
                     </div>
 
@@ -215,10 +222,13 @@
         });
     </script>
 
-
+    
     <script>
         (function ($) {
             $(window).load(function () {
+
+
+
                 $(".header-text").animate({ opacity: 1, left: "+=200" }, 4000, "linear", function () {
                     $(".header-text").animate({ opacity: 0, left: "+=200" }, 6000, "linear");
                 });
@@ -312,7 +322,7 @@
             $("input[type = 'radio']").click(function () {
 
                 $(this).parents("form").submit(); // post form
-                
+
             });
 
         })(jQuery);

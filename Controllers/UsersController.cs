@@ -40,10 +40,8 @@ namespace GenaroSilvestre.Controllers
 
             using (var deriveBytes = new Rfc2898DeriveBytes(users.Password, 20))
             {
-
                 byte[] key = deriveBytes.GetBytes(20);
                 byte[] salt = deriveBytes.Salt;
-
                 users.Password = BitConverter.ToString(key);
                 users.Salt = BitConverter.ToString(salt);
             }
