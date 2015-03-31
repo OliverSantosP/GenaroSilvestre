@@ -188,7 +188,7 @@
                         <div class="header-text" id="header-text">
                             @if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilDeLaFirma" || HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
                             {
-                                @Resources.Resources.HeaderText2.ToString();
+                                @Resources.Resources.HeaderText1.ToString();
                             }
                             else
                             {
@@ -197,7 +197,7 @@
                         </div>
 
                         <div class="header-link" id="header-link">
-                           
+
                         </div>
                     </div>
 
@@ -222,61 +222,11 @@
         });
     </script>
 
-    
+
     <script>
         (function ($) {
             $(window).load(function () {
-
-
-
-                $(".header-text").animate({ opacity: 1, left: "+=200" }, 4000, "linear", function () {
-                    $(".header-text").animate({ opacity: 0, left: "+=200" }, 6000, "linear");
-                });
-
-                $(".header-link").animate({ opacity: 1 }, 4000, "linear", function () {
-                    $(".header-link").animate({ opacity: 0, left: "-=100" }, 4000, "linear", function () {
-                        $("#menu-right-background").animate({ opacity: 0 }, 2000, "linear", function () {
-                            document.getElementById("header-text").innerHTML = "\"One of New York's fiercest defenders\"";
-                            document.getElementById("header-link").innerHTML = "New York Daily";
-
-
-                            document.getElementById("header-text").style.left = "0px";
-
-
-                            $(".header-text").animate({ opacity: 1, left: "+=200" }, 4000, "linear");
-                            $(".header-link").animate({ opacity: 1 }, 4000, "linear");
-
-                            $(".header-text").animate({ opacity: 0 }, 4000, "linear");
-                            $(".header-link").animate({ opacity: 0 }, 4000, "linear");
-
-                            document.getElementById("menu-right-background").style.backgroundImage = "url('../Content/images/Header-2.jpg')";
-
-                            $("#menu-right-background").animate({ opacity: 1 }, 2000, "linear").delay(4000);
-                            $("#menu-right-background").animate({ opacity: 0 }, 2000, "linear", function () {
-                                document.getElementById("header-text").style.left = "0px";
-
-                                document.getElementById("header-text").innerHTML = "\"Elevated to the upper level of prominence\"";
-                                document.getElementById("header-link").innerHTML = "US Daily";
-
-                                document.getElementById("header-text").style.left = "0px";
-
-                                $(".header-link").animate({ opacity: 1 }, 4000, "linear");
-                                $(".header-text").animate({ opacity: 1, left: "+=200" }, 4000, "linear");
-                                $(".header-text").animate({ opacity: 0 }, 4000, "linear");
-                                $(".header-link").animate({ opacity: 0 }, 4000, "linear");
-
-                                document.getElementById("menu-right-background").style.backgroundImage = "url('../Content/images/Header-3.jpg')";
-                                $("#menu-right-background").animate({ opacity: 1 }, 2000, "linear");
-
-
-
-                            });
-                        });
-
-                    });
-                });
-
-
+                $(".header-text").animate({ opacity: 1, left: "+=250" }, 6000, "linear");
             });
         })(jQuery);
     </script>
@@ -320,9 +270,7 @@
     <script type="text/javascript">
         (function ($) {
             $("input[type = 'radio']").click(function () {
-
-                $(this).parents("form").submit(); // post form
-
+                $(this).parents("form").submit();
             });
 
         })(jQuery);

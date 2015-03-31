@@ -153,3 +153,11 @@ C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\bin
 C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\bin\Resources.pdb
 C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\bin\en\Resources.resources.dll
 C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\bin\Newtonsoft.Json.dll
+C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\bin\EntityFramework.dll
+C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\bin\EntityFramework.SqlServer.dll
+C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\bin\EntityFramework.xml
+C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\bin\EntityFramework.SqlServer.xml
+C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\bin\Microsoft.AspNet.Identity.EntityFramework.xml
