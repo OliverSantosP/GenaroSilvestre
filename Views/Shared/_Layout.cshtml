@@ -108,7 +108,7 @@
     if (c == culture)
     {
         @:checked="checked"
-    }
+}
 }
 
                 @using (Html.BeginForm("SetCulture", "Home"))
@@ -188,11 +188,11 @@
                         <div class="header-text" id="header-text">
                             @if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilDeLaFirma" || HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
                             {
-                                @Resources.Resources.HeaderText1.ToString();
+                                @Resources.Resources.HeaderText1
                             }
                             else
                             {
-                                @Resources.Resources.HeaderText.ToString();
+                                @Resources.Resources.HeaderText
                             }
                         </div>
 
@@ -203,8 +203,95 @@
 
                     <div class="container body-content" id="body-content">
                         @RenderBody()
+
+                        <div class="footer-top">
+                            <div class="footer-title">@Resources.Resources.Terms</div>
+                        </div>
+                        <div class="footer-bottom">
+                            <div class="footer-wrapper">
+                                <div class="footer-subtitle footer-highlight-on" id="Footer1Title">
+                                    @Resources.Resources.Footer1Title
+                                </div>
+                                <div class="footer-subtitle footer-highlight-off" id="Footer2Title">
+                                    @Resources.Resources.Footer2Title
+                                </div>
+                                <div class="footer-subtitle footer-highlight-off" id="Footer3Title">
+                                    @Resources.Resources.Footer3Title
+                                </div>
+                                <div class="footer-subtitle footer-highlight-off" id="Footer4Title">
+                                    @Resources.Resources.Footer4Title
+                                </div>
+                                <div class="footer-subtitle footer-highlight-off" id="Footer5Title">
+                                    @Resources.Resources.Footer5Title
+                                </div>
+                                <div class="footer-subtitle footer-highlight-off" id="Footer6Title">
+                                   @Resources.Resources.Footer6Title
+                                </div>
+                                <div class="footer-subtitle footer-highlight-off" id="Footer7Title">
+                                    @Resources.Resources.Footer7Title
+                                </div>
+                                <div class="footer-bottom-content" id="Footer1">
+                                    <div class="footer-text">
+                                        @Resources.Resources.Footer1Text
+                                        <br />
+                                        <br />
+                                        @Resources.Resources.Footer1Text2
+                                    </div>
+                                </div>
+                                <div class="footer-bottom-content" id="Footer2">
+                                    <div class="footer-text">
+                                        @Resources.Resources.Footer2Text
+                                    </div>
+                                </div>
+                                <div class="footer-bottom-content" id="Footer3">
+                                    <div class="footer-text">
+                                        @Resources.Resources.Footer3Text
+                                    </div>
+                                </div>
+                                <div class="footer-bottom-content" id="Footer4">
+                                    <div class="footer-text">
+                                        @Resources.Resources.Footer4Text
+                                        @Resources.Resources.Footer4Text2
+                                    </div>
+                                </div>
+                                <div class="footer-bottom-content" id="Footer5">
+                                    <div class="footer-text">
+                                        @Resources.Resources.Footer5Text
+                                    </div>
+                                </div>
+                                <div class="footer-bottom-content" id="Footer6">
+                                    <div class="footer-text">
+                                        @Resources.Resources.Footer6Text
+                                    </div>
+                                </div>
+                                <div class="footer-bottom-content" id="Footer7">
+                                    <div class="footer-text">
+                                        @Resources.Resources.Footer7Text
+                                        <br />
+                                        <br />
+                                        @Resources.Resources.Footer7Text2
+                                        <br />
+                                        <br />
+                                        @Resources.Resources.Footer7Text3
+                                        <br />
+                                        <br />
+                                        @Resources.Resources.Footer7Text4
+                                        <br />
+                                        <br />
+                                        @Resources.Resources.Footer7Text5
+                                        <br />
+                                        <br />
+                                        @Resources.Resources.Footer7Text6
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
+
+
+
             </div>
 
         </div>
@@ -274,6 +361,70 @@
             });
 
         })(jQuery);
+    </script>
+
+    <script type="text/javascript">
+        document.getElementById('Footer2').style.display = 'none';
+        document.getElementById('Footer3').style.display = 'none';
+        document.getElementById('Footer4').style.display = 'none';
+        document.getElementById('Footer5').style.display = 'none';
+        document.getElementById('Footer6').style.display = 'none';
+        document.getElementById('Footer7').style.display = 'none';
+
+        
+
+        
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#Footer1Title").click(function () {
+                HideFooters("Footer1");
+            });
+
+            $("#Footer2Title").click(function () {
+                HideFooters("Footer2");
+            });
+
+            $("#Footer3Title").click(function () {
+                HideFooters("Footer3");
+            });
+
+            $("#Footer4Title").click(function () {
+                HideFooters("Footer4");
+            });
+
+            $("#Footer5Title").click(function () {
+                HideFooters("Footer5");
+            });
+
+            $("#Footer6Title").click(function () {
+                HideFooters("Footer6");
+            });
+
+            $("#Footer7Title").click(function () {
+                HideFooters("Footer7");
+            });
+
+            function HideFooters(name) {
+
+                var footers = ["Footer1", "Footer2", "Footer3", "Footer4", "Footer5", "Footer6", "Footer7"];
+
+                for (var i = 0; i < footers.length ; i++) {
+                    if (footers[i].toString() != name) {
+                        document.getElementById(footers[i].toString()).style.display = 'none';
+                    }
+                    else {
+                        document.getElementById(footers[i].toString()).style.display = 'inline';
+                        document.getElementById(footers[i].toString()+'Title').className.replace('footer-highlight-off', 'footer-highlight-on');
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        
     </script>
 
     @RenderSection("scripts", required: false)

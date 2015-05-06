@@ -242,6 +242,8 @@
     <Content Include="Content\images\Contactos-Image.jpg" />
     <Content Include="Content\images\FakeBackground.png" />
     <Content Include="Content\images\FBLogo.png" />
+    <Content Include="Content\images\FooterTextureBottom.jpg" />
+    <Content Include="Content\images\FooterTextureTop.jpg" />
     <Content Include="Content\images\Header-2.jpg" />
     <Content Include="Content\images\Header-3.jpg" />
     <Content Include="Content\images\Header2.jpg" />
