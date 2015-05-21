@@ -1,12 +1,12 @@
 ﻿@model GenaroSilvestre.Models.News
 
 @{
-    ViewBag.Title = "Crear Noticia";
+    ViewBag.Title = Resources.Resources.NewsCreate;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="noticias-header">
-    Crear Noticia
+    @Resources.Resources.NewsCreate
 </div>
 <div class="main-wrapper">
     @using ((Html.BeginForm("Create", "News",
@@ -34,7 +34,22 @@
             </div>
 
             <div class="form-group">
-                <div class="form-label col-md-1">Imagen</div>
+                @Html.LabelFor(model => model.TitleEnglish, new { @class = "form-label col-md-1" })
+                <div class="col-md-12">
+                    @Html.TextBoxFor(model => model.TitleEnglish, new { @class = "input-spaced" })
+                    @Html.ValidationMessageFor(model => model.TitleEnglish)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.TextAreaFor(model => model.TextEnglish, new { @id = "my-textarea2" })
+                    @Html.ValidationMessageFor(model => model.TextEnglish)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label col-md-1">@Resources.Resources.StandardImage</div>
                 <div class="col-md-10">
                     <input type="file" name="file" value="Image">
                 </div>
@@ -43,13 +58,13 @@
             <br />
             <div class="form-group">
                 <div class="col-md-10">
-                    <input type="submit" value="Crear" class="btn btn-default" />
+                    <input type="submit" value="@Resources.Resources.StandardCreate" class="btn btn-default" />
                 </div>
             </div>
         </div>
     }
     <div>
-        @Html.ActionLink("Volver a lista", "Index")
+        @Html.ActionLink(Resources.Resources.StandardBackToList, "Index")
     </div>
     <script src="~/Scripts/ckeditor/ckeditor.js"></script>
     <script src="~/Scripts/ckeditor/adapters/jquery.js"></script>
@@ -57,6 +72,7 @@
     <script type="text/javascript">
         $(function () {
             $('#my-textarea').ckeditor();
+            $('#my-textarea2').ckeditor();
         });
     </script>
 </div>

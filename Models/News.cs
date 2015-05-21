@@ -16,11 +16,12 @@ namespace GenaroSilvestre.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        [System.Web.Mvc.AllowHtml]
         public string Text { get; set; }
+        public string TextEnglish { get; set; }
         public string Image { get; set; }
         public System.DateTime Created { get; set; }
         public System.DateTime Updated { get; set; }
+        public string TitleEnglish { get; set; }
     
         public virtual Users User { get; set; }
     }

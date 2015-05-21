@@ -1,14 +1,30 @@
 ﻿@model GenaroSilvestre.Models.News
 
 @{
-    ViewBag.Title = "Borrar";
+    ViewBag.Title = Resources.Resources.NewsDelete;
     Layout = "~/Views/Shared/_Layout.cshtml";
-}
+    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
 
-<div class="noticias-header">Borrar Noticia</div>
+    string NewsText;
+    string NewsTitle;
 
-<div class="main-wrapper">
-    <div class="alert alert-danger times-bold text-big" role="alert">Está seguro que desea borrar esta noticia?</div>
+    if (culture == "es")
+    {
+        NewsText = Model.Text;
+        NewsTitle = Model.Title;
+    }
+    else
+    {
+        NewsText = Model.TextEnglish;
+        NewsTitle = Model.TitleEnglish;
+    }
+    }
+
+    <div class="noticias-header">@Resources.Resources.NewsDelete</div>
+
+    <div class="main-wrapper">
+    <div class="alert alert-danger times-bold text-big" role="alert">@Resources.Resources.StandardDeleteHint</div>
+
 
     <br />
     <div class="row">
@@ -25,13 +41,13 @@
             @Html.DisplayNameFor(model => model.Text)
         </div>
         <div class="col-md-6 times-regular">
-            @if (Model.Text.Length > 300)
+            @if (NewsText.Length > 300)
             {
-                @Html.DisplayFor(model => model.Text.Substring(0, 300))
+                @Html.Raw(NewsText.Substring(0, 300));
             }
             else
             {
-                @Html.DisplayFor(model => model.Text);
+                @Html.Raw(NewsText);
             }
         </div>
     </div>
@@ -79,15 +95,16 @@
             <div class="form-actions no-color">
                 <div class="col-md-3">
                     <br />
-                    <input type="submit" value="Borrar" class="btn btn-default" />
+                    <input type="submit" value="@Resources.Resources.StandardDelete" class="btn btn-default" />
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3">
                 <br />
-                @Html.ActionLink("Volver a la lista", "Index")
+                @Html.ActionLink(Resources.Resources.StandardBackToList, "Index")
             </div>
         </div>
     }
 </div>
+

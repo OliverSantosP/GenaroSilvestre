@@ -104,10 +104,9 @@
                 }
 
                 @helper selected(string c, string culture)
-{
-    if (c == culture)
-    {
-        @:checked="checked"
+                {
+        if (c == culture)
+        {@:checked="checked"
 }
 }
 
@@ -157,8 +156,6 @@
                                 <div class="input-spaced-mini">
                                     <input type="text" name="Name" value="" placeholder="@Resources.Resources.ContactFormName" class="input-spaced-mini-width" />
                                 </div>
-
-
                                 <div class="input-spaced-mini">
                                     <input type="text" name="Address" value="" placeholder="@Resources.Resources.ContactFormAddress" class="input-spaced-mini-width" />
                                 </div>

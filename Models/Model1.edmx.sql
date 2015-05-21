@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 11/20/2014 21:36:09
--- Generated from EDMX file: C:\Users\Oliver Santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\Models\Model1.edmx
+-- Date Created: 05/19/2015 10:29:16
+-- Generated from EDMX file: C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\Models\Model1.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -41,6 +41,7 @@ CREATE TABLE [dbo].[News] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Title] nvarchar(max)  NOT NULL,
     [Text] nvarchar(max)  NOT NULL,
+    [TextEnglish] nvarchar(max)  NOT NULL,
     [Image] nvarchar(max)  NOT NULL,
     [Created] datetime  NOT NULL,
     [Updated] datetime  NOT NULL,
@@ -89,6 +90,7 @@ ADD CONSTRAINT [FK_UsersNews]
     REFERENCES [dbo].[Users]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UsersNews'
 CREATE INDEX [IX_FK_UsersNews]

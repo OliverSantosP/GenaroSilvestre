@@ -1,12 +1,12 @@
 ﻿@model GenaroSilvestre.Models.News
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = Resources.Resources.NewsUpdate;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="noticias-header">
-    Editar Noticia
+    @Resources.Resources.NewsUpdate
 </div>
 
 <div class="main-wrapper">
@@ -36,14 +36,31 @@
         <div class="row">
             <div class="form-group">
                 <div class="col-md-12">
-                    @Html.TextAreaFor(model => model.Text, new {@id="my-textarea" })
+                    @Html.TextAreaFor(model => model.Text, new { @id = "my-textarea" })
                     @Html.ValidationMessageFor(model => model.Text)
                 </div>
             </div>
         </div>
 
+    <div class="form-group">
+        @Html.LabelFor(model => model.TitleEnglish, new { @class = "form-label col-md-1" })
+        <div class="col-md-12">
+            @Html.TextBoxFor(model => model.TitleEnglish, new { @class = "input-spaced" })
+            @Html.ValidationMessageFor(model => model.TitleEnglish)
+        </div>
+    </div>
+
         <div class="row">
-            <div class="form-label col-md-1">Imagen</div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.TextAreaFor(model => model.TextEnglish, new { @id = "my-textarea2" })
+                    @Html.ValidationMessageFor(model => model.TextEnglish)
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-label col-md-1">@Resources.Resources.StandardImage</div>
             <div class="col-md-12">
                 <div class="noticias-image-thumb">
                     <img src="@Model.Image" />
@@ -60,14 +77,14 @@
         <br />
         <div class="form-group">
             <div class="col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="@Resources.Resources.StandardSave" class="btn btn-default" />
             </div>
         </div>
     }
     <br />
     <br />
     <div>
-        @Html.ActionLink("Volver a la lista", "Index")
+        @Html.ActionLink(Resources.Resources.StandardBackToList, "Index")
     </div>
 
     <br />
@@ -77,7 +94,8 @@
 <script src="~/Scripts/ckeditor/adapters/jquery.js"></script>
 
 <script type="text/javascript">
-        $(function () {
-            $('#my-textarea').ckeditor();
-        });
+    $(function () {
+        $('#my-textarea').ckeditor();
+        $('#my-textarea2').ckeditor();
+    });
 </script>

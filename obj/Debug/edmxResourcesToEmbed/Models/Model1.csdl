@@ -13,26 +13,28 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Title" Type="String" Nullable="false" />
-    <Property Name="Text" Type="String" Nullable="false" />
-    <Property Name="Image" Type="String" Nullable="false" />
-    <Property Name="Created" Type="DateTime" Nullable="false" />
-    <Property Name="Updated" Type="DateTime" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TextEnglish" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Image" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="User" Relationship="Model1.UsersNews" FromRole="News" ToRole="Users" />
+    <Property Name="TitleEnglish" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Users">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UserName" Type="String" Nullable="false" />
-    <Property Name="Password" Type="String" Nullable="false" />
-    <Property Name="Salt" Type="String" Nullable="false" />
-    <Property Name="Email" Type="String" Nullable="false" />
-    <Property Name="Name" Type="String" Nullable="false" />
-    <Property Name="LastName" Type="String" Nullable="false" />
-    <Property Name="Created" Type="DateTime" Nullable="false" />
-    <Property Name="Updated" Type="DateTime" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Salt" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="News" Relationship="Model1.UsersNews" FromRole="Users" ToRole="News" />
   </EntityType>
   <Association Name="UsersNews">

@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Home Page";
+    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
 }
 <div class="noticias-header">
     @Resources.Resources.NewsTitle
@@ -10,6 +11,21 @@
 <div class="row">
     @foreach (var item in Model.OrderByDescending(x => x.Created))
     {
+
+        string NewsText;
+        string NewsTitle;
+
+        if (culture == "es")
+        {
+            NewsText = item.Text;
+            NewsTitle = item.Title;
+        }
+        else
+        {
+            NewsText = item.TextEnglish;
+            NewsTitle = item.TitleEnglish;
+        }
+
         <div class="col-xs-12 col-sm-6">
             <div class="main-wrapper">
                 <div class="noticia-image-frame">
@@ -22,16 +38,18 @@
                 </div>
                 <div class="noticia-text-wrapper">
                     <div class="noticia-title">
-                        @item.Title
+                        @NewsTitle
                     </div>
-                    @if (item.Text.Length > 300)
+
+                    @if (NewsText.Length > 300)
                     {
-                        <div class="noticia-text">@Html.Raw(item.Text.Substring(0, 100));</div>
+                    <div class="noticia-text">@Html.Raw(NewsText.Substring(0, 100));</div>
                     }
                     else
                     {
-                        <div class="noticia-text">@Html.Raw(item.Text)</div>
+                    <div class="noticia-text">@Html.Raw(NewsText)</div>
                     }
+
                     <div class="noticia-link">@Html.ActionLink(@Resources.Resources.CommonReadMore, "Details", new { id = item.Id })</div>
                 </div>
             </div>

@@ -56,17 +56,16 @@ namespace GenaroSilvestre.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [ValidateInput(false)]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Text,Image,Created,Updated,User")] News news, HttpPostedFileBase file)
+        public ActionResult Create([Bind(Include = "Id,Title,Text,TitleEnglish,TextEnglish,Image,Created,Updated,User")] News news, HttpPostedFileBase file)
         {
-            
-
             if (ModelState.IsValid)
             {
                 var image = file;
                 if (image == null)
                 {
-                    ViewBag.UploadMessage = "Failed to upload image";
+                    ViewBag.UploadMessage = @Resources.Resources.ImageUploadFailed;
                 }
                 else
                 {
@@ -107,8 +106,9 @@ namespace GenaroSilvestre.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [ValidateInput(false)]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,Text,Image,Created,Updated")] News news, HttpPostedFileBase file)
+        public ActionResult Edit([Bind(Include = "Id,Title,Text,TitleEnglish,TextEnglish,Image,Created,Updated")] News news, HttpPostedFileBase file)
         {
             news.Updated = System.DateTime.Now;
             GenaroSilvestre.Models.Users User;

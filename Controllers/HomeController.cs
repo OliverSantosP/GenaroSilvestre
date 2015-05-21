@@ -15,46 +15,42 @@ namespace GenaroSilvestre.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Home", "News");
         }
 
         public ActionResult AreasDePractica()
         {
-            ViewBag.Message = "Areas de práctica.";
+            ViewBag.Message = Resources.Resources.PracticeAreasTitle;
+
             return View();
         }
 
         public ActionResult PerfilEjecutivo()
         {
-            ViewBag.Message = "Perfil ejecutivo.";
+            ViewBag.Message = Resources.Resources.ExecutiveProfileTitle;
 
             return View();
         }
 
         public ActionResult PerfilDeLaFirma()
         {
-            ViewBag.Message = "Perfil de la firma.";
+            ViewBag.Message = Resources.Resources.FirmProfileTitle;
             return View();
         }
 
         public ActionResult NotariadoYLegalizacion()
         {
-            ViewBag.Message = "Notariado y legalización.";
+            ViewBag.Message = Resources.Resources.NotaryTitle;
             return View();
         }
 
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Contactos.";
+            ViewBag.Message = Resources.Resources.ContactTitle;
             return View();
         }
 
-        public ActionResult View1Test()
-        {
-            ViewBag.Message = "View1Test.";
-            return View();
-        }
 
         [HttpPost]
         public ActionResult Contact(ContactModels Contacto)
@@ -70,12 +66,12 @@ namespace GenaroSilvestre.Controllers
                 var Comment = Contacto.Comment;
 
                 GenaroSilvestre.Services.Mail.SendEmail(Contacto);
-                ViewBag.ContactMessage = "Se ha enviado su mensaje.";
+                ViewBag.ContactMessage = Resources.Resources.ContactMessageSent;
                 return View();
             }
             else
             {
-                ViewBag.Message = "Contactos.";
+                ViewBag.Message = Resources.Resources.ContactTitle;
                 return View();
             }
 
