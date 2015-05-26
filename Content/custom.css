@@ -469,13 +469,18 @@ textarea {
     padding-bottom: 10px;
 }
 
+.footer{
+    bottom:0px;
+    min-width: 100%;
+}
+
 .footer-wrapper {
-    padding: 17px 0px 0px 40px;
+    padding: 17px 40px 0px 40px;
 }
 
 .footer-top {
     background-image: url('images/FooterTextureTop.jpg');
-    background-repeat: repeat-x;
+    background-repeat: repeat;
     min-height: 41px;
     margin: 30px -15px 0px -15px;
 }
@@ -499,6 +504,7 @@ textarea {
     float: left;
     font-weight: bold;
     padding-right: 15px;
+    padding-bottom: 10px;
 }
 
 .footer-text {
@@ -510,8 +516,7 @@ textarea {
     float: left;
     max-width: 1030px;
     text-align: justify;
-    max-height: 125px;
-    overflow-y: scroll;
+    padding-bottom: 15px;
 }
 
 .footer-bottom {
@@ -519,6 +524,7 @@ textarea {
     background-repeat: repeat;
     min-height: 169px;
     margin: 0px -15px 0px -15px;
+    overflow-y: auto;
 }
 
 .footer-bottom-content {
@@ -542,4 +548,10 @@ a:link {
 
 a {
     color: #FFF;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    color: blue;
+    font-family:'Times New Roman';
+    font-size:14px;
 }

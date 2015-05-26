@@ -3,10 +3,27 @@
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+
+    string NewsText;
+    string NewsTitle;
+
+    if (culture == "es")
+    {
+        NewsText = Model.Text;
+        NewsTitle = Model.Title;
+    }
+    else
+    {
+        NewsText = Model.TextEnglish;
+        NewsTitle = Model.TitleEnglish;
+    }
 }
 
+
 <div class="noticias-header">
-    @Html.DisplayFor(model => model.Title)
+    @NewsTitle
 </div>
 <div class="menu-spacer"></div>
 
@@ -14,6 +31,6 @@
     <img src="@Html.DisplayFor(model => model.Image)" />
     <hr />
     <div class="times-regular text-justify">
-        @Html.Raw(Model.Text)
+        @Html.Raw(NewsText)
     </div>
 </div>
