@@ -530,6 +530,7 @@ textarea {
 .footer-bottom-content {
     padding: 12px 0px 0px 0px;
     float: left;
+    display: none;
 }
 
 .footer-highlight-on {

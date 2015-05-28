@@ -376,64 +376,37 @@
         })(jQuery);
     </script>
 
-    <script type="text/javascript">
-        document.getElementById('Footer2').style.display = 'none';
-        document.getElementById('Footer3').style.display = 'none';
-        document.getElementById('Footer4').style.display = 'none';
-        document.getElementById('Footer5').style.display = 'none';
-        document.getElementById('Footer6').style.display = 'none';
-        document.getElementById('Footer7').style.display = 'none';
-    </script>
 
     <script>
         $(document).ready(function () {
-            $("#Footer1Title").click(function () {
-                HideFooters("Footer1");
-            });
 
-            $("#Footer2Title").click(function () {
-                HideFooters("Footer2");
-            });
+            $('#Footer1').css('display', 'inline');
 
-            $("#Footer3Title").click(function () {
-                HideFooters("Footer3");
-            });
-
-            $("#Footer4Title").click(function () {
-                HideFooters("Footer4");
-            });
-
-            $("#Footer5Title").click(function () {
-                HideFooters("Footer5");
-            });
-
-            $("#Footer6Title").click(function () {
-                HideFooters("Footer6");
-            });
-
-            $("#Footer7Title").click(function () {
-                HideFooters("Footer7");
+            $(".footer-subtitle").click(function () {
+                HideFooters(event.target.id);
             });
 
             function HideFooters(name) {
 
-                var footers = ["Footer1", "Footer2", "Footer3", "Footer4", "Footer5", "Footer6", "Footer7"];
+                var footers = ["Footer1Title", "Footer2Title", "Footer3Title", "Footer4Title", "Footer5Title", "Footer6Title", "Footer7Title"];
 
                 for (var i = 0; i < footers.length ; i++) {
+
+                    var footercontent = document.getElementById(footers[i].toString().replace("Title", ""));
+                    var footertitle = document.getElementById(footers[i]);
+                    footertitle.className = "footer-subtitle footer-highlight-off";
+
                     if (footers[i].toString() != name) {
-                        document.getElementById(footers[i].toString()).style.display = 'none';
+                        footercontent.style.display = 'none';
                     }
                     else {
-                        document.getElementById(footers[i].toString()).style.display = 'inline';
-                        var footertitle=document.getElementById(footers[i].toString() + 'Title');
-                        document.getElementById(footers[i].toString() + 'Title').className.replace('footer-highlight-off', 'footer-highlight-on');
+                        footercontent.style.display = 'inline';
+                        footertitle.className = "footer-subtitle footer-highlight-on";
                     }
                 }
             }
         });
     </script>
-
     @RenderSection("scripts", required: false)
-
 </body>
 </html>
