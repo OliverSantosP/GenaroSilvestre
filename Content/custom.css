@@ -522,7 +522,6 @@ textarea {
 .footer-bottom {
     background-image: url('images/FooterTextureBottom.jpg');
     background-repeat: repeat;
-    min-height: 169px;
     margin: 0px -15px 0px -15px;
     overflow-y: auto;
 }

@@ -297,10 +297,61 @@
 
     <script>
         $(document).ready(function () {
+
             $('#right-menu').sidr({
                 side: 'right',
                 displace: false
             });
+
+            $(".noticias-header").click(function () {
+                if ($("#menu-right-background").height() == 0) {
+                    
+                    $("#menu-right-background").slideDown(3500, "linear", function () {
+                        $("#header-text").show();
+                        $("#header-link").show();
+                        $("#mini-image").css("top", 466);
+                        $("#sidr").css("top", 466);
+                        $("#menu-right-background").css("height", 350);
+                    });
+                   
+                }
+                else {
+                    $("#header-text").hide();
+                    $("#header-link").hide();
+                    $("#menu-right-background").slideUp(1500, "linear", function () {
+                        $("#menu-right-background").css("height", 0);
+                        $("#mini-image").css("top", 100);
+                        $("#sidr").css("top", 100);
+                        
+                    })
+                }
+            });
+
+            var footer = $("#footer-bottom");
+            footer.hide();
+
+            $("#footer-top").click(function () {
+
+                if (footer.is(':visible')) {
+                    footer.slideUp(1500, "linear", function() {footer.hide();});
+                }
+                else {
+                    footer.show();
+                    $('html, body').animate({
+                        scrollTop: footer.offset().top
+                    }, 2000);
+                }
+
+            });
+
+            $("#mini-image").click(function () {
+
+                var image = $("#mini-image");
+
+                if (image[0].src.indexOf("Contact-Icon.jpg") > -1) { image[0].src = "../Content/images/Contact-Icon-Close.jpg"; }
+                else { image[0].src = "../Content/images/Contact-Icon.jpg"; }
+            });
+
         });
     </script>
 
@@ -312,61 +363,6 @@
             });
         })(jQuery);
     </script>
-
-
-    <script>
-        $(document).ready(function () {
-
-            var footer = $("#footer-bottom");
-            footer.hide();
-
-            $(".noticias-header").click(function () {
-                if (document.getElementById("menu-right-background").style.height.toString() == "0px") {
-                    $("#header-text").show();
-                    $("#header-link").show();
-                    document.getElementById("menu-right-background").style.height = 350 + "px";
-                    document.getElementById("mini-image").style.top = 466 + "px";
-                    document.getElementById("sidr").style.top = 466 + "px";
-
-                }
-                else {
-                    $("#header-text").hide();
-                    $("#header-link").hide();
-                    $("#menu-right-background").slideUp(1500, "linear", function () {
-                        document.getElementById("menu-right-background").style.height = 0 + "px";
-                        document.getElementById("mini-image").style.top = 100 + "px";
-                        document.getElementById("sidr").style.top = 100 + "px";
-                    })
-                }
-            });
-
-
-            $("#footer-top").click(function () {
-
-                if (footer.is(':visible')) {
-                    footer.hide();
-                }
-                else {
-                    footer.show();
-                    $('html, body').animate({
-                        scrollTop: footer.offset().top
-                    }, 2000);
-                }
-
-            });
-        })
-    </script>
-
-    <script type="text/javascript">
-        $("#mini-image").click(function () {
-
-            var image = $("#mini-image");
-
-            if (image[0].src.indexOf("Contact-Icon.jpg") > -1) { image[0].src = "../Content/images/Contact-Icon-Close.jpg"; }
-            else { image[0].src = "../Content/images/Contact-Icon.jpg"; }
-        });
-    </script>
-
 
     <script type="text/javascript">
         (function ($) {
