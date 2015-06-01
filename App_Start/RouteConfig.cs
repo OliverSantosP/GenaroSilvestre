@@ -14,10 +14,18 @@ namespace GenaroSilvestre
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Admin",                                           // Route name
+                url: "Admin",                            // URL with parameters
+                defaults: new { controller = "Users", action = "Login" }  // Parameter defaults
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "News", action = "Home", id = UrlParameter.Optional }
             );
+
+            
         }
     }
 }
