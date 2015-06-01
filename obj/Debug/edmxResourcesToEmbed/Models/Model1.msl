@@ -4,7 +4,6 @@
     <EntitySetMapping Name="News">
       <EntityTypeMapping TypeName="IsTypeOf(Model1.News)">
         <MappingFragment StoreEntitySet="News">
-          <ScalarProperty Name="TitleEnglish" ColumnName="TitleEnglish" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Text" ColumnName="Text" />
@@ -12,6 +11,7 @@
           <ScalarProperty Name="Image" ColumnName="Image" />
           <ScalarProperty Name="Created" ColumnName="Created" />
           <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="TitleEnglish" ColumnName="TitleEnglish" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

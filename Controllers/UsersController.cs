@@ -32,7 +32,6 @@ namespace GenaroSilvestre.Controllers
         // POST: /Users/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,UserName,Password,Email,Name,LastName,Created,Updated")] Users users)
@@ -151,7 +150,7 @@ namespace GenaroSilvestre.Controllers
 
                 bool userfound = db.Users.Where(user => user.UserName == username & user.Password == password).Any();
                 // User found in the database
-                if (userfound!=null)
+                if (userfound==true)
                 {
                     FormsAuthentication.SetAuthCookie(username, false);
                     if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")

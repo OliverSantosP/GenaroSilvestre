@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/19/2015 10:29:16
+-- Date Created: 06/01/2015 14:29:21
 -- Generated from EDMX file: C:\Users\Oliver santos\Documents\Visual Studio 2013\Projects\GenaroSilvestre\Models\Model1.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [GenaroSilvestre_DB];
+USE [genarosilvestre_db];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -45,6 +45,7 @@ CREATE TABLE [dbo].[News] (
     [Image] nvarchar(max)  NOT NULL,
     [Created] datetime  NOT NULL,
     [Updated] datetime  NOT NULL,
+    [TitleEnglish] nvarchar(max)  NOT NULL,
     [User_Id] int  NOT NULL
 );
 GO
