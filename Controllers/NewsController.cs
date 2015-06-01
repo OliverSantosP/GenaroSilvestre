@@ -20,6 +20,7 @@ namespace GenaroSilvestre.Controllers
         private Model1Container db = new Model1Container();
 
         // GET: /News/
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.News.ToList());
@@ -47,6 +48,7 @@ namespace GenaroSilvestre.Controllers
         }
 
         // GET: /News/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -55,6 +57,7 @@ namespace GenaroSilvestre.Controllers
         // POST: /News/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateInput(false)]
         [ValidateAntiForgeryToken]
@@ -88,6 +91,7 @@ namespace GenaroSilvestre.Controllers
         }
 
         // GET: /News/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -105,6 +109,7 @@ namespace GenaroSilvestre.Controllers
         // POST: /News/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateInput(false)]
         [ValidateAntiForgeryToken]
@@ -130,6 +135,7 @@ namespace GenaroSilvestre.Controllers
         }
 
         // GET: /News/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -145,6 +151,7 @@ namespace GenaroSilvestre.Controllers
         }
 
         // POST: /News/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

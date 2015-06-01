@@ -3,48 +3,391 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Genaro Silvestre - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <link href="~/Content/custom.css" rel="stylesheet" />
-</head>
-<body>
-    <div class="menu-left">
-        <nav class="navbar navbar-default" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <img src="~/Content/images/Header.jpg" /></a>
-            </div>
-            <div class="menu-spacer"></div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Áreas de práctica</a></li>
-                    <li><a href="#">Perfil ejecutivo</a></li>
-                    <li><a href="#">Perfil de la firma</a></li>
-                    <li><a href="#">Notariado y legalización</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </nav>
-    </div>
-    <div class="menu-right">
-        <div class="container body-content">
-            @RenderBody()
-        </div>
-        <footer>
-        </footer>
-    </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <link href="~/Content/jquery.sidr.dark.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.sidr.min.js"></script>
+
+</head>
+<body>
+    <div class="main">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="menu-left" id="menu-left">
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Cambiar navegación</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/News/Home">
+                                <img src="~/Content/images/Logo.png" class="navbar-brand-logo" />
+                            </a>
+                        </div>
+                        <div class="logo-spacer hidden-xs"></div>
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="nav navbar-nav">
+                                @{
+
+                                    if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilEjecutivo")
+                                    {
+                                        <li class="active"><a href="/Home/PerfilEjecutivo">@Resources.Resources.ExecutiveProfileTitle</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a href="/Home/PerfilEjecutivo">@Resources.Resources.ExecutiveProfileTitle</a></li>
+                                    }
+
+                                    if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilDeLaFirma")
+                                    {
+                                        <li class="active"><a href="/Home/PerfilDeLaFirma">@Resources.Resources.FirmProfileTitle</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a href="/Home/PerfilDeLaFirma">@Resources.Resources.FirmProfileTitle</a></li>
+                                    }
+
+                                    if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
+                                    {
+                                        <li class="active"><a href="/Home/AreasDePractica">@Resources.Resources.PracticeAreasTitle</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a href="/Home/AreasDePractica">@Resources.Resources.PracticeAreasTitle</a></li>
+                                    }
+
+
+                                    if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "NotariadoYLegalizacion")
+                                    {
+                                        <li class="active"><a href="/Home/NotariadoYLegalizacion">@Resources.Resources.NotaryTitle</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a href="/Home/NotariadoYLegalizacion">@Resources.Resources.NotaryTitle</a></li>
+                                    }
+
+                                    if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Contact")
+                                    {
+                                        <li class="active"><a href="/Home/Contact">@Resources.Resources.ContactTitle</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a href="/Home/Contact">@Resources.Resources.ContactTitle</a></li>
+                                    }
+
+                                }
+                                <li>
+                                    <br />
+                                    <div class="social-mini">
+                                        <a href="http://www.facebook.com"><img src="~/Content/images/FBLogo.png" /></a>
+                                        <a href="http://www.twitter.com"><img src="~/Content/images/TWLogo.png" /></a>
+                                    </div>
+                                </li>
+                                <li>
+                                <li><a href="http://genarosilvestrescroggins.blogspot.com/">Blog</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                @{
+                    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+                }
+
+                @helper selected(string c, string culture)
+{
+    if (c == culture)
+    {@:checked="checked"
+}
+}
+                @using (Html.BeginForm("SetCulture", "Home"))
+                {
+                    <div class="navbar-brand">
+                        <div class="control-group">
+                            <div class="controls">
+                                <label for="en-us">
+                                    <input name="culture" id="en-us" value="en-us" type="radio" @selected("en", culture) /> English
+                                </label>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <label for="es">
+                                    <input name="culture" id="es" value="es" type="radio" @selected("es", culture) /> Español
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+            <div class="col-md-12">
+                <a href="#right-menu" id="right-menu">
+                    <img src="~/Content/images/Contact-Icon.jpg" class="contact-mini hidden-sm hidden-xs" id="mini-image" />
+                </a>
+                <div id="sidr" class="sidr right">
+                    @using (Html.BeginForm("Contact", "Home"))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="contact-mini-gray-background">
+                            <div class="contact-mini-wrapper">
+                                <div class="contact-mini-header">
+                                    @Resources.Resources.ContactFormTitle
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="times-regular">@ViewBag.ContactMessage</div>
+                                    @Html.ValidationSummary()
+                                </div>
+                                <div class="input-spaced-mini">
+                                    <input type="text" name="Name" value="" placeholder="@Resources.Resources.ContactFormName" class="input-spaced-mini-width" />
+                                </div>
+                                <div class="input-spaced-mini">
+                                    <input type="text" name="Address" value="" placeholder="@Resources.Resources.ContactFormAddress" class="input-spaced-mini-width" />
+                                </div>
+                                <div class="input-spaced-mini">
+                                    <input type="text" name="Phone" value="" placeholder="@Resources.Resources.ContactFormPhone" class="input-spaced-mini-width" />
+                                </div>
+                                <div class="input-spaced-mini">
+                                    <input type="text" name="Email" value="" placeholder="@Resources.Resources.ContactFormEmail" class="input-spaced-mini-width" />
+                                </div>
+                                <div class="input-spaced-mini">
+                                    <input type="text" name="City" value="" placeholder="@Resources.Resources.ContactFormCity" class="input-spaced-mini-width" />
+                                </div>
+                                <div class="input-spaced-mini">
+                                    <textarea name="Comment" class="input-wide span6 input-spaced-mini-width" placeholder="@Resources.Resources.ContactFormComment" rows="12"></textarea>
+                                </div>
+
+                                <input type="submit" class="btn btn-contact-mini" value="@Resources.Resources.ConctactFormSend" />
+                            </div>
+                        </div>
+
+                    }
+
+                </div>
+
+                <div class="menu-right">
+                    <div class="menu-right-background hidden-sm hidden-xs" id="menu-right-background">
+                        <div class="header-text" id="header-text">
+                            @if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilDeLaFirma" || HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "AreasDePractica")
+                            {
+                                @Resources.Resources.HeaderText1
+                            }
+                            else
+                            {
+                                @Resources.Resources.HeaderText
+                            }
+                        </div>
+
+                        <div class="header-link" id="header-link">
+
+                        </div>
+                    </div>
+
+                    <div class="container body-content" id="body-content">
+                        @RenderBody()
+
+                        <div class="footer">
+                            <div class="footer-top" id="footer-top">
+                                <div class="footer-title">@Resources.Resources.Terms</div>
+                            </div>
+                            <div class="footer-bottom" id="footer-bottom">
+                                <div class="footer-wrapper">
+                                    <div class="footer-subtitle footer-highlight-on" id="Footer1Title">
+                                        @Resources.Resources.Footer1Title
+                                    </div>
+                                    <div class="footer-subtitle footer-highlight-off" id="Footer2Title">
+                                        @Resources.Resources.Footer2Title
+                                    </div>
+                                    <div class="footer-subtitle footer-highlight-off" id="Footer3Title">
+                                        @Resources.Resources.Footer3Title
+                                    </div>
+                                    <div class="footer-subtitle footer-highlight-off" id="Footer4Title">
+                                        @Resources.Resources.Footer4Title
+                                    </div>
+                                    <div class="footer-subtitle footer-highlight-off" id="Footer5Title">
+                                        @Resources.Resources.Footer5Title
+                                    </div>
+                                    <div class="footer-subtitle footer-highlight-off" id="Footer6Title">
+                                        @Resources.Resources.Footer6Title
+                                    </div>
+                                    <div class="footer-subtitle footer-highlight-off" id="Footer7Title">
+                                        @Resources.Resources.Footer7Title
+                                    </div>
+                                    <div class="footer-bottom-content" id="Footer1">
+                                        <div class="footer-text">
+                                            @Resources.Resources.Footer1Text
+                                            <br />
+                                            <br />
+                                            @Resources.Resources.Footer1Text2
+                                        </div>
+                                    </div>
+                                    <div class="footer-bottom-content" id="Footer2">
+                                        <div class="footer-text">
+                                            @Resources.Resources.Footer2Text
+                                        </div>
+                                    </div>
+                                    <div class="footer-bottom-content" id="Footer3">
+                                        <div class="footer-text">
+                                            @Resources.Resources.Footer3Text
+                                        </div>
+                                    </div>
+                                    <div class="footer-bottom-content" id="Footer4">
+                                        <div class="footer-text">
+                                            @Resources.Resources.Footer4Text
+                                            @Resources.Resources.Footer4Text2
+                                        </div>
+                                    </div>
+                                    <div class="footer-bottom-content" id="Footer5">
+                                        <div class="footer-text">
+                                            @Resources.Resources.Footer5Text
+                                        </div>
+                                    </div>
+                                    <div class="footer-bottom-content" id="Footer6">
+                                        <div class="footer-text">
+                                            @Resources.Resources.Footer6Text
+                                        </div>
+                                    </div>
+                                    <div class="footer-bottom-content" id="Footer7">
+                                        <div class="footer-text">
+                                            @Resources.Resources.Footer7Text
+                                            <br />
+                                            <br />
+                                            @Resources.Resources.Footer7Text2
+                                            <br />
+                                            <br />
+                                            @Resources.Resources.Footer7Text3
+                                            <br />
+                                            <br />
+                                            @Resources.Resources.Footer7Text4
+                                            <br />
+                                            <br />
+                                            @Resources.Resources.Footer7Text5
+                                            <br />
+                                            <br />
+                                            @Resources.Resources.Footer7Text6
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        (function ($) {
+            $(window).load(function () {
+                $(".header-text").animate({ opacity: 1, left: "+=250" }, 6000, "linear");
+            });
+        })(jQuery);
+    </script>
+
+    <script type="text/javascript">
+        (function ($) {
+            $("input[type = 'radio']").click(function () {
+                $(this).parents("form").submit();
+            });
+        })(jQuery);
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $('#right-menu').sidr({
+                side: 'right',
+                displace: false
+            });
+
+            $(".noticias-header").click(function () {
+                if ($("#menu-right-background").height() == 0) {
+
+                    $("#menu-right-background").slideDown(3500, "linear", function () {
+                        $("#header-text").show();
+                        $("#header-link").show();
+                        $("#mini-image").css("top", 466);
+                        $("#sidr").css("top", 466);
+                        $("#menu-right-background").css("height", 350);
+                    });
+
+                }
+                else {
+                    $("#header-text").hide();
+                    $("#header-link").hide();
+                    $("#menu-right-background").slideUp(1500, "linear", function () {
+                        $("#menu-right-background").css("height", 0);
+                        $("#mini-image").css("top", 100);
+                        $("#sidr").css("top", 100);
+
+                    })
+                }
+            });
+
+            var footer = $("#footer-bottom");
+            footer.hide();
+
+            $("#footer-top").click(function () {
+
+                if (footer.is(':visible')) {
+                    footer.slideUp(1500, "linear", function () { footer.hide(); });
+                }
+                else {
+                    footer.show();
+                    $('html, body').animate({
+                        scrollTop: footer.offset().top
+                    }, 2000);
+                }
+
+            });
+
+            $("#mini-image").click(function () {
+
+                var image = $("#mini-image");
+
+                if (image[0].src.indexOf("Contact-Icon.jpg") > -1) { image[0].src = "../Content/images/Contact-Icon-Close.jpg"; }
+                else { image[0].src = "../Content/images/Contact-Icon.jpg"; }
+            });
+
+
+            $('#Footer1').css('display', 'inline');
+
+            $(".footer-subtitle").click(function () {
+                HideFooters(event.target.id);
+            });
+
+            function HideFooters(name) {
+
+                var footers = ["Footer1Title", "Footer2Title", "Footer3Title", "Footer4Title", "Footer5Title", "Footer6Title", "Footer7Title"];
+
+                for (var i = 0; i < footers.length ; i++) {
+
+                    var footercontent = document.getElementById(footers[i].toString().replace("Title", ""));
+                    var footertitle = document.getElementById(footers[i]);
+                    footertitle.className = "footer-subtitle footer-highlight-off";
+
+                    if (footers[i].toString() != name) {
+                        footercontent.style.display = 'none';
+                    }
+                    else {
+                        footercontent.style.display = 'inline';
+                        footertitle.className = "footer-subtitle footer-highlight-on";
+                    }
+                }
+            }
+        });
+    </script>
+
     @RenderSection("scripts", required: false)
 </body>
 </html>

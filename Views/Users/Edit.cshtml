@@ -6,7 +6,7 @@
 }
 
 <div class="noticias-header">
-    Editar Usuarios
+    @Resources.Resources.StandardEdit
 </div>
 
 @using (Html.BeginForm())
@@ -89,12 +89,12 @@
 
         <br />
         <div>
-            @Html.ActionLink("Volver a la lista de Usuarios.", "Index")
+            @Html.ActionLink(@Resources.Resources.StandardBackToList, "Index")
         </div>
 
     </div>
 
-              }
+}
 
 
 

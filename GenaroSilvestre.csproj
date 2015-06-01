@@ -288,7 +288,8 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <None Include="Properties\PublishProfiles\GenaroSilvestre.pubxml" />
+    <None Include="Properties\PublishProfiles\genarosilvestre - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\genarosilvestre - Web Deploy.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -510,6 +511,7 @@
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Home\NotariadoYLegalizacion.cshtml" />
     <Content Include="Views\Home\PerfilDeLaFirma.cshtml" />
+    <Content Include="Views\Users\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

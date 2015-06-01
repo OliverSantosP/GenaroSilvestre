@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using GenaroSilvestre.Models;
 using System.Security.Cryptography;
+using System.Web.Security;
 
 namespace GenaroSilvestre.Controllers
 {
@@ -16,11 +17,11 @@ namespace GenaroSilvestre.Controllers
         private Model1Container db = new Model1Container();
 
         // GET: /Users/
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.Users.ToList());
         }
-
 
         // GET: /Users/Create
         public ActionResult Create()
@@ -31,6 +32,7 @@ namespace GenaroSilvestre.Controllers
         // POST: /Users/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,UserName,Password,Email,Name,LastName,Created,Updated")] Users users)
@@ -57,6 +59,7 @@ namespace GenaroSilvestre.Controllers
         }
 
         // GET: /Users/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -74,6 +77,7 @@ namespace GenaroSilvestre.Controllers
         // POST: /Users/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,UserName,Password,Email,Name,LastName,Created,Updated")] Users users)
@@ -90,6 +94,7 @@ namespace GenaroSilvestre.Controllers
         }
 
         // GET: /Users/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -105,6 +110,7 @@ namespace GenaroSilvestre.Controllers
         }
 
         // POST: /Users/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -123,5 +129,82 @@ namespace GenaroSilvestre.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(Users model, string returnUrl)
+        {
+            // Lets first check if the Model is valid or not
+            if (ModelState.IsValid)
+            {
+                string username = model.UserName;
+                string password = model.Password;
+                
+
+                // Now if our password was enctypted or hashed we would have done the
+                // same operation on the user entered password here, But for now
+                // since the password is in plain text lets just authenticate directly
+
+                bool userfound = db.Users.Where(user => user.UserName == username & user.Password == password).Any();
+                // User found in the database
+                if (userfound!=null)
+                {
+                    FormsAuthentication.SetAuthCookie(username, false);
+                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
+                        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+                    {
+                        return Redirect(returnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "The user name or password provided is incorrect.");
+                }
+            }
+
+            // If we got this far, something failed, redisplay form
+            return View(model);
+        }
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        private bool CheckPassword(string Password, byte[] hash, byte[] salt)
+        {
+            string password = Password;
+
+            using (var deriveBytes = new Rfc2898DeriveBytes(password, salt))
+            {
+                byte[] newKey = deriveBytes.GetBytes(20);  // derive a 20-byte key
+
+                if (!newKey.SequenceEqual(hash)) { return false; }
+                //throw new InvalidOperationException("Password is invalid!");
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+        static byte[] GetBytes(string str)
+        {
+            byte[] bytes = new byte[str.Length * sizeof(char)];
+            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
+            return bytes;
+        }
+
+
     }
 }
