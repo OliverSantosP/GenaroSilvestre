@@ -513,6 +513,7 @@
     <Content Include="Views\Home\NotariadoYLegalizacion.cshtml" />
     <Content Include="Views\Home\PerfilDeLaFirma.cshtml" />
     <Content Include="Views\Users\Login.cshtml" />
+    <Content Include="Views\Home\Admin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

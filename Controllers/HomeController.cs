@@ -95,5 +95,12 @@ namespace GenaroSilvestre.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize]
+        [HttpGet]
+        public ActionResult Admin()
+        {
+            return View();
+        }
+
     }
 }
