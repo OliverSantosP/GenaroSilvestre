@@ -226,6 +226,7 @@
     <Compile Include="Services\Azure.cs" />
     <Compile Include="Services\CultureHelper.cs" />
     <Compile Include="Services\Email.cs" />
+    <Compile Include="Services\PasswordManager.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -7,8 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using GenaroSilvestre.Models;
-using System.Security.Cryptography;
 using System.Web.Security;
+using GenaroSilvestre.Services;
 
 namespace GenaroSilvestre.Controllers
 {
@@ -38,15 +38,15 @@ namespace GenaroSilvestre.Controllers
         {
             users.Created = System.DateTime.Now;
             users.Updated = System.DateTime.Now;
+            
+            string password = users.Password;
+            string salt = null;
 
-            using (var deriveBytes = new Rfc2898DeriveBytes(users.Password, 20))
-            {
-                byte[] key = deriveBytes.GetBytes(20);
-                byte[] salt = deriveBytes.Salt;
-                users.Password = BitConverter.ToString(key);
-                users.Salt = BitConverter.ToString(salt);
-            }
+            string passwordHash = PasswordManager.GeneratePasswordHash(password, out salt);
 
+            users.Password = passwordHash;
+            users.Salt = salt;
+            
             if (ModelState.IsValid)
             {
                 db.Users.Add(users);
@@ -81,6 +81,14 @@ namespace GenaroSilvestre.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,UserName,Password,Email,Name,LastName,Created,Updated")] Users users)
         {
+
+            string password = users.Password;
+            string salt = null;
+
+            string passwordHash = PasswordManager.GeneratePasswordHash(password, out salt);
+
+            users.Password = passwordHash;
+            users.Salt = salt;
 
             users.Updated = System.DateTime.Now;
             if (ModelState.IsValid)
@@ -143,14 +151,12 @@ namespace GenaroSilvestre.Controllers
                 string username = model.UserName;
                 string password = model.Password;
                 
+                var myuser = db.Users.Where(user => user.UserName == username).FirstOrDefault();
 
-                // Now if our password was enctypted or hashed we would have done the
-                // same operation on the user entered password here, But for now
-                // since the password is in plain text lets just authenticate directly
+                PasswordManager PM = new PasswordManager();
+                bool userfound = PM.IsPasswordMatch(password, myuser.Salt, myuser.Password);
 
-                bool userfound = db.Users.Where(user => user.UserName == username & user.Password == password).Any();
-                // User found in the database
-                if (userfound==true)
+                if (userfound == true)
                 {
                     FormsAuthentication.SetAuthCookie(username, false);
                     if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
@@ -179,31 +185,6 @@ namespace GenaroSilvestre.Controllers
 
             return RedirectToAction("Index", "Home");
         }
-
-        private bool CheckPassword(string Password, byte[] hash, byte[] salt)
-        {
-            string password = Password;
-
-            using (var deriveBytes = new Rfc2898DeriveBytes(password, salt))
-            {
-                byte[] newKey = deriveBytes.GetBytes(20);  // derive a 20-byte key
-
-                if (!newKey.SequenceEqual(hash)) { return false; }
-                //throw new InvalidOperationException("Password is invalid!");
-                else
-                {
-                    return true;
-                }
-            }
-        }
-
-        static byte[] GetBytes(string str)
-        {
-            byte[] bytes = new byte[str.Length * sizeof(char)];
-            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
-            return bytes;
-        }
-
 
     }
 }
