@@ -26,7 +26,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand" href="/News/Home">
-                                <img src="~/Content/images/Logo.png" class="navbar-brand-logo" />
+                                <img src="~/Content/images/Logo.png" class="navbar-brand-logo" alt="GenaroSilvestreLogo" />
                             </a>
                         </div>
                         <div class="logo-spacer hidden-xs"></div>
@@ -84,8 +84,8 @@
                                 <li>
                                     <br />
                                     <div class="social-mini">
-                                        <a href="http://www.facebook.com"><img src="~/Content/images/FBLogo.png" /></a>
-                                        <a href="http://www.twitter.com"><img src="~/Content/images/TWLogo.png" /></a>
+                                        <a href="http://www.facebook.com"><img src="~/Content/images/FBLogo.png" alt="FacebookLogo" /></a>
+                                        <a href="http://www.twitter.com"><img src="~/Content/images/TWLogo.png" alt="TwitterLogo" /></a>
                                     </div>
                                 </li>
                                 <li>
@@ -124,18 +124,16 @@
                         </div>
                     </div>
                 }
-
+                <div class="fake-background hidden-md hidden-sm hidden-xs"></div>
             </div>
-
             <div class="col-md-12">
                 <a href="#right-menu" id="right-menu">
-                    <img src="~/Content/images/Contact-Icon.jpg" class="contact-mini hidden-sm hidden-xs" id="mini-image" />
+                    <img src="~/Content/images/Contact-Icon.jpg" class="contact-mini hidden-sm hidden-xs" id="mini-image" alt="ContactIcon" />
                 </a>
                 <div id="sidr" class="sidr right">
                     @using (Html.BeginForm("Contact", "Home"))
                     {
                         @Html.AntiForgeryToken()
-
                         <div class="contact-mini-gray-background">
                             <div class="contact-mini-wrapper">
                                 <div class="contact-mini-header">
@@ -163,13 +161,10 @@
                                 <div class="input-spaced-mini">
                                     <textarea name="Comment" class="input-wide span6 input-spaced-mini-width" placeholder="@Resources.Resources.ContactFormComment" rows="12"></textarea>
                                 </div>
-
                                 <input type="submit" class="btn btn-contact-mini" value="@Resources.Resources.ConctactFormSend" />
                             </div>
                         </div>
-
                     }
-
                 </div>
 
                 <div class="menu-right">
@@ -184,15 +179,11 @@
                                 @Resources.Resources.HeaderText
                             }
                         </div>
-
                         <div class="header-link" id="header-link">
-
                         </div>
                     </div>
-
                     <div class="container body-content" id="body-content">
                         @RenderBody()
-
                         <div class="footer">
                             <div class="footer-top" id="footer-top">
                                 <div class="footer-title">@Resources.Resources.Terms</div>
@@ -277,11 +268,9 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -387,7 +376,6 @@
             }
         });
     </script>
-
     @RenderSection("scripts", required: false)
 </body>
 </html>

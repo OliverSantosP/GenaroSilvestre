@@ -166,7 +166,7 @@ namespace GenaroSilvestre.Controllers
                     }
                     else
                     {
-                        return RedirectToAction("Index");
+                        return RedirectToAction("Admin", "Home");
                     }
                 }
                 else

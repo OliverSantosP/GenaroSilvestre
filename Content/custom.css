@@ -469,10 +469,11 @@ textarea {
     padding-bottom: 10px;
 }
 
-.footer{
-    bottom:0px;
+.footer {
+    bottom: 0px;
     min-width: 100%;
-    position:static;
+    position: fixed;
+    padding-left: 2px;
 }
 
 .footer-wrapper {
@@ -538,8 +539,9 @@ textarea {
 }
 
 a:link {
-    color: #d93920;
+    color: #fff;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 
@@ -547,12 +549,18 @@ a:link {
     color: #FFF;
 }
 
-a {
-    color: #FFF;
-}
 
 input[type="radio"], input[type="checkbox"] {
     color: blue;
-    font-family:'Times New Roman';
-    font-size:14px;
+    font-family: 'Times New Roman';
+    font-size: 14px;
+}
+
+.btn-table {
+    color: #474747;
+    background-color: #d93920;
+}
+
+.white-background {
+    background-color: #fff;
 }

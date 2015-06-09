@@ -2219,9 +2219,8 @@ textarea.input-lg {
     }
 
 .btn-default {
-color: #474747;
-background-color: #FFFFFF;
-border-color: #C8C8C8;
+  color: #fff;
+  background-color: #d93920;
 }
 
 .btn-contact-mini {
@@ -2238,9 +2237,8 @@ border-color: #C8C8C8;
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
-    color: #333333;
-    background-color: #ebebeb;
-    border-color: #adadad;
+    color: #fff;
+    background-color: #B2220B;
 }
 
 .btn-default:active,

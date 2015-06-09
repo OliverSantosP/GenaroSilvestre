@@ -16,7 +16,7 @@ namespace GenaroSilvestre
             routes.MapRoute(
                 name: "Admin",                                           // Route name
                 url: "Admin",                            // URL with parameters
-                defaults: new { controller = "Users", action = "Login" }  // Parameter defaults
+                defaults: new { controller = "Home", action = "Admin" }  // Parameter defaults
             );
 
             routes.MapRoute(

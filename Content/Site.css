@@ -5,8 +5,9 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    background-color: #FFF;
     overflow: hidden;
+    min-height:300px;
+    background-color:#fff;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */

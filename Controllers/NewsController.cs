@@ -73,9 +73,9 @@ namespace GenaroSilvestre.Controllers
                 else
                 {
                     
-                    GenaroSilvestre.Models.Users User;
-                    User = db.Users.Where(u => u.Id == 1).FirstOrDefault();
-                    news.User = User;
+                    GenaroSilvestre.Models.Users MyUser = new GenaroSilvestre.Models.Users();
+                    MyUser = db.Users.Where(u => u.UserName == User.Identity.Name).FirstOrDefault();
+                    news.User = MyUser;
                     news.Created = System.DateTime.Now;
                     news.Updated = System.DateTime.Now;
                     news.Image = GenaroSilvestre.Services.Azure.UploadImage(file);
@@ -116,9 +116,10 @@ namespace GenaroSilvestre.Controllers
         public ActionResult Edit([Bind(Include = "Id,Title,Text,TitleEnglish,TextEnglish,Image,Created,Updated")] News news, HttpPostedFileBase file)
         {
             news.Updated = System.DateTime.Now;
-            GenaroSilvestre.Models.Users User;
-            User = db.Users.Where(u => u.Id == 1).FirstOrDefault();
-            news.User = User;
+            GenaroSilvestre.Models.Users MyUser = new GenaroSilvestre.Models.Users();
+
+            MyUser = db.Users.Where(u => u.UserName == User.Identity.Name).FirstOrDefault();
+            news.User = MyUser;
             var image = file;
             if (image != null)
             {
