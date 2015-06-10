@@ -33,6 +33,17 @@
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav">
                                 @{
+                                    if (User.Identity.IsAuthenticated)
+                                    {
+                                        if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "Admin")
+                                        {
+                                            <li class="active"><a href="/Home/Admin">Admin</a></li>
+                                        }
+                                        else
+                                        {
+                                            <li><a href="/Home/Admin">Admin</a></li>
+                                        }
+                                    }
 
                                     if (HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString() == "PerfilEjecutivo")
                                     {
@@ -84,8 +95,8 @@
                                 <li>
                                     <br />
                                     <div class="social-mini">
-                                        <a href="http://www.facebook.com"><img src="~/Content/images/FBLogo.png" alt="FacebookLogo" /></a>
-                                        <a href="http://www.twitter.com"><img src="~/Content/images/TWLogo.png" alt="TwitterLogo" /></a>
+                                        <a href="http://www.facebook.com/genaro.silvestre.1"><img src="~/Content/images/FBLogo.png" alt="FacebookLogo" /></a>
+                                        <a href="http://www.twitter.com/genarosilvestre"><img src="~/Content/images/TWLogo.png" alt="TwitterLogo" /></a>
                                     </div>
                                 </li>
                                 <li>

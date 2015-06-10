@@ -23,7 +23,7 @@
 
     <div class="areas-wrapper">
         <div class="areas-container">
-            <div class="areas-header">
+            <div class="areas-header" id="areas-header1">
                 <div class="arrow" id="arrow1"></div>@Resources.Resources.PracticeAreasSubtitle
             </div>
             <div class="areas-text-wrapper" id="area-text-1">
@@ -51,7 +51,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="areas-header">
+            <div class="areas-header" id="areas-header2">
                 <div class="arrow" id="arrow2"></div>@Resources.Resources.PracticeAreasSubtitle2
             </div>
             <div class="areas-text-wrapper" id="area-text-2">
@@ -74,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="areas-header">
+            <div class="areas-header" id="areas-header3">
                 <div class="arrow" id="arrow3"></div>@Resources.Resources.PracticeAreasSubtitle3
             </div>
             <div class="areas-text-wrapper" id="area-text-3">
@@ -113,35 +113,68 @@
     });
 </script>
 
+<!--TODO: Dry this!-->
 <script>
     $("#arrow1").click(function () {
 
         if ($("#area-text-1").is(":hidden")) {
             $("#area-text-1").slideDown(1500,"linear");
-            $(this).css('-webkit-transform', 'rotate(0deg)');
+            $('#arrow1').css('-webkit-transform', 'rotate(0deg)');
         } else {
             $("#area-text-1").slideUp(1500, "linear");
-            $(this).css('-webkit-transform', 'rotate(-90deg)');
+            $('#arrow1').css('-webkit-transform', 'rotate(-90deg)');
+        }
+    });
+    $("#areas-header1").click(function () {
+
+        if ($("#area-text-1").is(":hidden")) {
+            $("#area-text-1").slideDown(1500, "linear");
+            $('#arrow1').css('-webkit-transform', 'rotate(0deg)');
+        } else {
+            $("#area-text-1").slideUp(1500, "linear");
+            $('#arrow1').css('-webkit-transform', 'rotate(-90deg)');
         }
     });
     $("#arrow2").click(function () {
 
         if ($("#area-text-2").is(":hidden")) {
             $("#area-text-2").slideDown(1500, "linear");
-            $(this).css('-webkit-transform', 'rotate(0deg)');
+            $('#arrow2').css('-webkit-transform', 'rotate(0deg)');
         } else {
             $("#area-text-2").slideUp(1500, "linear");
-            $(this).css('-webkit-transform', 'rotate(-90deg)');
+            $('#arrow2').css('-webkit-transform', 'rotate(-90deg)');
+        }
+    });
+    $("#areas-header2").click(function () {
+
+        if ($("#area-text-2").is(":hidden")) {
+            $("#area-text-2").slideDown(1500, "linear");
+            $('#arrow2').css('-webkit-transform', 'rotate(0deg)');
+        } else {
+            $("#area-text-2").slideUp(1500, "linear");
+            $('#arrow2').css('-webkit-transform', 'rotate(-90deg)');
         }
     });
     $("#arrow3").click(function () {
 
         if ($("#area-text-3").is(":hidden")) {
             $("#area-text-3").slideDown(1500, "linear");
-            $(this).css('-webkit-transform', 'rotate(0deg)');
+            $('#arrow3').css('-webkit-transform', 'rotate(0deg)');
         } else {
             $("#area-text-3").slideUp(1500, "linear");
-            $(this).css('-webkit-transform', 'rotate(-90deg)');
+            $('#arrow3').css('-webkit-transform', 'rotate(-90deg)');
         }
     });
+    $("#areas-header3").click(function () {
+
+        if ($("#area-text-3").is(":hidden")) {
+            $("#area-text-3").slideDown(1500, "linear");
+            $('#arrow3').css('-webkit-transform', 'rotate(0deg)');
+        } else {
+            $("#area-text-3").slideUp(1500, "linear");
+            $('#arrow3').css('-webkit-transform', 'rotate(-90deg)');
+        }
+    });
+
+
 </script>
