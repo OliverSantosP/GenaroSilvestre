@@ -472,7 +472,6 @@ textarea {
 .footer {
     bottom: 0px;
     min-width: 100%;
-    position: fixed;
     padding-left: 2px;
 }
 
@@ -539,6 +538,12 @@ textarea {
 }
 
 a:link {
+    color: #d93920;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a.table-link {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
