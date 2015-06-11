@@ -17,11 +17,10 @@
         {
             <div class="alert alert-danger" role="alert">@ViewBag.UploadMessage</div>
         }
-
         <div class="form-horizontal">
             <hr />
             @Html.ValidationSummary(true)
-            @Html.HiddenFor(model=>model.User)
+            @Html.HiddenFor(model => model.User)
             <div class="form-group">
                 @Html.LabelFor(model => model.Title, new { @class = "form-label col-md-1" })
                 <div class="col-md-12">
@@ -29,14 +28,12 @@
                     @Html.ValidationMessageFor(model => model.Title)
                 </div>
             </div>
-
             <div class="form-group">
                 <div class="col-md-12">
                     @Html.TextAreaFor(model => model.Text, new { @id = "my-textarea" })
                     @Html.ValidationMessageFor(model => model.Text)
                 </div>
             </div>
-
             <div class="form-group">
                 @Html.LabelFor(model => model.TitleEnglish, new { @class = "form-label col-md-1" })
                 <div class="col-md-12">
@@ -44,14 +41,12 @@
                     @Html.ValidationMessageFor(model => model.TitleEnglish)
                 </div>
             </div>
-
             <div class="form-group">
                 <div class="col-md-12">
                     @Html.TextAreaFor(model => model.TextEnglish, new { @id = "my-textarea2" })
                     @Html.ValidationMessageFor(model => model.TextEnglish)
                 </div>
             </div>
-
             <div class="form-group">
                 <div class="form-label col-md-1">@Resources.Resources.StandardImage</div>
                 <div class="col-md-10">
@@ -62,7 +57,7 @@
             <br />
             <div class="form-group">
                 <div class="col-md-10">
-                    <input type="submit" value="@Resources.Resources.StandardCreate" class="btn btn-default" />
+                    <input type="submit" value="@Resources.Resources.StandardCreate" class="btn btn-default table-link" />
                 </div>
             </div>
         </div>
@@ -80,4 +75,3 @@
         });
     </script>
 </div>
-

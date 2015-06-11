@@ -10,7 +10,6 @@
     @Scripts.Render("~/bundles/bootstrap")
     <link href="~/Content/jquery.sidr.dark.css" rel="stylesheet" />
     <script src="~/Scripts/jquery.sidr.min.js"></script>
-
 </head>
 <body>
     <div class="main">
@@ -352,11 +351,9 @@
             });
 
             $("#mini-image").click(function () {
-
                 var image = $("#mini-image");
-
-                if (image[0].src.indexOf("Contact-Icon.jpg") > -1) { image[0].src = "../Content/images/Contact-Icon-Close.jpg"; }
-                else { image[0].src = "../Content/images/Contact-Icon.jpg"; }
+                if (image[0].src.indexOf("Contact-Icon.jpg") > -1) { image[0].src = "~/Content/images/Contact-Icon-Close.jpg"; }
+                else { image[0].src = "~/Content/images/Contact-Icon.jpg"; }
             });
 
 
