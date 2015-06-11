@@ -303,6 +303,11 @@
     <script>
         $(document).ready(function () {
 
+            var headertext = $("#header-text");
+            var headerlink = $("#header-link");
+            var miniimage = $("#mini-image");
+            var sidr = $("#sidr");
+            var menurightbackground = $("#menu-right-background");
 
             $('#right-menu').sidr({
                 side: 'right',
@@ -310,24 +315,24 @@
             });
 
             $(".noticias-header").click(function () {
-                if ($("#menu-right-background").height() == 0) {
-
-                    $("#menu-right-background").slideDown(3500, "linear", function () {
-                        $("#header-text").show();
-                        $("#header-link").show();
-                        $("#mini-image").css("top", 466);
-                        $("#sidr").css("top", 466);
-                        $("#menu-right-background").css("height", 350);
+                if (menurightbackground.height() == 0) {
+                    menurightbackground.slideDown(3500, "linear", function () {
+                        headertext.show();
+                        headerlink.show();
+                        miniimage.css("top", 466);
+                        sidr.css("top", 466);
+                        menurightbackground.css("height", 350);
                     });
 
                 }
                 else {
-                    $("#header-text").hide();
-                    $("#header-link").hide();
-                    $("#menu-right-background").slideUp(1500, "linear", function () {
-                        $("#menu-right-background").css("height", 0);
-                        $("#mini-image").css("top", 100);
-                        $("#sidr").css("top", 100);
+                    headertext.hide();
+                    headerlink.hide();
+
+                    menurightbackground.slideUp(1500, "linear", function () {
+                        menurightbackground.css("height", 0);
+                        miniimage.css("top", 100);
+                        sidr.css("top", 100);
 
                     })
                 }
